@@ -1,0 +1,30 @@
+﻿name: ci
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: ruff check src tests
+      - name: Types
+        run: mypy src
+      - name: Unit tests
+        run: pytest tests/unit -q
+      - name: Contract tests
+        run: pytest tests/contract -q
+      - name: Guardrails check
+        run: pwsh -File scripts/check_guardrails.ps1
+      - name: Techcards check
+        run: pwsh -File scripts/check_techcards.ps1

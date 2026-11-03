@@ -1,0 +1,10 @@
+﻿---
+description: ZettaCalc AI-first rules
+globs: ["src/**/*.py", "schemas/**/*.yaml", "tests/**/*.py"]
+---
+- Читай AGENTS.md перед любым изменением.
+- Детерминированное ядро не вызывает LLM.
+- Цены и SKU — только из PIM (`src/domain/catalog`).
+- Для write-операций — Idempotency-Key и approval-gate.
+- Не ослабляй guardrails в `src/harness/guardrails`.
+- Добавляй тест на каждое изменение бизнес-правила.

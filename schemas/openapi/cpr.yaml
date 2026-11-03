@@ -1,0 +1,8 @@
+﻿openapi: 3.1.0
+info:
+  title: Fresh House CPR API
+  version: 1.0.0
+  description: |
+    Заглушка. Полная спецификация — в чате / docs/api/cpr.openapi.yaml.
+paths: {}
+components: {}

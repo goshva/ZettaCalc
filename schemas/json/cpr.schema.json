@@ -1,0 +1,111 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fresh-house.ru/schemas/cpr/v1.json",
+  "title": "CPR (Цифровой паспорт ремонта)",
+  "type": "object",
+  "required": ["cpr_id", "version", "status", "source", "client", "rooms", "specification", "estimate", "deliverables", "audit"],
+  "properties": {
+    "cpr_id": { "type": "string", "pattern": "^CPR-[0-9]{4}-[0-9]{6}$" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "pending_review", "approved_for_tender", "in_tender", "awarded", "rejected"]
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "source": {
+      "type": "object",
+      "required": ["reference_id", "implementation_variant", "brief_id", "geometry_id", "catalog_snapshot"],
+      "properties": {
+        "reference_id": { "type": "string" },
+        "implementation_variant": { "type": "string", "enum": ["econom", "balanced", "fast", "premium"] },
+        "brief_id": { "type": "string" },
+        "geometry_id": { "type": "string" },
+        "catalog_snapshot": { "type": "string" }
+      }
+    },
+    "client": {
+      "type": "object",
+      "required": ["project_id", "assumptions"],
+      "properties": {
+        "project_id": { "type": "string" },
+        "apartment_area_m2": { "type": "number" },
+        "rooms_count": { "type": "integer" },
+        "assumptions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "rooms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["room_id", "type", "geometry", "completeness_checklist"],
+        "properties": {
+          "room_id": { "type": "string" },
+          "type": { "type": "string", "enum": ["kitchen", "bathroom", "bedroom", "living", "hallway", "kids", "office"] },
+          "area_m2": { "type": "number" },
+          "ceiling_height_m": { "type": "number" },
+          "geometry": { "type": "object", "additionalProperties": true },
+          "layout_type": { "type": "string" },
+          "completeness_checklist": { "type": "object", "additionalProperties": { "type": "boolean" } },
+          "surfaces": { "type": "object", "additionalProperties": true },
+          "furniture": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+          "lighting": { "type": "object", "additionalProperties": true },
+          "works": { "type": "array", "items": { "type": "object", "additionalProperties": true } }
+        }
+      }
+    },
+    "specification": {
+      "type": "object",
+      "required": ["materials", "furniture", "lighting"],
+      "properties": {
+        "materials": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+        "furniture": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+        "lighting": { "type": "array", "items": { "type": "object", "additionalProperties": true } }
+      }
+    },
+    "estimate": {
+      "type": "object",
+      "required": ["total_rub", "currency", "disclaimer"],
+      "properties": {
+        "materials_rub": { "type": "number" },
+        "furniture_rub": { "type": "number" },
+        "lighting_rub": { "type": "number" },
+        "works_rub": { "type": "number" },
+        "total_rub": { "type": "number" },
+        "currency": { "type": "string", "default": "RUB" },
+        "disclaimer": { "type": "string" }
+      }
+    },
+    "deliverables": {
+      "type": "object",
+      "required": ["drawings", "schedules", "attachments"],
+      "properties": {
+        "drawings": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+        "schedules": { "type": "array", "items": { "type": "object", "additionalProperties": true } },
+        "attachments": { "type": "array", "items": { "type": "object", "additionalProperties": true } }
+      }
+    },
+    "tender": { "type": ["object", "null"] },
+    "audit": {
+      "type": "object",
+      "required": ["created_by", "changelog"],
+      "properties": {
+        "created_by": { "type": "string" },
+        "approved_by": { "type": ["string", "null"] },
+        "approval_at": { "type": ["string", "null"], "format": "date-time" },
+        "changelog": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["version", "at", "note"],
+            "properties": {
+              "version": { "type": "integer" },
+              "at": { "type": "string", "format": "date-time" },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
