@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://fresh-house.ru/schemas/cpr/v1.json",
   "title": "CPR (Цифровой паспорт ремонта)",

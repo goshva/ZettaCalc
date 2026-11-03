@@ -1,4 +1,4 @@
-﻿"""Geometry Service: контур в мм, сцена (1 unit = 1 m)."""
+"""Geometry Service: контур в мм, сцена (1 unit = 1 m)."""
 from __future__ import annotations
 
 from dataclasses import dataclass

@@ -1,4 +1,4 @@
-﻿"""Harness runtime: бюджеты, ретраи, anti-loop, трейсы.
+"""Harness runtime: бюджеты, ретраи, anti-loop, трейсы.
 
 Правило: детерминированное ядро не вызывает LLM. Harness — единственная
 точка вызова LLM.
@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from typing import Any
 
 
 @dataclass
@@ -17,10 +18,18 @@ class Budget:
 
 @dataclass
 class Trace:
-    steps: list[dict] = field(default_factory=list)
+    steps: list[dict[str, Any]] = field(default_factory=list)
 
-    def log(self, tool: str, args: dict, result: dict, cost_rub: float) -> None:
-        self.steps.append({"tool": tool, "args": args, "result": result, "cost_rub": cost_rub})
+    def log(
+        self,
+        tool: str,
+        args: dict[str, Any],
+        result: dict[str, Any],
+        cost_rub: float,
+    ) -> None:
+        self.steps.append(
+            {"tool": tool, "args": args, "result": result, "cost_rub": cost_rub}
+        )
 
 
 def run_agent(task: str, budget: Budget) -> Trace:

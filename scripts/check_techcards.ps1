@@ -1,4 +1,4 @@
-﻿# Проверка техкарт: версия, ответственный, тестовый пример.
+# Проверка техкарт: версия, ответственный, тестовый пример.
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $root

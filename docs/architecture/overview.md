@@ -1,4 +1,4 @@
-﻿# Архитектура ZettaCalc (Fresh House CPR)
+# Архитектура ZettaCalc (Fresh House CPR)
 
 ## Поток
 

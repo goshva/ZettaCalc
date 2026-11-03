@@ -1,4 +1,4 @@
-﻿from src.domain.geometry import Contour
+from src.domain.geometry import Contour
 
 
 def test_area_rectangle():

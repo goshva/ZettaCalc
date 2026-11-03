@@ -1,4 +1,4 @@
-﻿"""Code-based guardrails: ACL, JSON, SKU, площади, write-safety.
+"""Code-based guardrails: ACL, JSON, SKU, площади, write-safety.
 
 Правило: права доступа проверяются только code-based, не LLM.
 """

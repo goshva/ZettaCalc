@@ -1,1 +1,1 @@
-﻿"""ZettaCalc domain package (детерминированное ядро)."""
+"""ZettaCalc domain package (детерминированное ядро)."""

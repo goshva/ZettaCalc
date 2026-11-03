@@ -1,4 +1,4 @@
-﻿from src.harness.guardrails import check_acl, check_write_allowed
+from src.harness.guardrails import check_acl, check_write_allowed
 
 
 def test_acl_denied():

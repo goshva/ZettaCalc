@@ -1,4 +1,4 @@
-﻿from src.harness.evals import pass_hat_k, pass_at_k
+from src.harness.evals import pass_hat_k, pass_at_k
 
 
 def test_pass_hat_k_all():
