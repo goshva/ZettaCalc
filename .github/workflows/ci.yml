@@ -24,6 +24,8 @@ jobs:
         run: pytest tests/unit -q
       - name: Contract tests
         run: pytest tests/contract -q
+      - name: Evals
+        run: pytest tests/evals -q
       - name: Guardrails check
         run: pwsh -File scripts/check_guardrails.ps1
       - name: Techcards check

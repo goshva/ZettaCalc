@@ -1,4 +1,4 @@
-﻿.PHONY: install lint test contract evals check
+.PHONY: install lint test contract evals check
 
 install:
 	pip install -e ".[dev]"

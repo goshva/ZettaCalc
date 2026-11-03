@@ -2,18 +2,42 @@
   "code": "FLOOR-KER-600",
   "version": 3,
   "owner": "expert-001",
-  "title": "Укладка керамогранита 600?600",
+  "title": "Укладка керамогранита 600×600",
   "conditions": {
     "surface": "floor",
     "material": "keramogranit",
-    "min_area_m2": 1
+    "min_area_m2": 1,
+    "max_unevenness_mm_per_m": 5
   },
   "operations": [
-    {"code": "PREP-01", "name": "Подготовка основания", "unit": "m2"},
-    {"code": "FLOOR-01", "name": "Укладка покрытия", "unit": "m2"},
-    {"code": "GROUT-01", "name": "Затирка швов", "unit": "m2"}
+    {
+      "code": "PREP-01",
+      "name": "Подготовка основания",
+      "unit": "m2"
+    },
+    {
+      "code": "FLOOR-01",
+      "name": "Укладка покрытия",
+      "unit": "m2"
+    },
+    {
+      "code": "GROUT-01",
+      "name": "Затирка швов",
+      "unit": "m2"
+    }
   ],
-  "consumption": {"glue_kg_per_m2": 4.5, "grout_kg_per_m2": 0.5},
-  "limitations": ["Не применять при неровности основания > 5 мм/м"],
-  "test_examples": ["tests/fixtures/techcards/floor_ker_600.json"]
+  "consumption": {
+    "glue_kg_per_m2": 4.5,
+    "grout_kg_per_m2": 0.5
+  },
+  "limitations": [
+    "Не применять при неровности основания > 5 мм/м"
+  ],
+  "test_examples": [
+    "tests/fixtures/techcards/floor_ker_600.json"
+  ],
+  "materials": {
+    "glue_kg_per_m2": "SKU-GLUE-C2-25",
+    "grout_kg_per_m2": "SKU-GROUT-5"
+  }
 }

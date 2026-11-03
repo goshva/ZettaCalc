@@ -1,0 +1,36 @@
+{
+  "project_id": "P-2",
+  "room_id": "R-1",
+  "type": "kitchen",
+  "contour_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      6000,
+      0
+    ],
+    [
+      6000,
+      5000
+    ],
+    [
+      0,
+      5000
+    ]
+  ],
+  "ceiling_height_m": 2.8,
+  "floor_material": "keramogranit",
+  "floor_unevenness_mm_per_m": 3,
+  "completeness_checklist": {
+    "fridge": true,
+    "sink": true,
+    "closed_cabinets": true,
+    "passages": true
+  },
+  "expect": {
+    "status": "draft",
+    "area_m2": 30.0
+  }
+}

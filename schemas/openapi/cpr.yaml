@@ -3,6 +3,447 @@ info:
   title: Fresh House CPR API
   version: 1.0.0
   description: |
-    Заглушка. Полная спецификация — в чате / docs/api/cpr.openapi.yaml.
-paths: {}
-components: {}
+    Контракт модуля ЦПР (цифровой паспорт ремонта): проект и геометрия,
+    предварительный расчёт, ЦПР, аукцион подрядчиков, заказы, каталог, файлы.
+
+    Правила записи (см. AGENTS.md): каждая write-операция принимает
+    `Idempotency-Key`, поддерживает `dry_run` и для approve/order требует
+    подтверждения человеком. Цены и SKU отдаются только из PIM.
+servers:
+  - url: https://api.fresh-house.example/v1
+tags:
+  - name: projects
+  - name: geometry
+  - name: estimates
+  - name: cpr
+  - name: tender
+  - name: orders
+  - name: catalog
+  - name: files
+security:
+  - bearerAuth: []
+paths:
+  /projects:
+    post:
+      tags: [projects]
+      operationId: createProject
+      summary: Создать проект из референса и варианта реализации
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ProjectCreate' }
+      responses:
+        '201':
+          description: Проект создан
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+  /projects/{projectId}:
+    get:
+      tags: [projects]
+      operationId: getProject
+      parameters:
+        - $ref: '#/components/parameters/ProjectId'
+      responses:
+        '200':
+          description: Проект со всеми версиями расчётов и допущениями
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Project' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /projects/{projectId}/brief:
+    put:
+      tags: [projects]
+      operationId: saveBrief
+      summary: Сохранить бриф. Неизвестное попадает в assumptions.
+      parameters:
+        - $ref: '#/components/parameters/ProjectId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Brief' }
+      responses:
+        '200':
+          description: Бриф сохранён, расчёт помечен к пересчёту
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Brief' }
+  /projects/{projectId}/geometry:
+    put:
+      tags: [geometry]
+      operationId: saveGeometry
+      summary: Сохранить контур помещения (мм) и проёмы
+      parameters:
+        - $ref: '#/components/parameters/ProjectId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Geometry' }
+      responses:
+        '200':
+          description: Геометрия принята
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Geometry' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+  /projects/{projectId}/estimates:
+    post:
+      tags: [estimates]
+      operationId: calculateEstimate
+      summary: Бесплатный предварительный расчёт со SKU, ценами и диапазоном
+      parameters:
+        - $ref: '#/components/parameters/ProjectId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '200':
+          description: Расчёт
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Estimate' }
+  /projects/{projectId}/cpr:
+    post:
+      tags: [cpr]
+      operationId: buildCpr
+      summary: Автосборка базового ЦПР (платная услуга)
+      parameters:
+        - $ref: '#/components/parameters/ProjectId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/DryRun'
+      responses:
+        '201':
+          description: ЦПР собран. status=pending_review, если нужна проверка.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Cpr' }
+        '402':
+          description: ЦПР не оплачен
+        '409':
+          description: Исходные данные не подтверждены
+  /cpr/{cprId}:
+    get:
+      tags: [cpr]
+      operationId: getCpr
+      parameters:
+        - $ref: '#/components/parameters/CprId'
+      responses:
+        '200':
+          description: Версия ЦПР
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Cpr' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /cpr/{cprId}/approve:
+    post:
+      tags: [cpr]
+      operationId: approveCpr
+      summary: Согласование экспертом. Только роль expert, только человек.
+      parameters:
+        - $ref: '#/components/parameters/CprId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '200':
+          description: Согласован
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Cpr' }
+        '403':
+          description: Роль не expert
+        '409':
+          description: Чек-лист полноты не закрыт
+  /cpr/{cprId}/tender:
+    post:
+      tags: [tender]
+      operationId: openTender
+      summary: Открыть аукцион по согласованному ЦПР
+      parameters:
+        - $ref: '#/components/parameters/CprId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+      responses:
+        '201':
+          description: Аукцион открыт
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Tender' }
+        '409':
+          description: ЦПР не в статусе approved_for_tender
+  /tenders/{tenderId}/bids:
+    get:
+      tags: [tender]
+      operationId: listBids
+      parameters:
+        - $ref: '#/components/parameters/TenderId'
+      responses:
+        '200':
+          description: Ставки по единому ТЗ (цена, срок, рейтинг, условия)
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/Bid' }
+    post:
+      tags: [tender]
+      operationId: placeBid
+      parameters:
+        - $ref: '#/components/parameters/TenderId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Bid' }
+      responses:
+        '201':
+          description: Ставка принята
+  /orders:
+    post:
+      tags: [orders]
+      operationId: createOrder
+      summary: Заказ товаров или услуг. Требует подтверждения клиента.
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/DryRun'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/OrderCreate' }
+      responses:
+        '201':
+          description: Заказ создан
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Order' }
+        '422': { $ref: '#/components/responses/ValidationError' }
+  /catalog/items/{sku}:
+    get:
+      tags: [catalog]
+      operationId: getCatalogItem
+      parameters:
+        - name: sku
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Позиция PIM
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CatalogItem' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /files:
+    post:
+      tags: [files]
+      operationId: uploadFile
+      summary: Загрузка фото, чертежей, дизайн-проекта
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file, project_id]
+              properties:
+                file: { type: string, format: binary }
+                project_id: { type: string }
+      responses:
+        '201':
+          description: Файл сохранён
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [file_id]
+                properties:
+                  file_id: { type: string }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  parameters:
+    ProjectId:
+      name: projectId
+      in: path
+      required: true
+      schema: { type: string }
+    CprId:
+      name: cprId
+      in: path
+      required: true
+      schema: { type: string, pattern: '^CPR-[0-9]{4}-[0-9]{6}$' }
+    TenderId:
+      name: tenderId
+      in: path
+      required: true
+      schema: { type: string }
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema: { type: string, minLength: 8 }
+    DryRun:
+      name: dry_run
+      in: query
+      required: false
+      schema: { type: boolean, default: false }
+  responses:
+    NotFound:
+      description: Не найдено
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    ValidationError:
+      description: Данные не прошли проверку
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+  schemas:
+    Error:
+      type: object
+      required: [code, message]
+      properties:
+        code: { type: string }
+        message: { type: string }
+    ProjectCreate:
+      type: object
+      required: [reference_id, implementation_variant]
+      properties:
+        reference_id: { type: string }
+        implementation_variant:
+          type: string
+          enum: [econom, balanced, fast, premium]
+    Project:
+      type: object
+      required: [project_id, reference_id, implementation_variant, assumptions]
+      properties:
+        project_id: { type: string }
+        reference_id: { type: string }
+        implementation_variant: { type: string }
+        assumptions:
+          type: array
+          items: { type: string }
+        cpr_ids:
+          type: array
+          items: { type: string }
+    Brief:
+      type: object
+      required: [answers, assumptions]
+      properties:
+        answers:
+          type: object
+          additionalProperties: true
+        assumptions:
+          type: array
+          items: { type: string }
+        open_questions:
+          type: array
+          items: { type: string }
+    Geometry:
+      type: object
+      required: [rooms]
+      properties:
+        rooms:
+          type: array
+          items:
+            type: object
+            required: [room_id, type, contour_mm]
+            properties:
+              room_id: { type: string }
+              type: { type: string }
+              contour_mm:
+                type: array
+                minItems: 3
+                items:
+                  type: array
+                  minItems: 2
+                  maxItems: 2
+                  items: { type: number }
+              openings:
+                type: array
+                items: { type: object, additionalProperties: true }
+              confidence:
+                type: object
+                additionalProperties: { type: number, minimum: 0, maximum: 1 }
+    Estimate:
+      type: object
+      required: [total_rub, low_rub, high_rub, lines, assumptions, disclaimer]
+      properties:
+        total_rub: { type: number }
+        low_rub: { type: number }
+        high_rub: { type: number }
+        lines:
+          type: array
+          items:
+            type: object
+            required: [sku, qty, unit_price_rub]
+            properties:
+              sku: { type: string }
+              qty: { type: number }
+              unit_price_rub: { type: number }
+        assumptions:
+          type: array
+          items: { type: string }
+        disclaimer: { type: string }
+    Cpr:
+      description: Полная схема в schemas/json/cpr.schema.json
+      type: object
+      required: [cpr_id, version, status]
+      properties:
+        cpr_id: { type: string, pattern: '^CPR-[0-9]{4}-[0-9]{6}$' }
+        version: { type: integer, minimum: 1 }
+        status:
+          type: string
+          enum: [draft, pending_review, approved_for_tender, in_tender, awarded, rejected]
+      additionalProperties: true
+    Tender:
+      type: object
+      required: [tender_id, cpr_id, status]
+      properties:
+        tender_id: { type: string }
+        cpr_id: { type: string }
+        status: { type: string, enum: [open, closed, awarded] }
+    Bid:
+      type: object
+      required: [contractor_id, price_rub, duration_days]
+      properties:
+        contractor_id: { type: string }
+        price_rub: { type: number }
+        duration_days: { type: integer }
+        rating: { type: number }
+    OrderCreate:
+      type: object
+      required: [project_id, items]
+      properties:
+        project_id: { type: string }
+        items:
+          type: array
+          items:
+            type: object
+            required: [sku, qty]
+            properties:
+              sku: { type: string }
+              qty: { type: number }
+    Order:
+      type: object
+      required: [order_id, status]
+      properties:
+        order_id: { type: string }
+        status: { type: string }
+    CatalogItem:
+      type: object
+      required: [sku, name, price_rub]
+      properties:
+        sku: { type: string }
+        name: { type: string }
+        price_rub: { type: number }
+        width_mm: { type: integer }
+        depth_mm: { type: integer }
+        height_mm: { type: integer }

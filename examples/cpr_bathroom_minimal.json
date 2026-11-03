@@ -1,0 +1,119 @@
+{
+  "cpr_id": "CPR-2026-000002",
+  "version": 1,
+  "status": "draft",
+  "created_at": "2026-11-03T00:00:00+00:00",
+  "updated_at": "2026-11-03T00:00:00+00:00",
+  "source": {
+    "reference_id": "n/a",
+    "implementation_variant": "balanced",
+    "brief_id": "P-3-brief",
+    "geometry_id": "R-1-geometry",
+    "catalog_snapshot": "fixture-2026-11-03"
+  },
+  "client": {
+    "project_id": "P-3",
+    "apartment_area_m2": 3.4,
+    "rooms_count": 1,
+    "assumptions": [
+      "FLOOR-KER-600: ровность основания неизвестна, требует проверки на объекте"
+    ]
+  },
+  "rooms": [
+    {
+      "room_id": "R-1",
+      "type": "bathroom",
+      "area_m2": 3.4,
+      "ceiling_height_m": 2.5,
+      "geometry": {
+        "contour_mm": [
+          [
+            0,
+            0
+          ],
+          [
+            2000,
+            0
+          ],
+          [
+            2000,
+            1700
+          ],
+          [
+            0,
+            1700
+          ]
+        ]
+      },
+      "completeness_checklist": {
+        "sink": true,
+        "passages": true
+      },
+      "works": [
+        {
+          "code": "PREP-01",
+          "name": "Подготовка основания",
+          "unit": "m2",
+          "qty": 3.4
+        },
+        {
+          "code": "FLOOR-01",
+          "name": "Укладка покрытия",
+          "unit": "m2",
+          "qty": 3.4
+        },
+        {
+          "code": "GROUT-01",
+          "name": "Затирка швов",
+          "unit": "m2",
+          "qty": 3.4
+        }
+      ]
+    }
+  ],
+  "specification": {
+    "materials": [
+      {
+        "sku": "SKU-GLUE-C2-25",
+        "qty": 15.3,
+        "techcard": "FLOOR-KER-600"
+      },
+      {
+        "sku": "SKU-GROUT-5",
+        "qty": 1.7,
+        "techcard": "FLOOR-KER-600"
+      }
+    ],
+    "furniture": [],
+    "lighting": []
+  },
+  "estimate": {
+    "materials_rub": 11747.0,
+    "works_rub": 0,
+    "total_rub": 11747.0,
+    "currency": "RUB",
+    "disclaimer": "Предварительный расчёт. Допущения требуют подтверждения; итог может измениться после проверки объекта.",
+    "range_rub": [
+      11394.59,
+      12099.41
+    ]
+  },
+  "deliverables": {
+    "drawings": [],
+    "schedules": [],
+    "attachments": []
+  },
+  "tender": null,
+  "audit": {
+    "created_by": "cpr-generator",
+    "approved_by": null,
+    "approval_at": null,
+    "changelog": [
+      {
+        "version": 1,
+        "at": "2026-11-03T00:00:00+00:00",
+        "note": "авто-сборка"
+      }
+    ]
+  }
+}

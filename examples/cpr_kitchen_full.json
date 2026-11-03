@@ -1,0 +1,119 @@
+{
+  "cpr_id": "CPR-2026-000001",
+  "version": 1,
+  "status": "draft",
+  "created_at": "2026-11-03T00:00:00+00:00",
+  "updated_at": "2026-11-03T00:00:00+00:00",
+  "source": {
+    "reference_id": "n/a",
+    "implementation_variant": "balanced",
+    "brief_id": "P-2-brief",
+    "geometry_id": "R-1-geometry",
+    "catalog_snapshot": "fixture-2026-11-03"
+  },
+  "client": {
+    "project_id": "P-2",
+    "apartment_area_m2": 30.0,
+    "rooms_count": 1,
+    "assumptions": []
+  },
+  "rooms": [
+    {
+      "room_id": "R-1",
+      "type": "kitchen",
+      "area_m2": 30.0,
+      "ceiling_height_m": 2.8,
+      "geometry": {
+        "contour_mm": [
+          [
+            0,
+            0
+          ],
+          [
+            6000,
+            0
+          ],
+          [
+            6000,
+            5000
+          ],
+          [
+            0,
+            5000
+          ]
+        ]
+      },
+      "completeness_checklist": {
+        "fridge": true,
+        "sink": true,
+        "closed_cabinets": true,
+        "passages": true
+      },
+      "works": [
+        {
+          "code": "PREP-01",
+          "name": "Подготовка основания",
+          "unit": "m2",
+          "qty": 30.0
+        },
+        {
+          "code": "FLOOR-01",
+          "name": "Укладка покрытия",
+          "unit": "m2",
+          "qty": 30.0
+        },
+        {
+          "code": "GROUT-01",
+          "name": "Затирка швов",
+          "unit": "m2",
+          "qty": 30.0
+        }
+      ]
+    }
+  ],
+  "specification": {
+    "materials": [
+      {
+        "sku": "SKU-GLUE-C2-25",
+        "qty": 135.0,
+        "techcard": "FLOOR-KER-600"
+      },
+      {
+        "sku": "SKU-GROUT-5",
+        "qty": 15.0,
+        "techcard": "FLOOR-KER-600"
+      }
+    ],
+    "furniture": [],
+    "lighting": []
+  },
+  "estimate": {
+    "materials_rub": 103650.0,
+    "works_rub": 0,
+    "total_rub": 103650.0,
+    "currency": "RUB",
+    "disclaimer": "Предварительный расчёт. Допущения требуют подтверждения; итог может измениться после проверки объекта.",
+    "range_rub": [
+      103650.0,
+      103650.0
+    ]
+  },
+  "deliverables": {
+    "drawings": [],
+    "schedules": [],
+    "attachments": []
+  },
+  "tender": null,
+  "audit": {
+    "created_by": "cpr-generator",
+    "approved_by": null,
+    "approval_at": null,
+    "changelog": [
+      {
+        "version": 1,
+        "at": "2026-11-03T00:00:00+00:00",
+        "note": "авто-сборка"
+      }
+    ]
+  }
+}

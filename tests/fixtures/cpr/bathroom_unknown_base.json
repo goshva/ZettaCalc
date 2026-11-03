@@ -1,0 +1,35 @@
+{
+  "project_id": "P-3",
+  "room_id": "R-1",
+  "type": "bathroom",
+  "contour_mm": [
+    [
+      0,
+      0
+    ],
+    [
+      2000,
+      0
+    ],
+    [
+      2000,
+      1700
+    ],
+    [
+      0,
+      1700
+    ]
+  ],
+  "ceiling_height_m": 2.5,
+  "floor_material": "keramogranit",
+  "floor_unevenness_mm_per_m": null,
+  "completeness_checklist": {
+    "sink": true,
+    "passages": true
+  },
+  "expect": {
+    "status": "draft",
+    "area_m2": 3.4,
+    "has_assumption": true
+  }
+}

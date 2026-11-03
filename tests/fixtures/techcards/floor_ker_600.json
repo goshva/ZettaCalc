@@ -1,0 +1,17 @@
+{
+  "input": {
+    "surface": "floor",
+    "material": "keramogranit",
+    "area_m2": 12.8,
+    "unevenness_mm_per_m": 2
+  },
+  "expect": {
+    "operations": [
+      "PREP-01",
+      "FLOOR-01",
+      "GROUT-01"
+    ],
+    "glue_kg": 57.6,
+    "grout_kg": 6.4
+  }
+}
