@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZETTA HOME · Прототип А (Vue 3)</title>
+    <!-- Оригинальный CSS прототипа А разделён так же, как в оригинале:
+         оболочка (первый <style> + <style id="about-shell68">) постоянна,
+         а CSS главной (#appstyle52) подменяется при переходе в приложение
+         (mount52: style52.textContent = info.css). Поэтому data-app-css
+         у обоих: страницы приложений гасят CSS главной. -->
+    <link rel="stylesheet" href="/api/css/a/shell" data-app-css="shell" />
+    <link rel="stylesheet" href="/api/apps/main/css" data-app-css="main" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

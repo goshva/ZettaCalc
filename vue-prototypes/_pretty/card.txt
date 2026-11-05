@@ -1,0 +1,17 @@
+
+function card(x,pick=false,priceTier=0){return `<article class="card">>
+<div class="photo">>
+<a href="#/item/${x.id}">>
+<img src="${x.image}" alt="${esc(x.room+' «'+x.title+'»')}" loading="lazy">>
+</a>>
+<span class="badge">${x.demo?'Демонстрационный пример':x.type==='idea'?'Идея интерьера':'Есть смета'}</span>>
+<button class="heart ${favorites.includes(x.id)?'saved':''}" data-action="save" data-id="${x.id}" aria-label="${favorites.includes(x.id)?'Убрать из избранного':'Сохранить в избранное'}: ${esc(x.title)}" aria-pressed="${favorites.includes(x.id)}">${favorites.includes(x.id)?'♥':'♡'}</button>${pick?`<button class="pick ${meeting.includes(x.id)?'on':''}" data-action="meeting" data-id="${x.id}">${meeting.includes(x.id)?'✓ Для встречи':'Выбрать для встречи'}</button>`:''}</div>>
+<p class="meta">${esc(x.room)} · ${esc(x.style)}${x.area?' · '+x.area+' м²':''}</p>>
+<a href="#/item/${x.id}">>
+<h3>${esc(x.title)}</h3>>
+</a>${palette(x)}<div class="cardbottom">${isCalc(x)?`<div>>
+<strong class="price">${x.costs.length>1&&priceTier===0?'от ':''}${money(total(x,priceTier))}</strong>>
+<small>${x.costs.length>1?'3 ценовых варианта':'Работы, материалы, мебель и декор'}</small>>
+</div>`:'<span class="small muted">Подбор под этот образ — к визиту</span>'}<a class="textlink" href="#/item/${x.id}">${isCalc(x)?'Посмотреть смету':'Посмотреть интерьер'}</a>>
+</div>>
+</article>`}

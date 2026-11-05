@@ -1,0 +1,7 @@
+
+function apartmentNavigation(x){if(!x.parent)return '';;
+const a=item(x.parent);;
+return `<nav class="apartmentnav" aria-label="Помещения квартиры">>
+<a class="backapt" href="#/item/${a.id}">← Вернуться к квартире ${a.area} м²</a>>
+<div>${a.children.map(id=>`<a class="pill ${id===x.id?'active':''}" href="#/item/${id}">${esc(item(id).room)}</a>`).join('')}</div>>
+</nav>`}

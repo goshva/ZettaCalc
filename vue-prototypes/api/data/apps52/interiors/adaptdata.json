@@ -1,0 +1,1433 @@
+{
+  "products": [
+    {
+      "id": "sofa0",
+      "name": "Прямой диван Creatica Djun",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/pryamoy_divan_creatica_djun/?offer=9392",
+      "price": 49900,
+      "image": "/api/images/file/a_interiors_img_0027.jpg",
+      "shape": "Прямой",
+      "brand": "Creatica"
+    },
+    {
+      "id": "sofa1",
+      "name": "Угловой диван БеруДиван Джейли Изи, левосторонний",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/uglovoy_divan_berudivan_dzheyli_izi_levostoronniy/?offer=12029",
+      "price": 127990,
+      "image": "/api/images/file/a_interiors_img_0002.jpg",
+      "shape": "Угловой",
+      "brand": "БеруДиван"
+    },
+    {
+      "id": "sofa2",
+      "name": "Угловой диван БеруДиван Джейли Изи, правосторонний",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/uglovoy_divan_berudivan_dzheyli_izi_pravostoronniy/?offer=11674",
+      "price": 127990,
+      "image": "/api/images/file/a_interiors_img_0003.jpg",
+      "shape": "Угловой",
+      "brand": "БеруДиван"
+    },
+    {
+      "id": "sofa3",
+      "name": "Прямой диван Creatica Nesta",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/pryamoy_divan_creatica_nesta/?offer=9408",
+      "price": 44600,
+      "image": "/api/images/file/a_interiors_img_0004.jpg",
+      "shape": "Прямой",
+      "brand": "Creatica"
+    },
+    {
+      "id": "sofa4",
+      "name": "Прямой диван Creatica Nesta Premium",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/pryamoy_divan_creatica_nesta_premium/?offer=9387",
+      "price": 197500,
+      "image": "/api/images/file/a_interiors_img_0005.jpg",
+      "shape": "Прямой",
+      "brand": "Creatica"
+    },
+    {
+      "id": "sofa5",
+      "name": "Прямой диван Creatica Dimension",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/pryamoy_divan_creatica_dimension/?offer=9374",
+      "price": 59600,
+      "image": "/api/images/file/a_interiors_img_0006.jpg",
+      "shape": "Прямой",
+      "brand": "Creatica"
+    },
+    {
+      "id": "sofa6",
+      "name": "Угловой диван CHEERS модульный с электрическим реклайнером",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/uglovoy_divan_cheers_modulnyy_s_elektricheskim_reklaynerom/?offer=23694",
+      "price": 689990,
+      "image": "/api/images/file/a_interiors_img_0007.jpg",
+      "shape": "Угловой",
+      "brand": "CHEERS"
+    },
+    {
+      "id": "sofa7",
+      "name": "Прямой диван Creatica Tokyo",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/pryamoy_divan_creatica_tokyo/?offer=9451",
+      "price": 69900,
+      "image": "/api/images/file/a_interiors_img_0008.jpg",
+      "shape": "Прямой",
+      "brand": "Creatica"
+    },
+    {
+      "id": "sofa8",
+      "name": "Угловой диван Creatica Lennox Dream Corne",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/uglovoy_divan_creatica_lennox_dream_corne/?offer=9441",
+      "price": 119500,
+      "image": "/api/images/file/a_interiors_img_0009.jpg",
+      "shape": "Угловой",
+      "brand": "Creatica"
+    },
+    {
+      "id": "sofa9",
+      "name": "Прямой диван DECONA Тоттори",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/pryamoy_divan_decona_tottori_250x108/?offer=19727",
+      "price": 165590,
+      "image": "/api/images/file/a_interiors_img_0010.jpg",
+      "shape": "Прямой",
+      "brand": "DECONA"
+    },
+    {
+      "id": "sofa10",
+      "name": "Прямой диван Creatica Lennox Collapse Dream",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/pryamoy_divan_creatica_lennox_collapse_dream/?offer=9382",
+      "price": 68600,
+      "image": "/api/images/file/a_interiors_img_0011.jpg",
+      "shape": "Прямой",
+      "brand": "Creatica"
+    },
+    {
+      "id": "sofa11",
+      "name": "Прямой диван БеруДиван Элефант софа",
+      "url": "https://zettahome.ru/catalog/mebel_i_dekor/divany/pryamoy_divan_berudivan_elefant_sofa/?offer=13544",
+      "price": 137990,
+      "image": "/api/images/file/a_interiors_img_0012.jpg",
+      "shape": "Прямой",
+      "brand": "БеруДиван"
+    }
+  ],
+  "offers": [
+    {
+      "id": "9392",
+      "width": 210,
+      "color": "Бежевый",
+      "fabric": "4",
+      "price": 49900,
+      "images": [
+        "/api/images/file/a_interiors_img_0013.jpg",
+        "/api/images/file/a_interiors_img_0014.jpg",
+        "/api/images/file/a_interiors_img_0015.jpg"
+      ]
+    },
+    {
+      "id": "9393",
+      "width": 210,
+      "color": "Бежевый",
+      "fabric": "5",
+      "price": 64900,
+      "images": [
+        "/api/images/file/a_interiors_img_0016.jpg",
+        "/api/images/file/a_interiors_img_0017.jpg"
+      ]
+    },
+    {
+      "id": "9395",
+      "width": 210,
+      "color": "Темно-бежевый",
+      "fabric": "7",
+      "price": 94890,
+      "images": [
+        "/api/images/file/a_interiors_img_0018.jpg"
+      ]
+    }
+  ],
+  "photos": {
+    "bed": "/api/images/file/a_interiors_img_0019.jpg",
+    "floor": "/api/images/file/a_interiors_img_0146.jpg",
+    "light": "/api/images/file/a_interiors_img_0246.jpg",
+    "table": "/api/images/file/a_main_img_0019.jpg",
+    "bath": "/api/images/file/a_interiors_img_0162.jpg",
+    "decor": "/api/images/file/a_main_img_0022.jpg",
+    "room": "/api/images/file/a_main_img_0003.jpg",
+    "kitchen": "/api/images/file/a_main_img_0003.jpg",
+    "furniture": "/api/images/file/a_interiors_img_0027.jpg",
+    "engineering": "/api/images/file/a_interiors_img_0179.jpg"
+  },
+  "extra": [
+    {
+      "id": "archive0",
+      "name": "SPC ламинат ABA Apline floor, Parquet Premium (Дуб Фантазия, 600х125х8 мм)",
+      "short": "Напольное покрытие",
+      "price": 4437.0,
+      "image": "/api/images/file/a_interiors_img_0146.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/spc_laminat_i_lvt/spc_laminat_aba_apline_floor_parquet_premium/?offer=17365",
+      "group": "floors",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat5room0",
+        "flat5room1",
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive1",
+      "name": "Дверь входная Термо Стандарт МП 10T-136 с терморазрывом Шоколад букле/Бетон серый, 2 замка, с ночной задвижкой",
+      "short": "Входная дверь",
+      "price": 48527.0,
+      "image": "/api/images/file/a_interiors_img_0123.jpg",
+      "url": "https://169.ru/vhodnye-dveri/dveri-mastino/termo-standart/dm-termo-standart-mp-10t-136-shokolad-bukle-porog-r-4-beton-seryy/",
+      "group": "walls",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room0"
+      ]
+    },
+    {
+      "id": "archive2",
+      "name": "Плинтус скрытый 60 х 15 х 2450 мм",
+      "short": "Плинтус",
+      "price": 8112.0,
+      "image": "/api/images/file/a_interiors_img_0147.jpg",
+      "url": "https://www.volhovec.ru/catalog/plintus/skrytyy-plintus/?element_id=71390",
+      "group": "walls",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room0",
+        "flat5room1",
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive3",
+      "name": "Цвет HG01-070 harrison grey Колеровочные решения HYGGE Paint HEX A9ACAD База A",
+      "short": "Краска",
+      "price": 308.0,
+      "image": "/api/images/file/a_main_img_0024.jpg",
+      "url": "https://hyggepaint.ru/colors",
+      "group": "walls",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat5room0",
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive4",
+      "name": "Светильник встраиваемый светодиодный Maytoni Dip DL117-15W-3K-W",
+      "short": "Светильник",
+      "price": 5460.0,
+      "image": "/api/images/file/a_interiors_img_0246.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/osvetitelnye_pribory_i_trekovye_sistemy/svetilnik_vstraivaemyy_svetodiodnyy_maytoni_dip_dl117_15w_3k_w_/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room0",
+        "flat5room1",
+        "flat5room2",
+        "flat5room3",
+        "flat6room0",
+        "flat6room4",
+        "flat6room5"
+      ]
+    },
+    {
+      "id": "archive5",
+      "name": "Светодиодная лента Maytoni 7,2Вт/м 3000К 12V IP20 Ultra 201017",
+      "short": "Светодиодная \nлента",
+      "price": 2300.0,
+      "image": "/api/images/file/a_interiors_img_0247.jpg",
+      "url": "https://maytoni.su/catalog/svetodiodnaya_podsvetka/svetodiodnye_lenty/svetodiodnaya_lenta_maytoni_7_2vt_m_3000k_12v_ip20_ultra_201017/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room0",
+        "flat6room0",
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive6",
+      "name": "ATLASDESIGN РОЗЕТКА с заземлением без шторок, 16А, механизм, БЕЛЫЙ",
+      "short": "Розетка",
+      "price": 201.0,
+      "image": "/api/images/file/a_interiors_img_0179.jpg",
+      "url": "https://systeme.ru/product/ATN000143?cat_id=10300&sub_cat1_id=10328&sub_cat2_id=92",
+      "group": "electrics",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room0",
+        "flat5room1",
+        "flat5room2",
+        "flat5room3",
+        "flat6room0",
+        "flat6room1",
+        "flat6room2",
+        "flat6room3",
+        "flat6room4",
+        "flat6room5"
+      ]
+    },
+    {
+      "id": "archive7",
+      "name": "ATLASDESIGN 2-клавишный ВЫКЛЮЧАТЕЛЬ КНОПОЧНЫЙ, сх.5, 10А, механизм, БЕЛЫЙ",
+      "short": "Выключатели",
+      "price": 419.68,
+      "image": "/api/images/file/a_interiors_img_0241.jpg",
+      "url": "https://systeme.ru/product/ATN000117?cat_id=10300&sub_cat1_id=10328&sub_cat2_id=92",
+      "group": "electrics",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room0",
+        "flat5room1",
+        "flat5room2",
+        "flat6room0",
+        "flat6room1",
+        "flat6room2",
+        "flat6room3",
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive8",
+      "name": "ATLASDESIGN 1-постовая РАМКА, БЕЛЫЙ",
+      "short": "Рамка",
+      "price": 60.39,
+      "image": "/api/images/file/a_interiors_img_0181.jpg",
+      "url": "https://systeme.ru/product/ATN000101?cat_id=10300&sub_cat1_id=10328&sub_cat2_id=92",
+      "group": "electrics",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room0",
+        "flat6room0"
+      ]
+    },
+    {
+      "id": "archive9",
+      "name": "Цвет HG01-003 vermont cream Колеровочные решения HYGGE Paint HEX F0EFE9 База A",
+      "short": "Краска",
+      "price": 305.53,
+      "image": "/api/images/file/a_interiors_img_0148.jpg",
+      "url": "https://hyggepaint.ru/colors",
+      "group": "walls",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat5room1",
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive10",
+      "name": "Молдинг U.6.51.412",
+      "short": "Молдинг",
+      "price": 224.0,
+      "image": "/api/images/file/a_interiors_img_0150.jpg",
+      "url": "https://evroplast-moskva.ru/shop/interernyy-dekor/moldingi/molding-u651412/",
+      "group": "walls",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room1",
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive11",
+      "name": "Полубарный стул Tetchair Бари/Bari (Полубарный стул Tetchair Бари/Bari, бежевый, велюр)",
+      "short": "Стулья",
+      "price": 4990.0,
+      "image": "/api/images/file/a_interiors_img_0187.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/stulya/polubarnyy_stul_tetchair_bari_bari/?offer=12382",
+      "group": "tables",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room1",
+        "flat6room1"
+      ]
+    },
+    {
+      "id": "archive12",
+      "name": "Прямой диван Creatica LennoxCollapseDream (Прямой диван Creatica LennoxCollapseDream, 220x100 Велюр Союз-М Velutto 07 Бежевый кат.4)",
+      "short": "Диван",
+      "price": 68600.0,
+      "image": "/api/images/file/a_main_img_0015.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/divany/pryamoy_divan_creatica_lennoxcollapsedream/?offer=9382",
+      "group": "sofas",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room1"
+      ]
+    },
+    {
+      "id": "archive13",
+      "name": "Приставной столик Markalife Крокед (Приставной столик Крокед, 42x49x56, Светло-бежевый, гладкая, центральная опора/светлое дерево)",
+      "short": "Столик",
+      "price": 33490.0,
+      "image": "/api/images/file/a_main_img_0019.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/stoly/pristavnoy_stolik_markalife_kroked_/?offer=9608",
+      "group": "tables",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room1"
+      ]
+    },
+    {
+      "id": "archive14",
+      "name": "Тумба Basic 2 двери 2 ящика ширина 170 см (натуральный дуб)",
+      "short": "Тумба под ТВ",
+      "price": 140200.0,
+      "image": "/api/images/file/a_interiors_img_0139.jpg",
+      "url": "https://ellipsefurniture.ru/product/188281/",
+      "group": "storage",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room1"
+      ]
+    },
+    {
+      "id": "archive15",
+      "name": "Подвесной светильник Maytoni Modern Focus (Подвесной светильник Maytoni Modern Focus, Черный, 10 Вт)",
+      "short": "Светильник",
+      "price": 2300.0,
+      "image": "/api/images/file/a_interiors_img_0141.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/osvetitelnye_pribory_i_trekovye_sistemy/podvesnoy_svetilnik_maytoni_modern_focus/?offer=9671",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room1"
+      ]
+    },
+    {
+      "id": "archive16",
+      "name": "ATLASDESIGN 2-постовая РАМКА, универсальная, БЕЛЫЙ",
+      "short": "Рамка",
+      "price": 99.0,
+      "image": "/api/images/file/a_interiors_img_0248.jpg",
+      "url": "https://systeme.ru/product/ATN000117?cat_id=10300&sub_cat1_id=10328&sub_cat2_id=92",
+      "group": "electrics",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room1",
+        "flat5room2",
+        "flat5room3",
+        "flat6room1",
+        "flat6room2",
+        "flat6room3",
+        "flat6room4",
+        "flat6room5"
+      ]
+    },
+    {
+      "id": "archive17",
+      "name": "Пуф Stool Group Тея (Пуф Stool Group Тея, светло-серый, шенилл, 55 см)",
+      "short": "Пуф",
+      "price": 9990.0,
+      "image": "/api/images/file/a_interiors_img_0219.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/kresla_i_pufy/puf_stool_group_teya/?offer=10013",
+      "group": "chairs",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room2",
+        "flat6room2",
+        "flat6room3"
+      ]
+    },
+    {
+      "id": "archive18",
+      "name": "Двуспальная кровать Creatica Liberty (180х200, Бежевый, кат. 7)",
+      "short": "Кровать",
+      "price": 94890.0,
+      "image": "/api/images/file/a_interiors_img_0152.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/krovati/dvuspalnaya_krovat_creatica_liberty/?offer=9824",
+      "group": "beds",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive19",
+      "name": "Тумба прикроватная подвесная Блест 45x22 Графитовый",
+      "short": "Тумба",
+      "price": 5990.0,
+      "image": "/api/images/file/a_interiors_img_0153.jpg",
+      "url": "https://www.divan.ru/product/tumba-prikrovatnaya-podvesnaya-blest-45x22-grafitovyj",
+      "group": "storage",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive20",
+      "name": "Ковер COMO CM 12 Grey Cream NW",
+      "short": "Ковер",
+      "price": 46090.0,
+      "image": "/api/images/file/a_main_img_0022.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/tekstil/kover_como_cm_12_grey_cream_nw/",
+      "group": "decor",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive21",
+      "name": "Подвесной светильник Eurofase Palmas (Подвесной светильник Eurofase Palmas, Золото/Прозрачный, 12 Вт, тёплый свет, 1800–3200 К К)",
+      "short": "Светильник",
+      "price": 79750.0,
+      "image": "/api/images/file/a_interiors_img_0156.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/osvetitelnye_pribory_i_trekovye_sistemy/podvesnoy_svetilnik_eurofase_palmas/?offer=9712",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room2"
+      ]
+    },
+    {
+      "id": "archive22",
+      "name": "Керамическая плитка GlobalTile Искра / Sparkle (Светл. сер. матовая, камень, 600х300x9 мм)",
+      "short": "Керамогранит",
+      "price": 1400.0,
+      "image": "/api/images/file/a_interiors_img_0161.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/keramicheskaya_plitka_i_keramogranit/keramicheskaya_plitka_globaltile_iskra_sparkle/?offer=18120",
+      "group": "tiles",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat5room3"
+      ]
+    },
+    {
+      "id": "archive23",
+      "name": "Смеситель рычажный встраиваемый для раковины Ravak Chrome CR 019 (хром (серебряный), глянцевый)",
+      "short": "Смеситель",
+      "price": 37990.0,
+      "image": "/api/images/file/a_interiors_img_0162.jpg",
+      "url": "https://zettahome.ru/lk/catalog/santekhnika/smesiteli/smesitel_rychazhnyy_vstraivaemyy_dlya_rakoviny_ravak_chrome_cr_019/?offer=13148",
+      "group": "bath",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room3"
+      ]
+    },
+    {
+      "id": "archive24",
+      "name": "Светодиодная лента Maytoni 7,2Вт/м 3000К 12V IP20 Ultra 201017 длина 5м",
+      "short": "Светодиодная лента",
+      "price": 2300.0,
+      "image": "/api/images/file/a_interiors_img_0247.jpg",
+      "url": "https://maytoni.su/catalog/svetodiodnaya_podsvetka/svetodiodnye_lenty/svetodiodnaya_lenta_maytoni_7_2vt_m_3000k_12v_ip20_ultra_201017/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat5room3",
+        "flat6room5"
+      ]
+    },
+    {
+      "id": "archive25",
+      "name": "SPC ламинат Fargo Бевел Дуб Классик (SPC ламинат Fargo Бевел Дуб Классик, палуба, 1524х182х6 мм)",
+      "short": "Напольное покрытие",
+      "price": 2990.0,
+      "image": "/api/images/file/a_main_img_0017.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/spc_laminat_i_lvt/spc_laminat_fargo_bevel_dub_klassik/?offer=10563",
+      "group": "floors",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat6room0",
+        "flat6room1",
+        "flat6room2",
+        "flat6room3",
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive26",
+      "name": "Дверь входная Сити Интегра Ай Кью ПП 401ЧМ/Si-7 Дуб галифакс грей/Дуб галифакс грей, 1 замок, с ночной задвижкой",
+      "short": "Входная дверь",
+      "price": 126495.0,
+      "image": "/api/images/file/a_interiors_img_0174.jpg",
+      "url": "https://169.ru/product/dm-siti-integra-aykyu-pp-mdf-401chm-dub-galifaks-grejchernyj-matovyj-shokolad-bukle-si-7-integra-in-dub-galifaks-grej-20588-levaya/",
+      "group": "walls",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room0"
+      ]
+    },
+    {
+      "id": "archive27",
+      "name": "Теневой плинтус Волховец профиль поставляется кратно 6 шт., длина 2450 мм",
+      "short": "Плинтус",
+      "price": 24260.0,
+      "image": "/api/images/file/a_interiors_img_0229.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/plintusy_profili_i_komplektuyushchie/tenevoy_plintus_volkhovets_/",
+      "group": "walls",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room0",
+        "flat6room1",
+        "flat6room2",
+        "flat6room3",
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive28",
+      "name": "Цвет HG07-003 old book Колеровочные решения HYGGE Paint HEX EBE6DD База A",
+      "short": "Краска",
+      "price": 410.67,
+      "image": "/api/images/file/a_interiors_img_0230.jpg",
+      "url": "https://hyggepaint.ru/colors",
+      "group": "walls",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat6room0",
+        "flat6room1",
+        "flat6room2"
+      ]
+    },
+    {
+      "id": "archive29",
+      "name": "Керамогранит TAU Ceramica TRAVERTINO (Керамогранит TAU Ceramica TRAVERTINO бежевый (миндаль), под травертин, матовая, 600х1200х10,5 мм)",
+      "short": "Керамогранит (фартук)",
+      "price": 5661.0,
+      "image": "/api/images/file/a_interiors_img_0244.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/keramicheskaya_plitka_i_keramogranit/keramogranit_tau_ceramica_travertino_/?offer=9812",
+      "group": "tiles",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat6room1",
+        "flat6room5"
+      ]
+    },
+    {
+      "id": "archive30",
+      "name": "Угловой диван БеруДиван Элефант Мини, левосторонний (353х182, шенилл камби 33, ППУ Elax, кат. 5)",
+      "short": "Диван",
+      "price": 221490.0,
+      "image": "/api/images/file/a_interiors_img_0188.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/divany/uglovoy_divan_berudivan_elefant_mini_levostoronniy/?offer=13696",
+      "group": "sofas",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room1"
+      ]
+    },
+    {
+      "id": "archive31",
+      "name": "Столик Lagom nova D 80 высота 32 см (зеркало, кирпичный, орех)",
+      "short": "Столик",
+      "price": 76700.0,
+      "image": "/api/images/file/a_main_img_0018.jpg",
+      "url": "https://ellipsefurniture.ru/product/193032/",
+      "group": "tables",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room1"
+      ]
+    },
+    {
+      "id": "archive32",
+      "name": "Тумба Lagom под ТВ 1 ящик 1 полка ширина 140 см (орех, черный)",
+      "short": "Тумба под ТВ",
+      "price": 118900.0,
+      "image": "/api/images/file/a_main_img_0021.jpg",
+      "url": "https://ellipsefurniture.ru/product/186854/",
+      "group": "storage",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room1"
+      ]
+    },
+    {
+      "id": "archive33",
+      "name": "Подвесной светильник Maytoni Modern Basis (Подвесной светильник Maytoni Modern Basis, Черный, 36 Вт, 1117/33/1525 мм)",
+      "short": "Светильник",
+      "price": 10920.0,
+      "image": "/api/images/file/a_main_img_0016.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/osvetitelnye_pribory_i_trekovye_sistemy/podvesnoy_svetilnik_maytoni_modern_basis/?offer=9667",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room1"
+      ]
+    },
+    {
+      "id": "archive34",
+      "name": "Шинопровод магнитный Maytoni Gravity TRX010-421B Размер: 1000мм",
+      "short": "Светильник",
+      "price": 5190.0,
+      "image": "/api/images/file/a_interiors_img_0222.jpg",
+      "url": "https://maytoni.su/catalog/trekovye_sistemy/shinoprovody/shinoprovod_odnofaznyy_magnitnyy_maytoni_magnetic_track_system_gravity_trx010_421b/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room1",
+        "flat6room2",
+        "flat6room3"
+      ]
+    },
+    {
+      "id": "archive35",
+      "name": "Трековый магнитный светодиодный светильник Maytoni Basis Gravity TR074-2-12W3K-B размер: 300мм",
+      "short": "Светильник",
+      "price": 4390.0,
+      "image": "/api/images/file/a_interiors_img_0223.jpg",
+      "url": "https://maytoni.su/catalog/trekovye_sistemy/trekovye_svetilniki/trekovyy_magnitnyy_odnofaznyy_svetodiodnyy_svetilnik_maytoni_basis_gravity_tr074_2_12w3k_b/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room1",
+        "flat6room3"
+      ]
+    },
+    {
+      "id": "archive36",
+      "name": "Трековый магнитный светодиодный светильник Maytoni Basis Rot Gravity TR075-2-10W3K-B",
+      "short": "Светильник",
+      "price": 5090.0,
+      "image": "/api/images/file/a_interiors_img_0209.jpg",
+      "url": "https://maytoni.su/catalog/trekovye_sistemy/trekovye_svetilniki/trekovyy_magnitnyy_odnofaznyy_svetodiodnyy_svetilnik_maytoni_basis_rot_gravity_tr075_2_10w3k_b/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room1",
+        "flat6room2"
+      ]
+    },
+    {
+      "id": "archive37",
+      "name": "Бра Maytoni Gleam MIR005WL-L16B",
+      "short": "Бра",
+      "price": 6490.0,
+      "image": "/api/images/file/a_main_img_0023.jpg",
+      "url": "https://maytoni.su/catalog/bra_i_podsvetki/podsvetka_dlya_zerkal/bra_maytoni_gleam_mir005wl_l16b/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": true,
+      "rooms": [
+        "flat6room1"
+      ]
+    },
+    {
+      "id": "archive38",
+      "name": "Двуспальная кровать DECONA Комо (200х200, Белый, кат. 2)",
+      "short": "Кровать",
+      "price": 61445.0,
+      "image": "/api/images/file/a_interiors_img_0204.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/krovati/dvuspalnaya_krovat_decona_komo/?offer=10944",
+      "group": "beds",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room2"
+      ]
+    },
+    {
+      "id": "archive39",
+      "name": "Прикроватная тумба DECONA Консоно (51x41х53 см, Бежевый)",
+      "short": "Тумба",
+      "price": 131780.0,
+      "image": "/api/images/file/a_interiors_img_0205.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/tumby_i_komody/prikrovatnaya_tumba_decona_konsono/?offer=15933",
+      "group": "storage",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room2"
+      ]
+    },
+    {
+      "id": "archive40",
+      "name": "Банкетка Fjord 120 см (молочный букле, бук)",
+      "short": "Банкетка",
+      "price": 59500.0,
+      "image": "/api/images/file/a_interiors_img_0206.jpg",
+      "url": "https://ellipsefurniture.ru/product/182874/",
+      "group": "chairs",
+      "unit": "шт.",
+      "custom": true,
+      "rooms": [
+        "flat6room2"
+      ]
+    },
+    {
+      "id": "archive41",
+      "name": "Кресло Ellipse E5.1 антивандальная ткань (бежевый)",
+      "short": "Кресло",
+      "price": 59600.0,
+      "image": "/api/images/file/a_interiors_img_0234.jpg",
+      "url": "https://ellipsefurniture.ru/product/185219/",
+      "group": "chairs",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room2",
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive42",
+      "name": "Светильник подвесной Freya Astery FR5375PL-01CH",
+      "short": "Светильник",
+      "price": 12060.0,
+      "image": "/api/images/file/a_interiors_img_0210.jpg",
+      "url": "https://maytoni.su/catalog/svetilniki/podvesnye_svetilniki/svetilnik_podvesnoy_freya_astery_fr5375pl_01ch/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room2"
+      ]
+    },
+    {
+      "id": "archive43",
+      "name": "Цвет HG07-003 old book Колеровочные решения HYGGE Paint HEX EBE6DD База A",
+      "short": "Краска",
+      "price": 317.05,
+      "image": "/api/images/file/a_interiors_img_0230.jpg",
+      "url": "https://hyggepaint.ru/fleurs#tab3",
+      "group": "walls",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat6room3"
+      ]
+    },
+    {
+      "id": "archive44",
+      "name": "Компьютерное кресло Tetchair Мурано/Murano (65х64х85-94 см, Бежевый)",
+      "short": "Кресло",
+      "price": 13290.0,
+      "image": "/api/images/file/a_main_img_0020.jpg",
+      "url": "https://zettahome.ru/lk/catalog/mebel_i_dekor/stulya/kompyuternoe_kreslo_tetchair_murano_murano/?offer=12388",
+      "group": "chairs",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room3"
+      ]
+    },
+    {
+      "id": "archive45",
+      "name": "Подвесной светильник светодиодный Maytoni Step P010PL-L30G4K",
+      "short": "Светильник",
+      "price": 16990.0,
+      "image": "/api/images/file/a_interiors_img_0220.jpg",
+      "url": "https://maytoni.su/catalog/svetilniki/podvesnye_svetilniki/podvesnoy_svetilnik_maytoni_technical_step_p010pl_l30g4k/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room3"
+      ]
+    },
+    {
+      "id": "archive46",
+      "name": "Подвесной светильник Maytoni Basic form MOD321PL-01G3",
+      "short": "Светильник",
+      "price": 12570.0,
+      "image": "/api/images/file/a_interiors_img_0235.jpg",
+      "url": "https://maytoni.su/catalog/svetilniki/podvesnye_svetilniki/podvesnoy_svetilnik_maytoni_basic_form_mod321pl_01g3/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room3",
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive47",
+      "name": "Цвет HG07-003 old book Колеровочные решения HYGGE Paint HEX EBE6DD База A",
+      "short": "Краска",
+      "price": 280.29,
+      "image": "/api/images/file/a_interiors_img_0230.jpg",
+      "url": "https://hyggepaint.ru/fleurs",
+      "group": "walls",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive48",
+      "name": "Кровать Basic спальное место 140*200 см (молочный, антивандальная)",
+      "short": "Кровать",
+      "price": 126600.0,
+      "image": "/api/images/file/a_interiors_img_0231.jpg",
+      "url": "https://ellipsefurniture.ru/product/187921/",
+      "group": "beds",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive49",
+      "name": "Тумба прикроватная Type 1 ящик (белый)",
+      "short": "Тумба",
+      "price": 46200.0,
+      "image": "/api/images/file/a_interiors_img_0232.jpg",
+      "url": "https://ellipsefurniture.ru/product/46283/",
+      "group": "storage",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive50",
+      "name": "Шкаф Wood 3-х створчатый (белый)",
+      "short": "Шкаф",
+      "price": 151500.0,
+      "image": "/api/images/file/a_interiors_img_0233.jpg",
+      "url": "https://ellipsefurniture.ru/product/12256/",
+      "group": "storage",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive51",
+      "name": "Светильник потолочный светодиодный Maytoni Zon C032CL-45W2.7K-RD-W",
+      "short": "Светильник",
+      "price": 11200.0,
+      "image": "/api/images/file/a_interiors_img_0236.jpg",
+      "url": "https://maytoni.su/catalog/svetilniki/potolochnye_svetilniki/svetilnik_potolochnyy_svetodiodnyy_maytoni_zon_c032cl_45w2_7k_rd_w/",
+      "group": "lighting",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room4"
+      ]
+    },
+    {
+      "id": "archive52",
+      "name": "Керамогранит Laparet Бетоника Крема ПРО (Керамогранит Laparet Бетоника Крема ПРО 600х600х8 мм)",
+      "short": "Керамогранит",
+      "price": 2790.0,
+      "image": "/api/images/file/a_interiors_img_0243.jpg",
+      "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/keramicheskaya_plitka_i_keramogranit/keramogranit_laparet_betonika_krema_pro/?offer=10725",
+      "group": "tiles",
+      "unit": "м²",
+      "custom": false,
+      "rooms": [
+        "flat6room5"
+      ]
+    },
+    {
+      "id": "archive53",
+      "name": "Смеситель рычажный встраиваемый для раковины Ravak Chrome CR 019 (черный, матовый)",
+      "short": "Смеситель",
+      "price": 39990.0,
+      "image": "/api/images/file/a_interiors_img_0245.jpg",
+      "url": "https://zettahome.ru/lk/catalog/santekhnika/smesiteli/smesitel_rychazhnyy_vstraivaemyy_dlya_rakoviny_ravak_chrome_cr_019/?offer=13149",
+      "group": "bath",
+      "unit": "шт.",
+      "custom": false,
+      "rooms": [
+        "flat6room5"
+      ]
+    }
+  ],
+  "scenes": {
+    "furniture": "/api/images/file/a_main_img_0062.jpg",
+    "materials": "/api/images/file/a_main_img_0064.jpg",
+    "plumbing": "/api/images/file/a_interiors_img_0171.jpg",
+    "lighting": "/api/images/file/a_main_img_0050.jpg",
+    "decor": "/api/images/file/a_main_img_0053.jpg",
+    "engineering": "/api/images/file/a_main_img_0059.jpg"
+  },
+  "rooms": [
+    {
+      "id": "room0",
+      "title": "Пудровый акцент",
+      "room": "Спальня",
+      "palette": "Пудровая мягкость",
+      "colors": [
+        "#eae1d7",
+        "#d7b0b3",
+        "#ad7786",
+        "#908477",
+        "#685746"
+      ],
+      "image": "/api/images/file/a_interiors_img_0110.jpg",
+      "area": 14.96,
+      "costs": [
+        [
+          296874,
+          118490,
+          126947,
+          118431,
+          309669,
+          129360
+        ]
+      ]
+    },
+    {
+      "id": "room1",
+      "title": "Шалфей и терракота",
+      "room": "Кухня-гостиная",
+      "palette": "Оливковый контур",
+      "colors": [
+        "rgb(218, 214, 198)",
+        "rgb(155, 163, 138)",
+        "rgb(105, 123, 88)",
+        "rgb(175, 103, 75)",
+        "rgb(111, 80, 62)"
+      ],
+      "image": "/api/images/file/a_main_img_0003.jpg",
+      "area": 24,
+      "costs": [
+        [
+          270000,
+          45000,
+          98000,
+          150000,
+          140000,
+          85000
+        ],
+        [
+          370000,
+          68000,
+          138000,
+          175000,
+          155000,
+          95000
+        ],
+        [
+          510000,
+          110000,
+          205000,
+          190000,
+          170000,
+          108000
+        ]
+      ]
+    },
+    {
+      "id": "room2",
+      "title": "Винная симфония",
+      "room": "Спальня",
+      "palette": "Винная глубина",
+      "colors": [
+        "rgb(230, 222, 211)",
+        "rgb(180, 149, 131)",
+        "rgb(113, 50, 69)",
+        "rgb(73, 30, 50)",
+        "rgb(88, 67, 56)"
+      ],
+      "image": "/api/images/file/a_main_img_0005.jpg",
+      "area": 14.96,
+      "costs": [
+        [
+          150000,
+          25000,
+          58000,
+          80000,
+          90000,
+          55000
+        ],
+        [
+          215000,
+          45000,
+          80000,
+          90000,
+          100000,
+          65000
+        ],
+        [
+          310000,
+          70000,
+          115000,
+          105000,
+          110000,
+          75000
+        ]
+      ]
+    },
+    {
+      "id": "room3",
+      "title": "Тепло терракоты",
+      "room": "Ванная",
+      "palette": "Терракотовый баланс",
+      "colors": [
+        "rgb(228, 221, 206)",
+        "rgb(199, 159, 131)",
+        "rgb(183, 106, 77)",
+        "rgb(135, 71, 53)",
+        "rgb(63, 59, 54)"
+      ],
+      "image": "/api/images/file/a_main_img_0007.jpg",
+      "area": 5.4,
+      "costs": [
+        [
+          85000,
+          15000,
+          105000,
+          95000,
+          110000,
+          65000
+        ],
+        [
+          115000,
+          24000,
+          145000,
+          110000,
+          120000,
+          75000
+        ],
+        [
+          180000,
+          42000,
+          220000,
+          130000,
+          135000,
+          85000
+        ]
+      ]
+    },
+    {
+      "id": "flat5room0",
+      "parent": "flat5",
+      "title": "Коридор",
+      "room": "Коридор",
+      "palette": "Винная глубина",
+      "colors": [
+        "#ece7df",
+        "#a8acad",
+        "#642b36",
+        "#aa8967",
+        "#e2d5c7"
+      ],
+      "image": "/api/images/file/a_interiors_img_0168.jpg",
+      "costs": [
+        [
+          185216.27,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat5room1",
+      "parent": "flat5",
+      "title": "Кухня-гостиная",
+      "room": "Кухня-гостиная",
+      "palette": "Винная глубина",
+      "colors": [
+        "#ece7df",
+        "#a8acad",
+        "#642b36",
+        "#aa8967",
+        "#e2d5c7"
+      ],
+      "image": "/api/images/file/a_interiors_img_0169.jpg",
+      "costs": [
+        [
+          824615.0800000001,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat5room2",
+      "parent": "flat5",
+      "title": "Спальня",
+      "room": "Спальня",
+      "palette": "Винная глубина",
+      "colors": [
+        "#ece7df",
+        "#a8acad",
+        "#642b36",
+        "#aa8967",
+        "#e2d5c7"
+      ],
+      "image": "/api/images/file/a_interiors_img_0170.jpg",
+      "costs": [
+        [
+          580414.71,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat5room3",
+      "parent": "flat5",
+      "title": "Ванная комната",
+      "room": "Ванная комната",
+      "palette": "Винная глубина",
+      "colors": [
+        "#ece7df",
+        "#a8acad",
+        "#642b36",
+        "#aa8967",
+        "#e2d5c7"
+      ],
+      "image": "/api/images/file/a_interiors_img_0171.jpg",
+      "costs": [
+        [
+          439782.9,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat6room0",
+      "parent": "flat6",
+      "title": "Прихожая",
+      "room": "Прихожая",
+      "palette": "Древесный баланс",
+      "colors": [
+        "#e8dfd1",
+        "#b89977",
+        "#7d715f",
+        "#49443d",
+        "#d0c8ba"
+      ],
+      "image": "/api/images/file/a_interiors_img_0251.jpg",
+      "costs": [
+        [
+          279609.01,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          365321.41,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat6room1",
+      "parent": "flat6",
+      "title": "Кухня-гостиная",
+      "room": "Кухня-гостиная",
+      "palette": "Древесный баланс",
+      "colors": [
+        "#e8dfd1",
+        "#b89977",
+        "#7d715f",
+        "#49443d",
+        "#d0c8ba"
+      ],
+      "image": "/api/images/file/a_interiors_img_0252.jpg",
+      "costs": [
+        [
+          1437525.18,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1639353.5799999998,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat6room2",
+      "parent": "flat6",
+      "title": "Спальня",
+      "room": "Спальня",
+      "palette": "Древесный баланс",
+      "colors": [
+        "#e8dfd1",
+        "#b89977",
+        "#7d715f",
+        "#49443d",
+        "#d0c8ba"
+      ],
+      "image": "/api/images/file/a_interiors_img_0254.jpg",
+      "costs": [
+        [
+          1143424.36,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1219624.36,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat6room3",
+      "parent": "flat6",
+      "title": "Кабинет",
+      "room": "Кабинет",
+      "palette": "Древесный баланс",
+      "colors": [
+        "#e8dfd1",
+        "#b89977",
+        "#7d715f",
+        "#49443d",
+        "#d0c8ba"
+      ],
+      "image": "/api/images/file/a_interiors_img_0253.jpg",
+      "costs": [
+        [
+          443978.4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          505751.2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat6room4",
+      "parent": "flat6",
+      "title": "Детская",
+      "room": "Детская",
+      "palette": "Древесный баланс",
+      "colors": [
+        "#e8dfd1",
+        "#b89977",
+        "#7d715f",
+        "#49443d",
+        "#d0c8ba"
+      ],
+      "image": "/api/images/file/a_interiors_img_0255.jpg",
+      "costs": [
+        [
+          774938.4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          857031.2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "flat6room5",
+      "parent": "flat6",
+      "title": "Ванная комната",
+      "room": "Ванная комната",
+      "palette": "Древесный баланс",
+      "colors": [
+        "#e8dfd1",
+        "#b89977",
+        "#7d715f",
+        "#49443d",
+        "#d0c8ba"
+      ],
+      "image": "/api/images/file/a_interiors_img_0256.jpg",
+      "costs": [
+        [
+          515941.24,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          633154.24,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ]
+}

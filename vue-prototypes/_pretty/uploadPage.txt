@@ -1,0 +1,33 @@
+
+function uploadPage(){$('#app').innerHTML=`<div class="crumb">>
+<a href="#/">Интерьеры</a> / Свой дизайн-проект</div>>
+<div class="uploadlayout">>
+<div>>
+<div class="eyebrow">Ваш проект — наши решения</div>>
+<h1>Загрузите дизайн-проект до встречи</h1>>
+<p class="lead">Изучим его, подготовим подборку мебели и материалов и предварительный расчёт.</p>>
+<p>Приложите планировку, визуализации и спецификации, которые у вас есть.</p>>
+</div>>
+<form id="uploadform" class="filterbox">>
+<label>Файлы проекта<input required type="file" name="project" multiple accept=".pdf,.zip,.jpg,.jpeg,.png,.xlsx,.docx">>
+</label>>
+<p class="scope">PDF, ZIP, изображения или спецификации. До 50 МБ на файл в этом прототипе.</p>>
+<div id="filelist">>
+</div>>
+<label>Ваше имя<input name="name" required autocomplete="given-name">>
+</label>>
+<label>Телефон<input name="phone" type="tel" required minlength="10" autocomplete="tel">>
+</label>>
+<label>Что важно учесть?<textarea name="comment" rows="3">>
+</textarea>>
+</label>>
+<label class="consent">>
+<input required type="checkbox">Согласен с обработкой персональных данных</label>>
+<button class="btn">Отправить проект</button>>
+<p class="protohelp">Демонстрация загрузки: файлы выбираются на устройстве, но никуда не отправляются.</p>>
+</form>>
+</div>`;;
+const f=$('#uploadform');f.elements.project.onchange=()=>{$('#filelist').textContent=[...f.elements.project.files].map(x=>x.name).join(', ');f.elements.project.setCustomValidity([...f.elements.project.files].some(x=>x.size>50*1024*1024)?'Выберите файлы до 50 МБ':'')};f.onsubmit=e=>{e.preventDefault();if(f.elements.phone.value.replace(/\D/g,'').length<10){toast('Проверьте телефон');return}f.innerHTML='<h2>Проект выбран</h2>>
+<p>В рабочей версии файлы и контакты поступят менеджеру для подготовки расчёта до встречи.</p>>
+<p class="notice">Это демонстрация. Файлы и заявка не отправлены.</p>>
+<button class="btn" type="button" data-action="book">Выбрать время визита</button>'}}

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "idea0",
+    "title": "Шалфей и терракота",
+    "image": "/api/images/file/a_main_img_0003.jpg"
+  },
+  {
+    "id": "idea1",
+    "title": "Синяя резиденция",
+    "image": "/api/images/file/a_main_img_0004.jpg"
+  },
+  {
+    "id": "idea2",
+    "title": "Винная симфония",
+    "image": "/api/images/file/a_main_img_0005.jpg"
+  },
+  {
+    "id": "idea3",
+    "title": "Пастельный рассвет",
+    "image": "/api/images/file/a_main_img_0006.jpg"
+  },
+  {
+    "id": "idea4",
+    "title": "Тепло терракоты",
+    "image": "/api/images/file/a_main_img_0007.jpg"
+  },
+  {
+    "id": "idea5",
+    "title": "Графитовая глубина",
+    "image": "/api/images/file/a_main_img_0008.jpg"
+  },
+  {
+    "id": "room0",
+    "title": "Пудровый акцент",
+    "image": "/api/images/file/a_interiors_img_0110.jpg"
+  },
+  {
+    "id": "room1",
+    "title": "Шалфей и терракота",
+    "image": "/api/images/file/a_main_img_0003.jpg"
+  },
+  {
+    "id": "room2",
+    "title": "Винная симфония",
+    "image": "/api/images/file/a_main_img_0005.jpg"
+  },
+  {
+    "id": "room3",
+    "title": "Тепло терракоты",
+    "image": "/api/images/file/a_main_img_0007.jpg"
+  },
+  {
+    "id": "flat5room0",
+    "title": "Коридор",
+    "image": "/api/images/file/a_interiors_img_0168.jpg"
+  },
+  {
+    "id": "flat5room1",
+    "title": "Кухня-гостиная",
+    "image": "/api/images/file/a_interiors_img_0169.jpg"
+  },
+  {
+    "id": "flat5room2",
+    "title": "Спальня",
+    "image": "/api/images/file/a_interiors_img_0170.jpg"
+  },
+  {
+    "id": "flat5room3",
+    "title": "Ванная комната",
+    "image": "/api/images/file/a_interiors_img_0171.jpg"
+  },
+  {
+    "id": "flat5",
+    "title": "Двухкомнатная квартира 49,29 м²",
+    "image": "/api/images/file/a_interiors_img_0169.jpg"
+  },
+  {
+    "id": "flat6room0",
+    "title": "Прихожая",
+    "image": "/api/images/file/a_interiors_img_0251.jpg"
+  },
+  {
+    "id": "flat6room1",
+    "title": "Кухня-гостиная",
+    "image": "/api/images/file/a_interiors_img_0252.jpg"
+  },
+  {
+    "id": "flat6room2",
+    "title": "Спальня",
+    "image": "/api/images/file/a_interiors_img_0254.jpg"
+  },
+  {
+    "id": "flat6room3",
+    "title": "Кабинет",
+    "image": "/api/images/file/a_interiors_img_0253.jpg"
+  },
+  {
+    "id": "flat6room4",
+    "title": "Детская",
+    "image": "/api/images/file/a_interiors_img_0255.jpg"
+  },
+  {
+    "id": "flat6room5",
+    "title": "Ванная комната",
+    "image": "/api/images/file/a_interiors_img_0256.jpg"
+  },
+  {
+    "id": "flat6",
+    "title": "Четырёхкомнатная квартира 98,2 м²",
+    "image": "/api/images/file/a_interiors_img_0252.jpg"
+  },
+  {
+    "id": "live5092",
+    "title": "Большие мечты",
+    "image": "/api/images/file/a_interiors_img_0257.jpg"
+  },
+  {
+    "id": "live4685",
+    "title": "Полуночный бархат",
+    "image": "/api/images/file/a_interiors_img_0258.jpg"
+  },
+  {
+    "id": "live5323",
+    "title": "Геометрия света",
+    "image": "/api/images/file/a_interiors_img_0259.jpg"
+  },
+  {
+    "id": "live4251",
+    "title": "Городской силуэт",
+    "image": "/api/images/file/a_interiors_img_0260.jpg"
+  },
+  {
+    "id": "live14926",
+    "title": "Светлый дуб",
+    "image": "/api/images/file/a_interiors_img_0261.jpg"
+  },
+  {
+    "id": "live5150",
+    "title": "Тёплое спокойствие",
+    "image": "/api/images/file/a_interiors_img_0262.jpg"
+  }
+]

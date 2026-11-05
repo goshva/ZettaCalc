@@ -1,0 +1,2 @@
+
+function gallery(x){return `<div class="gallery"><img id="mainimage" src="${x.image}" alt="${esc(x.title)}"><div class="gallerybar"><div><button data-action="prev" aria-label="Предыдущее фото">‹</button> <span id="gallerycount" class="small">1 / ${(x.gallery||[x.image]).length}</span> <button data-action="next" aria-label="Следующее фото">›</button></div>${x.plan?'<button data-action="plan">Планировка</button>':'<span class="small muted">Визуализация интерьера</span>'}<button data-action="zoom">Увеличить</button></div></div>`}

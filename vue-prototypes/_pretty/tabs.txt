@@ -1,0 +1,2 @@
+
+function tabs(active){return `<div class="pills catalogtabs">${[['ideas','Идеи интерьеров'],['rooms','Интерьеры со сметой'],['apartments','Квартиры со сметой']].map(([r,t])=>`<a class="pill ${active===r?'active':''}" href="#/${r}">${t}</a>`).join('')}</div>`}

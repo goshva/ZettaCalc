@@ -1,0 +1,2 @@
+
+function lineRows(lines){return lines.map(l=>`<div class="lineitem"><div><strong>${esc(l.name)}</strong><p>${esc(l.description)}</p><small>${esc(l.qty)}${l.note?' · '+esc(l.note):''}</small>${l.url?`<a href="${esc(tier&&l.altUrl?l.altUrl:l.url)}" target="_blank" rel="noopener">Карточка товара ↗</a>`:''}${tier&&l.altUrl?'<small>Альтернатива этого варианта — по ссылке</small>':''}</div><b>${money(l.values[Math.min(tier,l.values.length-1)])}</b></div>`).join('')}

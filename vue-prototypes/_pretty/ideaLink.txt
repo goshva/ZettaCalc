@@ -1,0 +1,8 @@
+
+function ideaLink(x){if(x.type!=='idea')return '';;
+const exact=(x.realizationIds||[]).map(item).filter(Boolean),similar=ITEMS.filter(y=>y.type==='room'&&roomType(y.room)===roomType(x.room)&&y.palette===x.palette);;
+return `<section class="ideatoestimate">>
+<div class="eyebrow">От образа — к стоимости</div>>
+<h2>${exact.length?'Эта идея со сметой':'Помещения со сметой в этой палитре'}</h2>>
+<p>${exact.length?'Посмотрите варианты воплощения именно этой идеи и выберите подходящий бюджет.':'Сравните решения для того же типа помещения в палитре «'+esc(x.palette)+'». Это похожие по цветовой схеме интерьеры, а не точное воплощение этой идеи.'}</p>${exact.length?`<div class="grid">${exact.map(y=>card(y)).join('')}</div>`:similar.length?`<a class="btn secondary" href="#/matching/${x.id}">Смотреть ${x.room.toLowerCase()==='кухня'?'кухни':x.room.toLowerCase()==='спальня'?'спальни':'помещения'} со сметой в этой палитре →</a>`:`<p class="scope">Подходящих смет пока нет в демонстрационной выборке. Подготовим подборку по выбранной идее к встрече.</p>>
+<button class="btn secondary" data-action="book">Записаться в Интерьерный центр</button>`}</section>`}

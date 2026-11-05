@@ -1,0 +1,2 @@
+
+function actions(x){return `<div class="actions"><button class="btn secondary" data-action="save" data-id="${x.id}">${favorites.includes(x.id)?'♥ В избранном':'♡ Сохранить в избранное'}</button><button class="btn" data-action="book">Записаться в Интерьерный центр</button></div>`}

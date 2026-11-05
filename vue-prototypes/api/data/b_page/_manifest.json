@@ -1,0 +1,173 @@
+[
+  {
+    "file": "01_header_header0.html",
+    "tag": "header",
+    "id": "",
+    "class": "top",
+    "chars": 3702,
+    "imgs": 0,
+    "h": ""
+  },
+  {
+    "file": "02_section_top.html",
+    "tag": "section",
+    "id": "top",
+    "class": "",
+    "chars": 3385,
+    "imgs": 0,
+    "h": "Ваша квартира. Все решения  вместе."
+  },
+  {
+    "file": "03_section_start.html",
+    "tag": "section",
+    "id": "start",
+    "class": "sec reveal",
+    "chars": 817,
+    "imgs": 0,
+    "h": "С чего начнём?"
+  },
+  {
+    "file": "04_section_how.html",
+    "tag": "section",
+    "id": "how",
+    "class": "sec reveal",
+    "chars": 2593,
+    "imgs": 0,
+    "h": "Система, а не набор  отдельных подрядчиков."
+  },
+  {
+    "file": "05_section_why.html",
+    "tag": "section",
+    "id": "why",
+    "class": "sec reveal",
+    "chars": 2116,
+    "imgs": 0,
+    "h": "Шесть причин  начать с нас."
+  },
+  {
+    "file": "06_section_ideas.html",
+    "tag": "section",
+    "id": "ideas",
+    "class": "sec reveal",
+    "chars": 929,
+    "imgs": 0,
+    "h": "Сначала — интерьер, который  вам нравится."
+  },
+  {
+    "file": "07_section_feat.html",
+    "tag": "section",
+    "id": "feat",
+    "class": "reveal",
+    "chars": 140,
+    "imgs": 0,
+    "h": ""
+  },
+  {
+    "file": "08_section_connected.html",
+    "tag": "section",
+    "id": "connected",
+    "class": "sec dark",
+    "chars": 1715,
+    "imgs": 0,
+    "h": "Подборка точно к  вашему интерьеру."
+  },
+  {
+    "file": "09_section_section8.html",
+    "tag": "section",
+    "id": "",
+    "class": "pause reveal",
+    "chars": 327,
+    "imgs": 0,
+    "h": ""
+  },
+  {
+    "file": "10_section_supply.html",
+    "tag": "section",
+    "id": "supply",
+    "class": "sec reveal",
+    "chars": 2792,
+    "imgs": 0,
+    "h": "Мебель, материалы и  аксессуары."
+  },
+  {
+    "file": "11_section_center.html",
+    "tag": "section",
+    "id": "center",
+    "class": "",
+    "chars": 4680,
+    "imgs": 0,
+    "h": "За один визит — решения  для вашей квартиры."
+  },
+  {
+    "file": "12_section_real.html",
+    "tag": "section",
+    "id": "real",
+    "class": "sec reveal",
+    "chars": 668,
+    "imgs": 0,
+    "h": "Квартиры  целиком."
+  },
+  {
+    "file": "13_section_budget.html",
+    "tag": "section",
+    "id": "budget",
+    "class": "sec reveal",
+    "chars": 2853,
+    "imgs": 0,
+    "h": "Поймите порядок цифр.  И что за ними стоит."
+  },
+  {
+    "file": "14_section_repair.html",
+    "tag": "section",
+    "id": "repair",
+    "class": "sec dark",
+    "chars": 3524,
+    "imgs": 0,
+    "h": "Одинаковая задача.  Сопоставимые предложения."
+  },
+  {
+    "file": "15_section_project.html",
+    "tag": "section",
+    "id": "project",
+    "class": "sec reveal",
+    "chars": 2550,
+    "imgs": 0,
+    "h": "Личный кабинет.  Весь проект перед вами."
+  },
+  {
+    "file": "16_section_company.html",
+    "tag": "section",
+    "id": "company",
+    "class": "sec reveal",
+    "chars": 3432,
+    "imgs": 0,
+    "h": "За системой —  опыт ZETTA."
+  },
+  {
+    "file": "17_section_faq.html",
+    "tag": "section",
+    "id": "faq",
+    "class": "sec reveal",
+    "chars": 443,
+    "imgs": 0,
+    "h": "Остались  вопросы?"
+  },
+  {
+    "file": "18_section_final.html",
+    "tag": "section",
+    "id": "final",
+    "class": "",
+    "chars": 1176,
+    "imgs": 0,
+    "h": "Одна задача сегодня.  Целый интерьер — дальше."
+  },
+  {
+    "file": "19_footer_footer18.html",
+    "tag": "footer",
+    "id": "",
+    "class": "",
+    "chars": 4588,
+    "imgs": 0,
+    "h": "Обсудим вашу квартиру."
+  }
+]

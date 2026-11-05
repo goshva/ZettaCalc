@@ -1,0 +1,41 @@
+### data-action==='zoom'
+
+### 'zoom'
+44625 'ength}$(\'#mainimage\').src=planMode?x.plan:g[galleryIndex];$(\'#mainimage\').classList.toggle(\'plan\',planMode);$(\'#gallerycount\').textContent=planMode?\'Планировка\':(galleryIndex+1)+\' / \'+g.length}if(a===\'zoom\'){$(\'#lightbox\').innerHTML=`<div class="dialoghead"><span>${esc(x.title)}</span><button class="close" data-action="closelight" aria-label="Закрыть изображение">×</button></div><img style="width:'
+
+### zoom
+30913 'data-action="next" aria-label="Следующее фото">›</button></div>${x.plan?\'<button data-action="plan">Планировка</button>\':\'<span class="small muted">Визуализация интерьера</span>\'}<button data-action="zoom">Увеличить</button></div></div>`}\nfunction detail(x){const calc=isCalc(x),ap=x.type===\'apt\';$(\'#app\').innerHTML=`<div class="crumb"><a href="#/">Интерьеры</a> / <a href="#/${ap?\'apartments\':calc?'
+44626 'ngth}$(\'#mainimage\').src=planMode?x.plan:g[galleryIndex];$(\'#mainimage\').classList.toggle(\'plan\',planMode);$(\'#gallerycount\').textContent=planMode?\'Планировка\':(galleryIndex+1)+\' / \'+g.length}if(a===\'zoom\'){$(\'#lightbox\').innerHTML=`<div class="dialoghead"><span>${esc(x.title)}</span><button class="close" data-action="closelight" aria-label="Закрыть изображение">×</button></div><img style="width:1'
+167206 "dataset.doc));$('#open-cpr').onclick=$('#preview-cpr').onclick=()=>$('#cpr-dialog').showModal();$('#prev-page').onclick=()=>drawDoc(currentDoc-1);$('#next-page').onclick=()=>drawDoc(currentDoc+1);$('#zoom-page').onclick=()=>{const on=$('#page-canvas').classList.toggle('zoomed');$('#zoom-page').setAttribute('aria-pressed',on);$('#zoom-page').textContent=on?'По ширине':'Увеличить'};$('#cpr-dialog')."
+167276 "#cpr-dialog').showModal();$('#prev-page').onclick=()=>drawDoc(currentDoc-1);$('#next-page').onclick=()=>drawDoc(currentDoc+1);$('#zoom-page').onclick=()=>{const on=$('#page-canvas').classList.toggle('zoomed');$('#zoom-page').setAttribute('aria-pressed',on);$('#zoom-page').textContent=on?'По ширине':'Увеличить'};$('#cpr-dialog').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefau"
+167289 ".showModal();$('#prev-page').onclick=()=>drawDoc(currentDoc-1);$('#next-page').onclick=()=>drawDoc(currentDoc+1);$('#zoom-page').onclick=()=>{const on=$('#page-canvas').classList.toggle('zoomed');$('#zoom-page').setAttribute('aria-pressed',on);$('#zoom-page').textContent=on?'По ширине':'Увеличить'};$('#cpr-dialog').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();drawDoc("
+167337 "(currentDoc-1);$('#next-page').onclick=()=>drawDoc(currentDoc+1);$('#zoom-page').onclick=()=>{const on=$('#page-canvas').classList.toggle('zoomed');$('#zoom-page').setAttribute('aria-pressed',on);$('#zoom-page').textContent=on?'По ширине':'Увеличить'};$('#cpr-dialog').addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();drawDoc(currentDoc+1)}if(e.key==='ArrowLeft'){e.preventD"
+
+### aptplan
+58413 'mg src="${x.plan}" alt="Исходный план квартиры ${x.area} м²"><p class="scope">Планировка из проекта. Нажмите «Увеличить план», чтобы рассмотреть размеры.</p><button class="btn secondary" data-action="aptplan" data-id="${x.id}">Увеличить план</button></div></section><section class="section"><div class="row"><div><h2>Посмотрите каждое помещение</h2><p class="muted">Образ, конкретные товары и состав '
+61976 'я. Файлы и заявка не отправлены.</p><button class="btn" type="button" data-action="book">Выбрать время визита</button>\'}}\ndocument.addEventListener(\'click\',e=>{const b=e.target.closest(\'[data-action="aptplan"]\');if(b){$(\'#lightbox\').innerHTML=`<div class="dialoghead"><h3>Планировка</h3><button data-action="closelight" class="close">×</button></div><img style="width:100%" src="${item(b.dataset.id).'
+
+### 'tier'
+44206 "ормы сохранены')}if(a==='choose'){choosing=!choosing;favs()}if(a==='meeting'){toggleMeeting(id,meeting);persist();favs()}if(a==='reset'){filter={room:'',palette:'',style:'',search:''};render()}if(a==='tier'){tier=+b.dataset.value;detail(x)}if(a==='prev'||a==='next'||a==='plan'){const g=x.gallery||[x.image];if(a==='plan')planMode=!planMode;else{planMode=false;galleryIndex=(galleryIndex+(a==='next'?"
+
+### 'moreitems'
+
+### data-slide
+57414 '\'}${band()}${other.length?`<section class="section"><div class="row"><h2>${calc?\'Другие помещения этого типа со сметой\':\'Другие идеи: \'+esc(x.room.toLowerCase())}</h2><div class="scrolltools"><button data-slide="-1" aria-label="Предыдущие варианты">←</button><button data-slide="1" aria-label="Следующие варианты">→</button></div></div><p class="scope">${calc?\'Только этот тип помещения.\':\'Сначала — '
+57481 '"><h2>${calc?\'Другие помещения этого типа со сметой\':\'Другие идеи: \'+esc(x.room.toLowerCase())}</h2><div class="scrolltools"><button data-slide="-1" aria-label="Предыдущие варианты">←</button><button data-slide="1" aria-label="Следующие варианты">→</button></div></div><p class="scope">${calc?\'Только этот тип помещения.\':\'Сначала — идеи в той же палитре.\'} Листайте, чтобы сравнить варианты.</p><div'
+70716 '"><div><div class="eyebrow">От идеи — к смете</div><h2>${exact.length?\'Варианты воплощения этой идеи\':\'Помещения со сметой в этой палитре\'}</h2></div>${list.length>2?\'<div class="scrolltools"><button data-slide="-1" aria-label="Предыдущие помещения">←</button><button data-slide="1" aria-label="Следующие помещения">→</button></div>\':\'\'}</div><p>${exact.length?\'Та же идея в разных ценовых вариантах.'
+70784 'h?\'Варианты воплощения этой идеи\':\'Помещения со сметой в этой палитре\'}</h2></div>${list.length>2?\'<div class="scrolltools"><button data-slide="-1" aria-label="Предыдущие помещения">←</button><button data-slide="1" aria-label="Следующие помещения">→</button></div>\':\'\'}</div><p>${exact.length?\'Та же идея в разных ценовых вариантах. Откройте решение, чтобы посмотреть его состав.\':\'Тот же тип помещен'
+72197 'ортный\'].map((s,i)=>`<button data-action="tier" data-value="${i}" class="${tier===i?\'active\':\'\'}">${s}</button>`).join(\'\')}</div>`:\'\'}\ndocument.addEventListener(\'click\',e=>{const b=e.target.closest(\'[data-slide]\');if(b){const rail=b.closest(\'section\').querySelector(\'.relatedrail\');if(rail)rail.scrollBy({left:Number(b.dataset.slide)*rail.clientWidth*.8,behavior:\'smooth\'})}});\n\n// V50: personal esti'
+
+### 'choose'
+44030 "{meeting=[...pickerDraft];persist();$('#picker').close();booking()}if(a==='browse'){$('#picker').close();$('#booking').close();go('/ideas');toast('Выбирайте интерьеры. Данные формы сохранены')}if(a==='choose'){choosing=!choosing;favs()}if(a==='meeting'){toggleMeeting(id,meeting);persist();favs()}if(a==='reset'){filter={room:'',palette:'',style:'',search:''};render()}if(a==='tier'){tier=+b.dataset."
+
+### 'meeting'
+44073 "ker').close();booking()}if(a==='browse'){$('#picker').close();$('#booking').close();go('/ideas');toast('Выбирайте интерьеры. Данные формы сохранены')}if(a==='choose'){choosing=!choosing;favs()}if(a==='meeting'){toggleMeeting(id,meeting);persist();favs()}if(a==='reset'){filter={room:'',palette:'',style:'',search:''};render()}if(a==='tier'){tier=+b.dataset.value;detail(x)}if(a==='prev'||a==='next'||"
+
+### 'pickitem'
+43754 "t('Убрано из избранного')}persist();render()}if(a==='book')booking();if(a==='closebook') {capture();$('#booking').close()}if(a==='openpicker')picker();if(a==='closepicker')$('#picker').close();if(a==='pickitem'){toggleMeeting(id,pickerDraft);drawPicker()}if(a==='applypicker'){meeting=[...pickerDraft];persist();$('#picker').close();booking()}if(a==='browse'){$('#picker').close();$('#booking').close"
+
+### 'applypicker'
+43816 "king();if(a==='closebook') {capture();$('#booking').close()}if(a==='openpicker')picker();if(a==='closepicker')$('#picker').close();if(a==='pickitem'){toggleMeeting(id,pickerDraft);drawPicker()}if(a==='applypicker'){meeting=[...pickerDraft];persist();$('#picker').close();booking()}if(a==='browse'){$('#picker').close();$('#booking').close();go('/ideas');toast('Выбирайте интерьеры. Данные формы сохра"
+

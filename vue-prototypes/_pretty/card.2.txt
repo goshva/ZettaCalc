@@ -1,0 +1,16 @@
+
+function card(x,pick=false,priceTier=0){if(x.type==='apt'&&route()==='/apartments')priceTier=filter.budget==='comfort'?Math.min(1,x.costs.length-1):0;;
+let caption=x.realArchive?'Мебель и материалы · работы отдельно':x.type==='idea'?'Идея интерьера':x.demo?'Демонстрационный расчёт':'Мебель, материалы и работы';;
+return `<article class="card">>
+<div class="photo">>
+<a href="#/item/${x.id}">>
+<img src="${x.image}" alt="${esc(x.title)}" loading="lazy" ${x.planOnly?'style="object-fit:contain;background:#fff"':''}>>
+</a>${x.type==='idea'?'':`<span class="badge">${x.planOnly?'Планировка':x.demo?'Пример':'Есть смета'}</span>`}<button class="heart" data-action="save" data-id="${x.id}" title="Сохранить в избранное" aria-label="Сохранить в избранное: ${esc(x.title)}">${favorites.includes(x.id)?'♥':'♡'}</button>${pick?`<button class="pick ${meeting.includes(x.id)?'on':''}" data-action="meeting" data-id="${x.id}">${meeting.includes(x.id)?'✓ Для встречи':'Выбрать для встречи'}</button>`:''}</div>>
+<p class="meta">${esc(x.room)} · ${esc(x.style)}</p>${x.complex?`<p class="complex">${esc(x.complex)}</p>`:''}<h3>>
+<a href="#/item/${x.id}">${esc(x.title)}</a>>
+</h3>${palette(x)}<div class="cardbottom">>
+<div>${isCalc(x)?`<strong class="price">${x.costs.length>1&&!(route()==='/apartments'&&filter.budget)?'от ':''}${x.type==='apt'&&route()==='/apartments'&&((filter.budget==='optimal')||(filter.budget==='comfort'&&x.costs.length<2))?'Расчёт готовится':money(total(x,priceTier))}</strong>`:''}<small>${caption}</small>>
+</div>>
+<a class="textlink" href="#/item/${x.id}">Подробнее →</a>>
+</div>>
+</article>`}

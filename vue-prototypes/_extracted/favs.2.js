@@ -1,0 +1,2 @@
+
+function favs(){$('#app').innerHTML=crumb('Избранное')+'<h1>Избранные товары</h1><div class="grid section">'+(favorites.length?C.products.filter(x=>favorites.includes(x.id)).map(card).join(''):'<div class="empty"><p>Нажимайте на сердечко у понравившихся товаров.</p><a class="btn" href="#sofas">Выбрать диван →</a></div>')+'</div>'}

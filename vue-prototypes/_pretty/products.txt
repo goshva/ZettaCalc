@@ -1,0 +1,8 @@
+
+function products(x){const names=x.id==='room0'?['Кровать Como','SPC Fargo Bevel «Дуб Классик»','Обои Rasch Florentine XL']:['Мебель для выбранного интерьера','Отделочные материалы','Освещение и декор'];;
+return `<div class="products">${names.map((n,i)=>`<div class="product">>
+<small>${['МЕБЕЛЬ','МАТЕРИАЛЫ','ДЕТАЛИ'][i]}</small>>
+<h3>${n}</h3>>
+<p class="small muted">${x.id==='room0'?'Указано в описании исходного решения.':'Точный ассортимент подбирается для каждого ценового варианта.'}</p>>
+<a class="textlink" href="Zetta_Home_catalog_v48.html" target="_blank" rel="noopener">Открыть каталог товаров</a>>
+</div>`).join('')}</div>`}

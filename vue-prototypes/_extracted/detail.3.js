@@ -1,0 +1,2 @@
+;
+detail=function(x){baseDetail49(x);if(x.type==='room'){const panel=document.createElement('div');panel.className='adapt-cta';panel.innerHTML=`<strong>Посчитать для своей комнаты</strong><p>Укажите площадь и замените товары — посмотрите предварительный бюджет.</p><a class="btn secondary" href="#/adapt/${x.id}">Рассчитать для моей комнаты →</a>`;const anchor=$('.compactestimate');if(anchor)anchor.after(panel);else $('#app').prepend(panel)}}

@@ -1,0 +1,2 @@
+
+function updateResults(list){const a=list.filter(x=>(!filter.room||x.room===filter.room)&&(!filter.palette||x.palette===filter.palette)&&(!filter.style||x.style===filter.style)&&(!filter.search||(`${x.title} ${x.style} ${x.room}`).toLowerCase().includes(filter.search.toLowerCase())));$('#results').innerHTML=`<div class="results">Показано: ${a.length}</div>${a.length?'<div class="grid">'+a.map(x=>card(x)).join(''):'<div class="empty"><h3>По этим условиям интерьеров пока нет</h3><button class="btn secondary" data-action="reset">Сбросить фильтры</button></div>'}`}

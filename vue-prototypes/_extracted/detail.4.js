@@ -1,0 +1,2 @@
+
+detail=function(x){if(x.type==='apt')return apartment(x);if(x.type==='room'&&active50[x.id])return adaptPage(x);baseDetail49(x);if(x.type!=='room')return;draftRoom=x.id;const panel=document.createElement('details');panel.className='inline-start50';panel.id='customize50';panel.innerHTML=`<summary>Указать свою площадь и заменить товары <span>+</span></summary>${areaForm50(x)}`;$('.compactestimate').after(panel);}

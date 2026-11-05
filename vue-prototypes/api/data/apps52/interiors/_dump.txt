@@ -1,0 +1,285 @@
+{
+ "id": "idea0",
+ "type": "idea",
+ "title": "Шалфей и терракота",
+ "room": "Кухня",
+ "style": "Контемпорари",
+ "palette": "Оливковый контур",
+ "colors": [
+  "rgb(218, 214, 198)",
+  "rgb(155, 163, 138)",
+  "rgb(105, 123, 88)",
+  "rgb(175, 103, 75)",
+  "rgb(111, 80, 62)"
+ ],
+ "image": "/api/images/file/a_main_img_0003.jpg",
+ "source": "https://zettahome.ru/design/kukhnya-shalfey-i-terrakota-v-stile-kontemporari/"
+}
+
+{
+ "id": "idea2",
+ "type": "idea",
+ "title": "Винная симфония",
+ "room": "Спальня",
+ "style": "Неоклассика",
+ "palette": "Винная глубина",
+ "colors": [
+  "rgb(230, 222, 211)",
+  "rgb(180, 149, 131)",
+  "rgb(113, 50, 69)",
+  "rgb(73, 30, 50)",
+  "rgb(88, 67, 56)"
+ ],
+ "image": "/api/images/file/a_main_img_0005.jpg",
+ "source": "https://zettahome.ru/design/spalnya-vinnaya-simfoniya-v-stile-sovremennoy-klassiki/"
+}
+
+{
+ "id": "room0",
+ "type": "room",
+ "title": "Пудровый акцент",
+ "room": "Спальня",
+ "style": "Современный",
+ "palette": "Пудровая мягкость",
+ "colors": [
+  "#eae1d7",
+  "#d7b0b3",
+  "#ad7786",
+  "#908477",
+  "#685746"
+ ],
+ "image": "/api/images/file/a_interiors_img_0110.jpg",
+ "gallery": [
+  "/api/images/file/a_interiors_img_0110.jpg",
+  "/api/images/file/a_interiors_img_0111.jpg"
+ ],
+ "plan": "/api/images/file/a_interiors_img_0117.jpg",
+ "area": 14.96,
+ "costs": [
+  [
+   296874,
+   118490,
+   126947,
+   118431,
+   309669,
+   129360
+  ]
+ ],
+ "source": "https://zettahome.ru/solution/spalnya_pudrovyy_aktsent_v_sovremennom_stile/"
+}
+
+{
+ "id": "room1",
+ "type": "room",
+ "title": "Шалфей и терракота",
+ "room": "Кухня-гостиная",
+ "style": "Контемпорари",
+ "palette": "Оливковый контур",
+ "colors": [
+  "rgb(218, 214, 198)",
+  "rgb(155, 163, 138)",
+  "rgb(105, 123, 88)",
+  "rgb(175, 103, 75)",
+  "rgb(111, 80, 62)"
+ ],
+ "image": "/api/images/file/a_main_img_0003.jpg",
+ "area": 24,
+ "costs": [
+  [
+   270000,
+   45000,
+   98000,
+   150000,
+   140000,
+   85000
+  ],
+  [
+   370000,
+   68000,
+   138000,
+   175000,
+   155000,
+   95000
+  ],
+  [
+   510000,
+   110000,
+   205000,
+   190000,
+   170000,
+   108000
+  ]
+ ],
+ "demo": true,
+ "child": false
+}
+
+{
+ "id": "flat5room1",
+ "type": "room",
+ "child": true,
+ "parent": "flat5",
+ "title": "Кухня-гостиная",
+ "room": "Кухня-гостиная",
+ "style": "Неоклассика",
+ "palette": "Винная глубина",
+ "colors": [
+  "#ece7df",
+  "#a8acad",
+  "#642b36",
+  "#aa8967",
+  "#e2d5c7"
+ ],
+ "image": "/api/images/file/a_interiors_img_0169.jpg",
+ "planOnly": false,
+ "realArchive": true,
+ "variants": [
+  "Базовый"
+ ],
+ "lines": [
+  {
+   "name": "Напольное покрытие",
+   "description": "SPC ламинат ABA Apline floor, Parquet Premium (Дуб Фантазия, 600х125х8 мм)",
+   "qty": "17,0м2",
+   "values": [
+    75429,
+    75429
+   ],
+   "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/spc_laminat_i_lvt/spc_laminat_aba_apline_floor_parquet_premium/?offer=17365",
+   "altUrl": "",
+   "image": "/api/images/file/a_interiors_img_0146.jpg",
+   "note": "",
+   "catalogId": "archive0"
+  },
+  {
+   "name": "Керамогранит (фартук+пол)",
+   "description": "Керамогранит GlobalTile Корона / Corona (Бел. матовая, камень Глянцевые чернила, 600х300x8.5 мм)",
+   "qty": "8,06м2",
+   "values": [
+    24099.4,
+    24099.4
+   ],
+   "url": "https://zettahome.ru/lk/catalog/finishnaya_otdelka/keramicheskaya_plitka_i_keramogranit/keramogranit_globaltile_korona_corona/?offer=18894",
+   "altUrl": "",
+   "image": "",
+   "note": "нет цены на сайте"
+  }
+ ],
+ "costs": [
+  [
+   824615.0800000001,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ ],
+ "description": "Кухня-гостиная — часть проекта квартиры 49,29 м². Ниже — конкретные позиции из предоставленной подборки."
+}
+
+{
+ "id": "flat5",
+ "type": "apt",
+ "title": "Двухкомнатная квартира 49,29 м²",
+ "room": "2-комнатная",
+ "rooms": 2,
+ "area": 49.29,
+ "style": "Неоклассика",
+ "palette": "Винная глубина",
+ "colors": [
+  "#ece7df",
+  "#a8acad",
+  "#642b36",
+  "#aa8967",
+  "#e2d5c7"
+ ],
+ "image": "/api/images/file/a_interiors_img_0169.jpg",
+ "plan": "/api/images/file/a_interiors_img_0168.jpg",
+ "realArchive": true,
+ "variants": [
+  "Базовый"
+ ],
+ "children": [
+  "flat5room0",
+  "flat5room1",
+  "flat5room2",
+  "flat5room3"
+ ],
+ "costs": [
+  [
+   2030028.96,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ ],
+ "description": "Светлая квартира с кухней-гостиной, отдельной спальней и выразительными винными акцентами.",
+ "gallery": [
+  "/api/images/file/a_interiors_img_0169.jpg",
+  "/api/images/file/a_interiors_img_0170.jpg"
+ ],
+ "complex": "Название ЖК уточняется"
+}
+
+{
+ "id": "flat6",
+ "type": "apt",
+ "title": "Четырёхкомнатная квартира 98,2 м²",
+ "room": "4-комнатная",
+ "rooms": 4,
+ "area": 98.2,
+ "style": "Контемпорари",
+ "palette": "Древесный баланс",
+ "colors": [
+  "#e8dfd1",
+  "#b89977",
+  "#7d715f",
+  "#49443d",
+  "#d0c8ba"
+ ],
+ "image": "/api/images/file/a_interiors_img_0252.jpg",
+ "plan": "/api/images/file/a_interiors_img_0251.jpg",
+ "realArchive": true,
+ "variants": [
+  "Базовый",
+  "Комфортный"
+ ],
+ "children": [
+  "flat6room0",
+  "flat6room1",
+  "flat6room2",
+  "flat6room3",
+  "flat6room4",
+  "flat6room5"
+ ],
+ "costs": [
+  [
+   4595416.59,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  [
+   5220235.99,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ ],
+ "description": "Просторная квартира с кухней-гостиной, спальней, детской и отдельным кабинетом. Тёплые древесные оттенки связывают помещения.",
+ "gallery": [
+  "/api/images/file/a_interiors_img_0252.jpg",
+  "/api/images/file/a_interiors_img_0253.jpg"
+ ],
+ "complex": "Название ЖК уточняется"
+}
+
+categories: ["Мебель", "Свет и декор", "Отделочные материалы и двери", "Чистовые работы", "Черновые работы", "Черновые материалы"]
+descriptions: ["Мебель и системы хранения", "Освещение, текстиль и декор", "Покрытия, двери и отделка", "Работы по финишной отделке", "Подготовка основания и инженерные работы", "Материалы для подготовительных работ"]

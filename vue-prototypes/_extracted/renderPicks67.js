@@ -1,0 +1,2 @@
+
+function renderPicks67(){$('#selected').innerHTML=picks.map(id=>{const x=interiors.find(x=>x.id===id);return x?'<div class="selected-card67"><img src="'+x.image+'" alt=""><span>'+esc(x.title)+'</span><button type="button" data-remove67="'+id+'" aria-label="Убрать '+esc(x.title)+'">×</button></div>':''}).join('');$('#choose').textContent=picks.length?'Изменить выбор · '+picks.length+' из 5':'Выбрать из избранного'}

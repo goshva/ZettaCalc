@@ -1,0 +1,122 @@
+[
+  {
+    "id": "archive12",
+    "name": "Прямой диван Creatica LennoxCollapseDream",
+    "category": "Диван",
+    "price": 68600.0,
+    "unit": "шт.",
+    "image": "/api/images/file/a_main_img_0015.jpg",
+    "point": [
+      0.22,
+      0.65
+    ]
+  },
+  {
+    "id": "archive33",
+    "name": "Подвесной светильник Maytoni Modern Basis",
+    "category": "Подвесной светильник",
+    "price": 10920.0,
+    "unit": "шт.",
+    "image": "/api/images/file/a_main_img_0016.jpg",
+    "point": [
+      0.48,
+      0.2
+    ]
+  },
+  {
+    "id": "archive25",
+    "name": "SPC ламинат Fargo Бевел Дуб Классик",
+    "category": "Напольное покрытие",
+    "price": 2990.0,
+    "unit": "м²",
+    "image": "/api/images/file/a_main_img_0017.jpg",
+    "point": [
+      0.93,
+      0.89
+    ]
+  },
+  {
+    "id": "archive31",
+    "name": "Столик Lagom nova D 80 высота 32 см",
+    "category": "Журнальный столик",
+    "price": 76700.0,
+    "unit": "шт.",
+    "image": "/api/images/file/a_main_img_0018.jpg",
+    "point": [
+      0.52,
+      0.76
+    ]
+  },
+  {
+    "id": "archive13",
+    "name": "Приставной столик Markalife Крокед",
+    "category": "Приставной столик",
+    "price": 33490.0,
+    "unit": "шт.",
+    "image": "/api/images/file/a_main_img_0019.jpg",
+    "point": [
+      0.065,
+      0.77
+    ]
+  },
+  {
+    "id": "archive44",
+    "name": "Компьютерное кресло Tetchair Мурано/Murano",
+    "category": "Кресло",
+    "price": 13290.0,
+    "unit": "шт.",
+    "image": "/api/images/file/a_main_img_0020.jpg",
+    "point": [
+      0.6,
+      0.6
+    ]
+  },
+  {
+    "id": "archive32",
+    "name": "Тумба Lagom под ТВ 1 ящик 1 полка ширина 140 см",
+    "category": "Тумба под ТВ",
+    "price": 118900.0,
+    "unit": "шт.",
+    "image": "/api/images/file/a_main_img_0021.jpg",
+    "point": [
+      0.86,
+      0.68
+    ]
+  },
+  {
+    "id": "archive20",
+    "name": "Ковер COMO CM 12 Grey Cream NW",
+    "category": "Ковёр",
+    "price": 46090.0,
+    "unit": "шт.",
+    "image": "/api/images/file/a_main_img_0022.jpg",
+    "point": [
+      0.52,
+      0.93
+    ]
+  },
+  {
+    "id": "archive37",
+    "name": "Бра Maytoni Gleam MIR005WL-L16B",
+    "category": "Настенный светильник",
+    "price": 6490.0,
+    "unit": "шт.",
+    "image": "/api/images/file/a_main_img_0023.jpg",
+    "point": [
+      0.025,
+      0.32
+    ]
+  },
+  {
+    "id": "archive3",
+    "name": "Цвет HG01-070 harrison grey Колеровочные решения HYGGE Paint HEX A9ACAD База A",
+    "category": "Отделка стен",
+    "price": 308.0,
+    "unit": "м²",
+    "image": "/api/images/file/a_main_img_0024.jpg",
+    "point": [
+      0.82,
+      0.26
+    ]
+  }
+]

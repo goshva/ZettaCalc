@@ -1,0 +1,20 @@
+
+function favs(){$('#app').innerHTML=`<div class="crumb">>
+<a href="#/">Интерьеры</a> / Избранное</div>>
+<h1>Всё, что вам нравится</h1>>
+<p class="lead">Сохраняйте без ограничений. Для подготовки к встрече выберите от одного до пяти интерьеров.</p>${favorites.length?`<div class="row" style="margin:25px 0">>
+<span class="muted">Сохранено: ${favorites.length}</span>>
+<button class="btn secondary" data-action="choose">${choosing?'Завершить выбор':'Выбрать для встречи'}</button>>
+</div>>
+<div class="grid">${favorites.map(id=>card(item(id),choosing)).join('')}</div>>
+<div class="selected-strip">>
+<span>Для встречи: ${meeting.length} из 5</span>>
+<button class="btn" data-action="book">${meeting.length?'Записаться с выбранными':'Записаться в Интерьерный центр'}</button>>
+</div>`:`<div class="empty">>
+<h2>Здесь будут ваши интерьеры</h2>>
+<p class="muted">Нажимайте сердечко на понравившихся карточках.<br>Вход в аккаунт для этого не нужен.</p>>
+<a class="btn" href="#/ideas">Посмотреть идеи</a>>
+<p style="margin-top:20px">>
+<button class="textlink" data-action="book">Записаться без выбора</button>>
+</p>>
+</div>`}<p class="scope">Избранное сохраняется в этом браузере. Выбор для встречи остаётся тем же при переходе между страницами.</p>`}

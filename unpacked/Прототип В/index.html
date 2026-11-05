@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZETTA HOME — кликабельный прототип сайта</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body> <div class="util"><div class="wrap">
+<span>Интерьерный центр · Москва, Аминьевское шоссе, 6 · ТЦ «Квартал», 2 этаж · <a href="tel:+74951387338">+7 (495) 138-73-38</a></span>
+<span class="hide-m">Прототип: расчёты и часть цен — демонстрационные, заявки не отправляются</span>
+</div></div> <header class="top"><div class="wrap">
+<a class="logo" href="#/" aria-label="ZETTA HOME — на главную"><b>ZETTA</b><span>home</span></a>
+<nav class="nav" aria-label="Основное меню">
+<div class="dd" data-navkey="interiors"><a class="dd-top" href="#/interiors" aria-haspopup="true">Интерьеры <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+<div class="dd-menu mega"><div class="mcol"><a class="mhead" href="#/interiors">Все интерьеры →</a><a href="#/ideas">Идеи интерьеров</a><a href="#/rooms">Интерьеры со сметой</a><a href="#/apartments">Квартиры со сметой</a><a href="#/apartments?real">Из реальных проектов</a></div><div class="mcol"><span class="mlab">Ваш проект</span><a href="#/upload">Свой дизайн-проект</a><a href="#/favorites">Избранное</a><a href="#/appointment">Подборка к встрече</a></div><a class="mpromo" href="#/rooms"><img data-k="idea-kitchen" alt=""><span>Интерьеры со сметой →</span></a></div></div>
+<div class="dd" data-navkey="catalog"><a class="dd-top" href="#/catalog" aria-haspopup="true">Каталог товаров <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a>
+<div class="dd-menu mega wide" id="catMega"></div></div>
+<a href="#/center" data-navkey="center">Интерьерный центр</a>
+<a href="#/repair" data-navkey="repair">Ремонт</a>
+<a href="#/about" data-navkey="about">О ZETTA HOME</a>
+</nav>
+<div class="hdr-r">
+<a class="icon-btn" href="#/favorites" aria-label="Избранное"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span class="cnt" data-fav-count hidden>0</span></a>
+<a class="icon-btn" href="#/cart" aria-label="Корзина"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cnt" data-cart-count hidden>0</span></a>
+<a class="btn red sm" href="#/appointment">Записаться в Центр</a>
+<button class="icon-btn burger" aria-label="Открыть меню" data-menu><svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true"><path d="M0 1h18M0 7h18M0 13h18" stroke="currentColor" stroke-width="1.5"/></svg></button>
+</div>
+</div></header> <div class="mnav" id="mnav" role="dialog" aria-label="Меню">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px"><span class="logo"><b>ZETTA</b><span>home</span></span><button class="icon-btn" data-menu aria-label="Закрыть меню">✕</button></div>
+<a href="#/">Главная</a><a href="#/interiors">Интерьеры</a><a href="#/ideas" class="msub">Идеи интерьеров</a><a href="#/rooms" class="msub">Интерьеры со сметой</a><a href="#/apartments" class="msub">Квартиры со сметой</a><a href="#/catalog">Каталог товаров</a><a href="#/catalog/furniture" class="msub">Мебель</a><a href="#/catalog/materials" class="msub">Отделочные материалы</a><a href="#/catalog/plumbing" class="msub">Сантехника</a><a href="#/catalog/lighting" class="msub">Освещение</a><a href="#/catalog/decor" class="msub">Декор и текстиль</a><a href="#/center">Интерьерный центр</a><a href="#/repair">Ремонт</a><a href="#/about">О ZETTA HOME</a>
+<a class="btn red" style="margin-top:24px;align-self:flex-start;font-family:Manrope,sans-serif;font-size:14px;border-bottom:0;padding:0 26px" href="#/appointment">Записаться в Центр ↗</a>
+</div> <main>
+<div class="page" data-page="home"> <!-- HERO -->
+<section id="top" style="padding:56px 0 0">
+<div class="wrap">
+<div class="grid12 stack" style="align-items:end">
+<div style="grid-column:1/span 7">
+<div class="eyebrow" style="margin-bottom:36px"><i></i>Дизайн · ремонт · мебель · материалы</div>
+<h1 class="h1">Ваша квартира.<br>Все решения <span class="it">вместе.</span></h1>
+</div>
+<div style="grid-column:9/span 4;display:flex;flex-direction:column;gap:28px;padding-bottom:10px">
+<p class="lead">Подберём мебель и материалы, рассчитаем ремонт и организуем реализацию вашей квартиры. Персональный менеджер свяжет решения, закупки и работы в один проект — вы выбираете, насколько участвовать сами.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a class="btn red" href="#/ideas">Найти свой интерьер <span aria-hidden="true">↗</span></a>
+<button class="btn ghost" data-go="#/upload">У меня есть дизайн-проект</button>
+</div>
+</div>
+</div>
+</div>
+<div class="wrap" style="margin-top:56px">
+<div style="position:relative">
+<div class="hs heroimg" id="hs">
+<div id="hsSlides"></div>
+<button class="pill-play" data-video="system"><span class="c"><svg width="12" height="14" viewBox="0 0 12 14" aria-hidden="true"><path d="M0 0l12 7-12 7z" fill="currentColor"/></svg></span>Как работает система</button>
+<a class="hs-cap" id="hsCap" href="#/interiors"></a>
+<div class="hs-th" id="hsThumbs" role="tablist" aria-label="Интерьеры на первом экране"></div>
+<div class="hs-bar" id="hsBar"></div>
+</div>
+</div>
+<div class="hero-strip">
+<a href="#/ideas"><span class="num">01</span><span class="h3" style="font-size:28px">Дизайн</span><span class="small">Выбираете будущий интерьер или загружаете свой дизайн-проект</span></a>
+<a href="#/catalog"><span class="num">02</span><span class="h3" style="font-size:28px">Мебель и материалы</span><span class="small">Мебель и материалы подбираются точно под ваш проект</span></a>
+<a href="#/repair"><span class="num">03</span><span class="h3" style="font-size:28px">Ремонт</span><span class="small">Понятный состав работ, этапы и проверенные исполнители</span></a>
+<a href="#/" data-scroll="project"><span class="num">04</span><span class="h3" style="font-size:28px">Управление</span><span class="small">Бюджет, сроки, решения и контроль — в одном месте</span></a>
+<a href="#/" class="all" data-open="meeting" data-topic="Хочу всё вместе"><span class="num" style="color:#E9A090">01—04</span><span class="h3" style="font-size:30px">Хочу всё вместе <span aria-hidden="true">↗</span></span></a>
+</div>
+</div>
+</section> <div class="facts" aria-label="Коротко о ZETTA HOME"><div class="facts-in"><span>Мебель и материалы — вживую в Интерьерном центре</span><span>Подбор мебели и материалов — бесплатно</span><span>Предварительная смета — до начала работ</span><span>Подрядчики считают по единому цифровому паспорту ремонта</span><span>Ремонт принимается по этапам</span><span>25+ лет опыта ZETTA в кухнях и корпусной мебели</span><span>Персональный менеджер на весь проект</span><span>Мебель и материалы — вживую в Интерьерном центре</span><span>Подбор мебели и материалов — бесплатно</span><span>Предварительная смета — до начала работ</span><span>Подрядчики считают по единому цифровому паспорту ремонта</span><span>Ремонт принимается по этапам</span><span>25+ лет опыта ZETTA в кухнях и корпусной мебели</span><span>Персональный менеджер на весь проект</span></div></div> <!-- С чего начнём -->
+<section class="sec reveal" id="start" style="padding-bottom:120px">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 7"><div class="eyebrow" style="margin-bottom:28px"><b>01</b><i></i>Ваша ситуация</div><h2 class="h2">С чего начнём?</h2></div>
+<p class="lead" style="grid-column:9/span 4">Выберите вашу ситуацию.</p>
+</div>
+<div class="tabs" role="tablist" id="scTabs"></div>
+<div class="sc-panel stack" role="tabpanel" id="scPanel">
+<div style="grid-column:1/span 7"><h3 class="h3" style="font-size:40px" id="scTitle"></h3></div>
+<div style="grid-column:8/span 5;display:flex;flex-direction:column;gap:24px;align-items:flex-start">
+<p class="muted" style="margin:0" id="scText"></p>
+<a class="btn" id="scCta" href="#/ideas"></a>
+</div>
+</div>
+</div>
+</section> <!-- Как это работает -->
+<section class="sec reveal" id="how" style="background:var(--stone)">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 8"><div class="eyebrow" style="margin-bottom:28px"><b>02</b><i></i>Как это работает</div><h2 class="h2">Система, а не набор <span class="it">отдельных подрядчиков.</span></h2></div>
+<p class="lead" style="grid-column:9/span 4">Короткое видео о том, как из сохранённой идеи получается проект квартиры, а из проекта — готовый результат.</p>
+</div>
+<div class="video-box">
+<img class="photo" data-k="video" alt="Интерьерная иллюстрация к видео о системе ZETTA HOME">
+<button class="big-play" data-video="system" aria-label="Смотреть видео «Как это работает»"><svg width="18" height="20" viewBox="0 0 12 14" aria-hidden="true"><path d="M0 0l12 7-12 7z" fill="#1E1C19"/></svg><span>Смотреть</span></button>
+<div style="position:absolute;left:28px;bottom:24px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase">Видео о системе · со звуком</div>
+</div>
+<div class="steps">
+<div><span class="serif no">01</span><h3 class="h3" style="font-size:28px">Собираете идеи</h3><p class="small" style="margin:0;font-size:14px">Сохраняете понравившиеся интерьеры и записываетесь в Центр. Можно прийти со своим дизайн-проектом.</p><a class="link" href="#/ideas" style="align-self:flex-start;margin-top:auto">Каталог интерьеров ↗</a></div>
+<div><span class="serif no">02</span><h3 class="h3" style="font-size:28px">Подбираем решение в Центре</h3><p class="small" style="margin:0;font-size:14px">К вашему приходу подберём мебель и отделочные материалы. В Центре посмотрите подборку вживую и определитесь с выбором.</p><a class="link" href="#/center" style="align-self:flex-start;margin-top:auto">Центр интерьерных решений ↗</a></div>
+<div><span class="serif no">03</span><h3 class="h3" style="font-size:28px">Уточняем решения и бюджет</h3><p class="small" style="margin:0;font-size:14px">Уточняем планировку и пожелания. Подбираем технологию ремонта. Согласуем решения и предварительную смету.</p><a class="link" href="#/" data-scroll="budget" style="align-self:flex-start;margin-top:auto">Ориентир бюджета ↗</a></div>
+<div><span class="serif no">04</span><h3 class="h3" style="font-size:28px">Реализуем и контролируем</h3><p class="small" style="margin:0;font-size:14px">Выбираете подрядчика на аукционе. Следите за работами и принимаете этапы в личном кабинете.</p><a class="link" href="#/repair" style="align-self:flex-start;margin-top:auto">Ремонт и исполнители ↗</a></div>
+</div>
+</div>
+</section> <!-- Почему ZETTA HOME -->
+<section class="sec reveal" id="why">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 8"><div class="eyebrow" style="margin-bottom:28px"><b>03</b><i></i>Почему ZETTA HOME</div><h2 class="h2">Шесть причин <span class="it">начать с нас.</span></h2></div>
+<p class="lead" style="grid-column:9/span 4">Коротко о том, чем работа с системой отличается от ремонта «по частям».</p>
+</div>
+<div class="zz"><div class="zi"><div class="zim "><img class="photo" data-k="idea-living" alt=""></div><div class="zt"><span class="n">01</span><h3>Один проект вместо десятка подрядчиков</h3><p>Дизайн, мебель, материалы и работы связаны в общий проект вашей квартиры.</p></div></div><div class="zi"><div class="zim "><img class="photo" data-k="center-kitchen" alt=""></div><div class="zt"><span class="n">02</span><h3>Всё можно увидеть вживую</h3><p>В Интерьерном центре мебель и материалы можно посмотреть, сравнить и выбрать вместе с экспертами.</p></div></div><div class="zi"><div class="zim white"><img class="photo" data-k="cpr" alt=""></div><div class="zt"><span class="n">03</span><h3>Единое задание на ремонт</h3><p>Цифровой паспорт ремонта фиксирует планировку, состав работ, технологии и требования к результату.</p></div></div><div class="zi"><div class="zim "><img class="photo" data-k="repair" alt=""></div><div class="zt"><span class="n">04</span><h3>Сопоставимые предложения</h3><p>Подрядчики считают стоимость по одному заданию — на аукционе можно сравнить цену, сроки и рейтинг.</p></div></div><div class="zi"><div class="zim white"><img class="photo" data-k="app" alt=""></div><div class="zt"><span class="n">05</span><h3>Проект всегда перед глазами</h3><p>Сроки, закупки, документы и приёмка этапов — в личном кабинете.</p></div></div><div class="zi"><div class="zim "><img class="photo" data-k="center-store" alt=""></div><div class="zt"><span class="n">06</span><h3>За системой — опыт ZETTA</h3><p>Более 25 лет в кухнях и корпусной мебели — и собственный Интерьерный центр в Москве.</p></div></div></div>
+<div style="height:150px" class="hide-m"></div>
+</div>
+</section> <!-- Идеи -->
+<section class="sec reveal" id="ideas">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 8"><div class="eyebrow" style="margin-bottom:28px"><b>04</b><i></i>Дизайн и вдохновение</div><h2 class="h2">Сначала — интерьер,<br>который <span class="it">вам нравится.</span></h2></div>
+<div style="grid-column:9/span 4;display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+<p class="lead">Сохраняйте идеи для разных комнат — из них складывается образ вашей будущей квартиры.</p>
+<button class="link" data-open="saved">♡ Мои идеи · <span data-saved-num>0</span></button>
+</div>
+</div>
+<div class="stags" id="styleTags"></div>
+<div class="ideas" id="ideasGrid"></div>
+<div style="display:flex;justify-content:center;margin-top:72px"><button class="btn ghost" data-go="#/ideas">Смотреть все идеи интерьера <span aria-hidden="true">↗</span></button></div>
+</div>
+</section> <!-- Готовое решение -->
+<section class="reveal" id="feat" style="padding:0 0 140px">
+<div class="wrap"><div id="featBox"></div></div>
+</section> <!-- Подборка -->
+<section class="sec dark" id="connected">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 7"><div class="eyebrow" style="margin-bottom:28px"><b>05</b><i></i>От картинки — к конкретным решениям</div><h2 class="h2" style="color:var(--linen)">Подборка точно<br>к <span style="font-style:italic;color:var(--red-l)">вашему интерьеру.</span></h2></div>
+<p style="grid-column:8/span 5;margin:0;font-size:17px;line-height:1.6;color:#C9C1B5">Выбираете интерьер, который нравится. Мы собираем к нему мебель, свет и отделку из нашего каталога — с учётом вашей планировки и бюджета. Предметы можно заменить, сохранив общий образ.</p>
+</div>
+<div class="grid12 stack" style="gap:48px 24px">
+<div style="grid-column:1/span 8">
+<div class="room" id="room"><img class="photo" data-k="connected" alt="Гостиная с диваном, столиком, ковром и подвесным светильником"></div>
+<p style="margin:16px 0 0;font-size:13px;color:#A69D90">Нажмите на точки, чтобы посмотреть примеры товаров для этой подборки.</p>
+</div>
+<div style="grid-column:9/span 4;display:flex;flex-direction:column">
+<div style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#A69D90;padding-bottom:12px;border-bottom:1px solid rgba(237,232,224,.18)">Примеры товаров из каталога</div>
+<div id="prodList"></div>
+<div class="card-dark fade" id="prodCard"></div>
+</div>
+</div>
+<p style="margin:48px 0 0;font-size:13px;color:#A69D90;max-width:760px">Отдельные решения становятся одним проектом: проверяем размеры, сочетания и стоимость. Пример подборки к интерьеру — предметы могут отличаться от изображённых; точное исполнение и актуальную стоимость уточняем при подборе.</p>
+</div>
+</section> <!-- Пауза -->
+<section class="pause reveal" aria-label="Один интерьер. Один проект.">
+<div class="wrap">
+<p class="pt">Один интерьер.<br><i>Один проект.</i></p>
+<div class="pr"><p>Мебель, материалы, ремонт и управление — в логике одной вашей квартиры, а не набором отдельных покупок.</p></div>
+</div>
+</section> <!-- Мебель и материалы -->
+<section class="sec reveal" id="supply">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 7"><div class="eyebrow" style="margin-bottom:28px"><b>06</b><i></i>Мебель и материалы</div><h2 class="h2">Мебель, материалы<br>и <span class="it">аксессуары.</span></h2></div>
+<p class="lead" style="grid-column:9/span 4">Выбирайте отдельную категорию или собирайте весь интерьер в одной логике.</p>
+</div>
+<div class="cats">
+<a class="cat" href="#/catalog/furniture"><div class="img zoom" style="background:#ECE7DF"><img class="photo" data-k="cat-furniture" alt="Диван" style="object-fit:contain;padding:12%"></div><div class="serif" style="font-size:30px;line-height:1.1">Мебель</div><p class="small" style="margin:-8px 0 0">Диваны, кровати, кухни, системы хранения, столы и стулья.</p><span class="link" style="align-self:flex-start">Смотреть мебель ↗</span></a>
+<a class="cat" href="#/catalog/decor"><div class="img zoom"><img class="photo" data-k="cat-decor" alt="Обеденная зона с декором"></div><div class="serif" style="font-size:30px;line-height:1.1">Аксессуары и декор</div><p class="small" style="margin:-8px 0 0">Зеркала, текстиль и детали, которые завершают интерьер.</p><span class="link" style="align-self:flex-start">Смотреть аксессуары ↗</span></a>
+<a class="cat" href="#/catalog/materials"><div class="img zoom"><img class="photo" data-k="cat-materials" alt="Образцы напольных покрытий"></div><div class="serif" style="font-size:30px;line-height:1.1">Отделочные материалы</div><p class="small" style="margin:-8px 0 0">Пол, стены, плитка и покрытия — по стилю и техническим требованиям.</p><span class="link" style="align-self:flex-start">Смотреть материалы ↗</span></a>
+<a class="cat" href="#/catalog/plumbing"><div class="img zoom"><img class="photo" data-k="cat-bath" alt="Отдельностоящая ванна"></div><div class="serif" style="font-size:30px;line-height:1.1">Сантехника и ванная</div><p class="small" style="margin:-8px 0 0">Сантехника, мебель, зеркала и комплектующие в едином решении.</p><span class="link" style="align-self:flex-start">Смотреть сантехнику ↗</span></a>
+</div>
+<div class="grid12 stack" style="align-items:center;margin-top:72px;padding:40px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)">
+<h3 class="h3" style="grid-column:1/span 5;font-size:38px">Хотите собрать всё <span class="it">под ваш интерьер?</span></h3>
+<p class="muted" style="grid-column:6/span 4;margin:0;font-size:15px">Подберём мебель, кухню, отделочные материалы и сантехнику под выбранную концепцию или ваш дизайн-проект.</p>
+<div style="grid-column:10/span 3;display:flex;justify-content:flex-end"><button class="btn" data-open="meeting" data-topic="Помочь с подбором">Помочь с подбором ↗</button></div>
+</div>
+</div>
+</section> <!-- Центр -->
+<section id="center" style="background:var(--stone);padding:0 0 140px">
+<div class="center-hero heroimg expand" id="cexp">
+<img class="photo" data-k="center-pano" alt="Мебельная экспозиция Интерьерного центра ZETTA HOME">
+<div class="wrap" style="position:absolute;left:0;right:0;bottom:0;margin:0 auto;padding-bottom:48px">
+<div class="center-card">
+<div class="eyebrow"><b>07</b><i></i>Центр интерьерных решений</div>
+<h2 class="h2" style="font-size:60px">За один визит — решения <span class="it">для вашей квартиры.</span></h2>
+<p class="muted" style="margin:0">К встрече подготовим подборку под понравившиеся интерьеры или ваш дизайн-проект. В Центре посмотрите мебель и материалы вживую, сравните варианты с экспертами и определитесь с выбором.</p>
+</div>
+</div>
+</div>
+<div class="wrap reveal" style="padding-top:96px">
+<div class="grid12 stack" style="gap:56px 24px">
+<div style="grid-column:1/span 5;display:flex;flex-direction:column;gap:28px">
+<div class="eyebrow"><i></i>Во время визита</div>
+<h3 class="h3" style="font-size:44px">Посмотрите, сравните и выберите вживую.</h3>
+<p class="muted" style="margin:0">Пройдём по подготовленной подборке, проверим сочетания мебели и материалов, обсудим технологию ремонта и бюджет вашей квартиры.</p>
+<div style="border-top:1px solid var(--line2);padding-top:24px"><div style="font-weight:600;margin-bottom:8px">Поможем определиться</div><p class="small" style="margin:0;font-size:14px">Персональный менеджер подготовит подборку и будет сопровождать проект. Эксперты по мебели, материалам и технологии ремонта помогут с выбором.</p></div>
+<button class="link" style="align-self:flex-start" data-go="#/center">Подробнее о Центре ↗</button>
+</div>
+<div class="dark" style="grid-column:7/span 6;padding:44px;display:flex;flex-direction:column;gap:24px;align-self:start">
+<div style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red-l)">После визита у вас</div>
+<div>
+<div class="after"><span class="serif" style="font-size:22px;color:var(--red-l)">i</span><span class="serif" style="font-size:30px;color:var(--linen)">Подборка решений под вашу квартиру</span></div>
+<div class="after"><span class="serif" style="font-size:22px;color:var(--red-l)">ii</span><span class="serif" style="font-size:30px;color:var(--linen)">Предварительная смета</span></div>
+<div class="after"><span class="serif" style="font-size:22px;color:var(--red-l)">iii</span><span class="serif" style="font-size:30px;color:var(--linen)">Согласованный следующий шаг</span></div>
+</div>
+<p style="margin:0;font-size:14px;color:#C9C1B5">Понимаете, что выбрано, сколько это стоит и как перейти к реализации.</p>
+</div>
+</div>
+<div class="gal" id="gal">
+<figure data-zoom><div class="im zoom"><img class="photo" data-k="center-kitchen" alt="Кухня и обеденная зона в Центре"></div><figcaption>Кухни</figcaption></figure>
+<figure data-zoom><div class="im zoom"><img class="photo" data-k="center-stone" alt="Образцы камня для столешниц"></div><figcaption>Камень и фактуры</figcaption></figure>
+<figure data-zoom><div class="im zoom"><img class="photo" data-k="center-wardrobe" alt="Гардеробные и системы хранения"></div><figcaption>Системы хранения</figcaption></figure>
+<figure data-zoom><div class="im zoom"><img class="photo" data-k="cat-materials" alt="Образцы отделочных материалов"></div><figcaption>Отделочные материалы</figcaption></figure>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;margin-top:20px;flex-wrap:wrap"><span class="small">Реальные фотографии Центра ZETTA HOME · нажмите, чтобы увеличить</span><button class="link" data-go="#/center?gallery">Все фото · 29 ↗</button></div>
+<div class="grid12 stack" style="margin-top:88px;background:var(--paper);align-items:stretch">
+<div style="grid-column:1/span 4;min-height:280px;overflow:hidden"><img class="photo" data-k="center-store" alt="Вход в Интерьерный центр ZETTA HOME"></div>
+<div style="grid-column:5/span 8;padding:44px 48px 44px 24px;display:flex;flex-direction:column;gap:18px;justify-content:center">
+<h3 class="h3" style="font-size:40px">Почему по записи?</h3>
+<p class="muted" style="margin:0;max-width:560px">Заранее изучим вашу задачу и подготовим подборку. Персональный менеджер выделит время для работы именно с вашей квартирой.</p>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:8px"><span class="small">Москва · Аминьевское шоссе, 6 · ТЦ «Квартал», 2 этаж</span><button class="btn red" data-open="meeting" data-topic="Запись в Интерьерный центр">Записаться в Интерьерный центр ↗</button></div>
+</div>
+</div>
+</div>
+</section> <!-- Реальные проекты -->
+<section class="sec reveal" id="real" style="padding-bottom:0">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 8"><div class="eyebrow" style="margin-bottom:28px"><b>08</b><i></i>Из реальных проектов</div><h2 class="h2">Квартиры <span class="it">целиком.</span></h2></div>
+<div style="grid-column:9/span 4;display:flex;flex-direction:column;gap:18px;align-items:flex-start"><p class="lead">Реальные планировки и сметы из архива ZETTA HOME: все помещения квартиры собраны в один проект.</p><a class="link" href="#/apartments">Все квартиры со сметой ↗</a></div>
+</div>
+<div class="real" id="realBox"></div>
+</div>
+</section> <!-- Бюджет -->
+<section class="sec reveal" id="budget">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 8"><div class="eyebrow" style="margin-bottom:28px"><b>09</b><i></i>Бюджет до первого разговора</div><h2 class="h2">Поймите порядок цифр.<br><span class="it">И что за ними стоит.</span></h2></div>
+<p class="lead" style="grid-column:9/span 4">Укажите площадь и количество комнат. Сравните три ценовых сегмента и состав расходов.</p>
+</div>
+<div class="calc">
+<form id="budgetForm" novalidate>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+<div class="field"><label for="area">Площадь, м²</label><input id="area" type="number" min="15" max="400" value="54" inputmode="numeric"></div>
+<div class="field"><label for="rooms">Комнат</label><select id="rooms"><option value="0">Студия</option><option value="1">1 комната</option><option value="2" selected>2 комнаты</option><option value="3">3 комнаты</option><option value="4">4 и более</option></select></div>
+</div>
+<div class="field"><label for="cond">Состояние квартиры</label><select id="cond"><option value="new">Новостройка без отделки</option><option value="old">Вторичное жильё</option></select></div>
+<div class="field"><label for="scope">Что нужно рассчитать</label><select id="scope"><option value="all">Работы, мебель и отделочные материалы</option><option value="repair">Ремонтные работы</option><option value="supply">Мебель и отделочные материалы</option></select></div>
+<div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:8px">
+<button class="btn" type="submit">Пересчитать ориентир <span aria-hidden="true">↗</span></button>
+<span class="small">Без регистрации и номера телефона.</span>
+</div>
+</form>
+<div class="res">
+<div class="segs" role="group" aria-label="Ценовой сегмент" id="segs"></div>
+<div>
+<span class="tag">Демонстрационный расчёт</span>
+<div class="total" id="total" aria-live="polite"></div>
+<div class="small" style="margin-top:12px;font-size:14px" id="bmeta"></div>
+</div>
+<div class="bars" id="bars"><i style="background:var(--ink)"></i><i style="background:var(--red)"></i><i style="background:var(--sand)"></i></div>
+<div id="brows"></div>
+<p class="small" style="margin:0">За основу взята типовая планировка для выбранной площади и количества комнат. Расчёт включает выбранные категории по минимальным ценам в выбранном сегменте. Состав и стоимость уточняются под вашу квартиру. В прототипе показаны условные суммы; это не смета и не предложение цены.</p>
+<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+<button class="btn red" data-open="flats">Смотреть квартиры со сметами ↗</button>
+<button class="link" data-open="meeting" data-topic="Уточнить бюджет в Центре">Уточнить бюджет в Центре ↗</button>
+</div>
+</div>
+</div>
+</div>
+</section> <!-- Ремонт -->
+<section class="sec dark" id="repair">
+<div class="wrap">
+<div class="grid12 stack" style="gap:48px 24px;align-items:end;margin-bottom:88px">
+<div style="grid-column:1/span 6;display:flex;flex-direction:column;gap:32px">
+<div class="eyebrow"><b>10</b><i></i>Ремонт и исполнители</div>
+<h2 class="h2" style="color:var(--linen)">Одинаковая задача.<br><span style="font-style:italic;color:var(--red-l)">Сопоставимые предложения.</span></h2>
+<p style="margin:0;font-size:17px;line-height:1.6;color:#C9C1B5;max-width:520px">Подбираем технологию ремонта по вашему брифу и выбранным материалам. На основе планировки или замера готовим цифровой паспорт ремонта — единое задание, по которому подрядчики рассчитывают стоимость и выполняют работы.</p>
+</div>
+<figure style="grid-column:8/span 5;margin:0;display:flex;flex-direction:column;gap:10px">
+<div style="aspect-ratio:4/3;overflow:hidden"><img class="photo" data-k="repair" alt="Мастера выполняют отделочные работы в квартире"></div>
+<figcaption class="proto-note">Сгенерированная иллюстрация</figcaption>
+</figure>
+</div>
+<div class="grid12 stack" style="gap:48px 24px">
+<div style="grid-column:1/span 6">
+<table class="cmp">
+<thead><tr><th>Самостоятельно</th><th>С ZETTA HOME</th></tr></thead>
+<tbody>
+<tr><td>Согласуете с каждым исполнителем состав и способы выполнения работ</td><td>Подрядчики работают по выбранной стандартизированной технологии</td></tr>
+<tr><td>Сопоставляете сметы с разным наполнением</td><td>Сравниваете предложения по единому цифровому паспорту ремонта</td></tr>
+<tr><td>Определяете, кому поручить весь ремонт или отдельные работы</td><td>Выбираете компанию, которая отвечает за ремонт целиком</td></tr>
+</tbody>
+</table>
+<div style="margin-top:36px;padding:28px;border:1px solid rgba(237,232,224,.2);display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+<p style="margin:0;font-size:15px"><b>Цифровой паспорт можно заказать отдельно</b> и использовать с любым подрядчиком. При заказе ремонта через ZETTA HOME он входит в стоимость ремонта.</p>
+<button class="btn light sm" data-open="cpr">Что входит в ЦПР ↗</button>
+</div>
+<p class="proto-note" style="margin:24px 0 0;font-size:13px">Ремонт принимается по этапам. Дополнительно можно заказать индивидуальный дизайн-проект и «Адвоката качества». Состав сопровождения согласуем заранее.</p>
+</div>
+<div style="grid-column:8/span 5;background:var(--linen);color:var(--ink);padding:36px;display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><h3 class="h3">Аукцион подрядчиков</h3><span class="tag">Пример механики</span></div>
+<p class="small" style="margin:0;font-size:14px">Стоимость рассчитывается по единому заданию и прайсам на стандартные работы. На аукционе подрядчики могут предложить скидку.</p>
+<div style="display:flex;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line2)"><span style="font-size:11px;font-weight:700;letter-spacing:.1em;border:1px solid var(--ink);padding:6px 8px">ЦПР</span><span style="font-size:14px"><b style="font-weight:600">Цифровой паспорт ремонта</b><br><span class="muted">Одна технология и состав работ для всех участников</span></span></div>
+<div id="bids"></div>
+<p class="small" style="margin:0;font-size:12px">Сравнивайте стоимость, сроки, рейтинг и отзывы. Все предложения — на полный объём ремонта. Условные компании, цены и сроки; пример аукциона не связан с расчётом выше.</p>
+</div>
+</div>
+</div>
+</section> <!-- Кабинет -->
+<section class="sec reveal" id="project">
+<div class="wrap">
+<div class="grid12 stack" style="gap:56px 24px;align-items:center">
+<div style="grid-column:1/span 6;display:flex;flex-direction:column;gap:32px">
+<div class="eyebrow"><b>11</b><i></i>Управление проектом</div>
+<h2 class="h2">Личный кабинет.<br><span class="it">Весь проект перед вами.</span></h2>
+<p class="lead">Сроки, закупки, документы и ход ремонта — в одном месте.</p>
+<div class="lk-list" style="border-top:1px solid var(--ink)">
+<div><span class="serif" style="font-size:28px;color:var(--red)">01</span><div><div style="font-weight:600">Понятно, что и когда происходит</div><div class="small" style="font-size:14px">Этапы проекта, сроки закупок и ближайшие действия.</div></div></div>
+<div><span class="serif" style="font-size:28px;color:var(--red)">02</span><div><div style="font-weight:600">Всё нужное под рукой</div><div class="small" style="font-size:14px">Документы, история заказов и фотографии каждого этапа ремонта.</div></div></div>
+<div><span class="serif" style="font-size:28px;color:var(--red)">03</span><div><div style="font-weight:600">Согласования прямо в кабинете</div><div class="small" style="font-size:14px">Принимайте этапы ремонта и подписывайте документы онлайн.</div></div></div>
+</div>
+</div>
+<div style="grid-column:8/span 5;background:var(--stone);padding:48px 40px 0;display:flex;flex-direction:column;align-items:center;overflow:hidden">
+<div class="phone">
+<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px"><div><div class="serif" style="font-size:30px;line-height:1">Моя квартира</div><div class="small" style="font-size:12px;margin-top:6px">Пример будущего личного кабинета</div></div><span class="tag" id="lkStatus" style="border-color:var(--red);color:var(--red)">Ремонт идёт</span></div>
+<div class="lk-tabs" id="lkTabs"><button class="on" data-lk="0">Ход проекта</button><button data-lk="1">Документы</button><button data-lk="2">Заказы</button></div>
+<div id="lkBody"></div>
+</div>
+</div>
+</div>
+</div>
+</section> <div class="marq" aria-hidden="true"><div class="marq-in"><span>Дизайн</span><em>·</em><span>Мебель</span><em>·</em><span>Материалы</span><em>·</em><span>Ремонт</span><em>·</em><span>Управление</span><em>·</em><span>Одна квартира — один проект</span><em>·</em><span>Дизайн</span><em>·</em><span>Мебель</span><em>·</em><span>Материалы</span><em>·</em><span>Ремонт</span><em>·</em><span>Управление</span><em>·</em><span>Одна квартира — один проект</span><em>·</em></div></div> <!-- Компания -->
+<section class="sec reveal" id="company" style="background:var(--stone)">
+<div class="wrap">
+<div class="grid12 stack" style="gap:56px 24px;align-items:start">
+<div style="grid-column:1/span 7;display:flex;flex-direction:column;gap:32px">
+<div class="eyebrow"><b>12</b><i></i>Кто стоит за ZETTA HOME</div>
+<h2 class="h2">За системой —<br><span class="it">опыт ZETTA.</span></h2>
+<div style="display:flex;align-items:flex-end;gap:24px;padding:24px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line2);flex-wrap:wrap">
+<span class="serif" style="font-size:180px;line-height:.8;color:var(--red);letter-spacing:-.04em" id="years">25+</span>
+<span style="font-size:15px;line-height:1.4;padding-bottom:8px">лет опыта в кухнях<br>и корпусной мебели</span>
+</div>
+<p class="muted" style="margin:0">В основе ZETTA HOME — опыт компании ZETTA в кухнях и корпусной мебели. Развиваем его в систему, которая связывает идеи для интерьера, подбор мебели и материалов, ремонт и управление проектом квартиры.</p>
+<p class="muted" style="margin:0">Этот опыт помогает смотреть на мебель и материалы как на части одного интерьера и подбирать их под вашу задачу.</p>
+<div class="faq-item" id="meaning" style="border-top:1px solid var(--line2)">
+<button class="faqq" style="font-family:Manrope,sans-serif;font-size:15px;font-weight:600;padding:18px 0" aria-expanded="false">Что это значит для вашего проекта<span class="pm" aria-hidden="true">+</span></button>
+<div class="faqa"><div><p>Начать можно с понравившегося интерьера или готового дизайн-проекта. Мебель и отделочные материалы подбираются под него, а состав решений, ориентир бюджета и дальнейшие шаги связываются в общий проект.</p><p>За ремонтные работы отвечает выбранный исполнитель. Подбор, координация и контроль входят в проект в согласованном объёме.</p></div></div>
+</div>
+<button class="link" style="align-self:flex-start" data-go="#/about">О компании и системе ↗</button>
+</div>
+<figure style="grid-column:9/span 4;margin:0;display:flex;flex-direction:column;gap:16px">
+<div style="aspect-ratio:3/4;overflow:hidden;position:relative">
+<img class="photo" data-k="ceo" alt="Валерий Наврузбеков, руководитель ZETTA HOME">
+<button class="pill-play" style="left:16px;bottom:16px;font-size:13px" data-video="ceo"><span class="c" style="width:36px;height:36px"><svg width="10" height="12" viewBox="0 0 12 14" aria-hidden="true"><path d="M0 0l12 7-12 7z" fill="currentColor"/></svg></span>Смотреть · 10 сек</button>
+</div>
+<figcaption><div class="serif" style="font-size:26px">Валерий Наврузбеков</div><div class="small">руководитель ZETTA HOME</div></figcaption>
+</figure>
+</div>
+<div class="grid12 stack" style="align-items:center;margin-top:96px;padding-top:40px;border-top:1px solid var(--line2)">
+<div style="grid-column:1/span 3" class="eyebrow">Дополнительные платные услуги</div>
+<div style="grid-column:4/span 6"><h3 class="h3" style="font-size:36px">Больше помощи — под вашу задачу.</h3><p class="small" style="margin:10px 0 0;font-size:14px">Индивидуальный дизайн-проект, «Адвокат качества» и генподряд можно заказать отдельно. Состав, условия и стоимость согласуем до начала оказания услуг.</p></div>
+<div style="grid-column:10/span 3;display:flex;justify-content:flex-end"><button class="btn" data-open="meeting" data-topic="Дополнительные услуги">Обсудить услуги ↗</button></div>
+</div>
+</div>
+</section> <div class="wrap" id="recentHome"></div> <!-- FAQ -->
+<section class="sec reveal" id="faq">
+<div class="wrap">
+<div class="grid12 stack" style="gap:48px 24px">
+<div style="grid-column:1/span 4;display:flex;flex-direction:column;gap:28px">
+<div class="eyebrow"><b>13</b><i></i>Перед первым шагом</div>
+<h2 class="h2">Остались <span class="it">вопросы?</span></h2>
+</div>
+<div style="grid-column:6/span 7;border-top:1px solid var(--ink)" id="faqList"></div>
+</div>
+</div>
+</section> <!-- Финал -->
+<section id="final" style="position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;background:var(--ink)">
+<img class="photo" data-k="idea-living" alt="" style="position:absolute;inset:0;opacity:.45">
+<div class="wrap" style="position:relative;width:100%;padding-top:96px;padding-bottom:96px">
+<div style="max-width:820px;display:flex;flex-direction:column;gap:28px;color:var(--linen)">
+<div class="eyebrow"><i></i>Начните с вашей квартиры</div>
+<h2 class="h1" style="font-size:clamp(52px,7vw,96px)">Одна задача сегодня.<br><span style="font-style:italic;color:#F2B4A6">Целый интерьер — дальше.</span></h2>
+<p style="margin:0;font-size:18px;color:#E4DDD2;max-width:520px">Расскажите, что у вас уже есть и что нужно решить. Начнём с подходящего вам шага.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn red" data-open="meeting" data-topic="Обсудить мой проект">Обсудить мой проект ↗</button><a class="btn" href="#/ideas" style="background:transparent;border-color:var(--linen);color:var(--linen)">Сначала посмотреть идеи</a></div>
+</div>
+</div>
+</section> </div>
+<div class="page" data-page="other" id="app"></div>
+</main> <footer style="background:var(--ink);color:#C9C1B5;padding:88px 0 40px;border-top:1px solid #3A3631">
+<div class="wrap">
+<div class="grid12 stack" style="gap:40px 24px">
+<div style="grid-column:1/span 4;display:flex;flex-direction:column;gap:18px"><div class="logo" style="color:var(--linen)"><b>ZETTA</b><span style="color:var(--red-l)">home</span></div><p style="margin:0;font-size:14px">От идеи до готовой квартиры.<br>Дизайн, ремонт, мебель и материалы в контексте одной квартиры.</p></div>
+<div style="grid-column:6/span 2;display:flex;flex-direction:column;gap:12px;font-size:14px"><div style="color:var(--linen);font-weight:600;margin-bottom:6px">Интерьеры</div><a href="#/interiors">Все интерьеры</a><a href="#/ideas">Идеи интерьеров</a><a href="#/rooms">Интерьеры со сметой</a><a href="#/apartments">Квартиры со сметой</a><a href="#/upload">Свой дизайн-проект</a></div>
+<div style="grid-column:8/span 2;display:flex;flex-direction:column;gap:12px;font-size:14px"><div style="color:var(--linen);font-weight:600;margin-bottom:6px">Сервис</div><a href="#/catalog">Каталог товаров</a><a href="#/repair">Ремонт</a><a href="#/center">Интерьерный центр</a><a href="#/about">О ZETTA HOME</a></div>
+<div style="grid-column:10/span 3;display:flex;flex-direction:column;gap:12px;font-size:14px"><div style="color:var(--linen);font-weight:600;margin-bottom:6px">Встреча в Центре</div><span>Москва, Аминьевское шоссе, 6<br>ТЦ «Квартал», 2 этаж</span><a href="tel:+74951387338">+7 (495) 138-73-38</a><a href="#/appointment" style="color:var(--linen);border-bottom:1px solid var(--linen);align-self:flex-start;padding-bottom:2px">Записаться в Интерьерный центр</a><span style="font-size:12px;color:#A69D90">Подбор мебели и материалов — бесплатно</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:72px;padding-top:24px;border-top:1px solid #3A3631;font-size:12px;color:#A69D90"><span>© ZETTA HOME · кликабельный прототип</span><span>Фото — интерьерные референсы, не реализованные проекты ZETTA HOME.</span><a href="#/about">О ZETTA HOME</a></div>
+</div>
+</footer> <!-- Модальные окна -->
+<div class="modal" id="m-meeting" role="dialog" aria-modal="true" aria-labelledby="mt-meeting"><div class="mbox">
+<button class="mclose" data-close aria-label="Закрыть">×</button>
+<div id="meetForm">
+<div class="eyebrow"><b>●</b><i></i><span id="meetTopic">Запись в Интерьерный центр</span></div>
+<h3 class="h3" id="mt-meeting" style="margin-top:20px;font-size:40px">Обсудим вашу квартиру.</h3>
+<p class="muted" style="margin:12px 0 0">Оставьте контакты — менеджер подтвердит время. Регистрация не нужна.</p>
+<form class="form-f" id="mform">
+<div class="field"><label for="mname">Как к вам обращаться</label><input id="mname" required placeholder="Имя" style="font-size:24px"></div>
+<div class="field"><label for="mphone">Телефон</label><input id="mphone" type="tel" required placeholder="+7" style="font-size:24px"></div>
+<div class="field"><label for="mcomment">Комментарий</label><input id="mcomment" placeholder="Необязательно" style="font-size:24px"></div>
+<button class="btn red" type="submit" style="align-self:flex-start">Отправить ↗</button>
+<span class="small">Демонстрационная форма: данные не отправляются и не сохраняются.</span>
+</form>
+</div>
+<div id="meetDone" hidden>
+<div class="serif" style="font-size:72px;color:var(--red);line-height:1">✓</div>
+<h3 class="h3" style="font-size:40px;margin-top:12px">Спасибо!</h3>
+<p class="muted">Сценарий записи завершён. В прототипе заявка не отправляется.</p>
+<button class="btn" data-close>Готово</button>
+</div>
+</div></div> <div class="modal" id="m-video" role="dialog" aria-modal="true" aria-label="Видео"><div class="mbox wide">
+<button class="mclose" data-close aria-label="Закрыть">×</button>
+<video id="vplayer" controls playsinline preload="none"></video>
+<p id="verr" hidden style="margin:0;padding:16px;color:#EDE8E0;font-size:14px;background:#1E1C19">Видео не загрузилось — нужен интернет. <a id="vlink" href="#" target="_blank" rel="noopener" style="color:#E9826F">Открыть ролик ↗</a></p>
+</div></div> <div class="modal" id="m-img" role="dialog" aria-modal="true" aria-label="Фото"><div class="mbox img">
+<button class="mclose" data-close aria-label="Закрыть">×</button>
+<img id="zimg" alt="">
+</div></div> <div class="modal" id="m-info" role="dialog" aria-modal="true" aria-labelledby="mt-info"><div class="mbox">
+<button class="mclose" data-close aria-label="Закрыть">×</button>
+<div id="infoBody"></div>
+</div></div> <div class="toast" id="toast" role="status"></div> <script src="js/app.js"></script>
+</body>
+</html>

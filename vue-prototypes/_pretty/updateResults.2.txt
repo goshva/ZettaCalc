@@ -1,0 +1,6 @@
+
+function updateResults(list){let a=list.filter(x=>(!filter.room||x.room===filter.room)&&(!filter.palette||x.palette===filter.palette)&&(!filter.style||x.style===filter.style)&&(!filter.search||(`${x.title} ${x.style} ${x.room}`).toLowerCase().includes(filter.search.toLowerCase()))&&(!filter.area||(filter.area==='small'?x.area<60:x.area>=60)));$('#results').innerHTML=`<div class="results">Найдено: ${a.length}</div>${a.length?'<div class="grid">'+a.map(x=>card(x)).join(''):'<div class="empty">>
+<h3>Подходящих вариантов пока нет</h3>>
+<button class="btn secondary" data-action="reset">Сбросить фильтры</button>>
+</div>'}`;;
+const active=$('#activefilters');if(active){active.innerHTML=Object.entries(filter).filter(([k,v])=>v).map(([k,v])=>`<button class="pill" data-clear="${k}">${esc(({small:'До 60 м²',large:'От 60 м²',base:'Базовый',optimal:'Оптимальный',comfort:'Комфортный'})[v]||v)} ×</button>`).join('');active.querySelectorAll('[data-clear]').forEach(b=>b.onclick=()=>{filter[b.dataset.clear]='';listing(route().slice(1))})}}

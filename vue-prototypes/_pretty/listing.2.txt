@@ -1,0 +1,39 @@
+
+function listing(kind){const ap=kind==='apartments',names={ideas:'Идеи интерьеров',rooms:'Интерьеры со сметой',apartments:'Квартиры со сметой'},type={ideas:'idea',rooms:'room',apartments:'apt'}[kind],list=ITEMS.filter(x=>x.type===type&&(!x.child||x.id==='flat5room1'||x.id==='flat6room1'));;
+const select=(id,key,label,values)=>`<label>${label}<select id="${id}">>
+<option value="">Все</option>${values.map(v=>`<option value="${esc(v)}" ${filter[key]===v?'selected':''}>${esc(v)}</option>`).join('')}</select>>
+</label>`;$('#app').innerHTML=`<div class="crumb">>
+<a href="#/">Интерьеры</a> / ${names[kind]}</div>>
+<h1>${names[kind]}</h1>>
+<p class="lead">${ap?'Начните с планировки. Посмотрите, как связаны помещения и из чего складывается стоимость.':'Выбирайте помещение, стиль и цветовую палитру. Сохраняйте понравившееся в избранное.'}</p>${tabs(kind)}<div class="filterbox">>
+<div class="row">>
+<h3>Подобрать ${ap?'квартиру':'интерьер'}</h3>>
+<button class="textlink" data-action="reset">Сбросить всё</button>>
+</div>>
+<div class="primaryfilter">${select('roomfilter','room',ap?'Количество комнат':'Тип помещения',[...new Set(list.map(x=>x.room))])}<label>Поиск<input id="search" value="${esc(filter.search)}" placeholder="Название или стиль">>
+</label>>
+</div>>
+<details class="morefilters" open>>
+<summary>Все фильтры · стиль, палитра${ap?', площадь и бюджет':''}</summary>>
+<div class="filterfields">${select('stylefilter','style','Стиль',[...new Set(list.map(x=>x.style))])}<div>>
+<span>Цветовая палитра</span>>
+<div class="palettechoices">>
+<button data-palette="" class="pill ${!filter.palette?'active':''}">Все палитры</button>${[...new Set(list.map(x=>x.palette))].map(p=>`<button data-palette="${esc(p)}" class="pill ${filter.palette===p?'active':''}">${palette(list.find(x=>x.palette===p))}</button>`).join('')}</div>>
+</div>${ap?`<label>Площадь, м²<select id="areafilter">>
+<option value="">Любая</option>>
+<option value="small" ${filter.area==='small'?'selected':''}>До 60 м²</option>>
+<option value="large" ${filter.area==='large'?'selected':''}>От 60 м²</option>>
+</select>>
+</label>>
+<label>Стоимость подборки<select id="budgetfilter">>
+<option value="">Любая</option>>
+<option value="low" ${filter.budget==='low'?'selected':''}>До 3 млн ₽</option>>
+<option value="high" ${filter.budget==='high'?'selected':''}>От 3 млн ₽</option>>
+</select>>
+</label>`:''}</div>>
+</details>>
+<div id="activefilters">>
+</div>>
+</div>>
+<div id="results">>
+</div>${band()}${uploadBand()}`;updateResults(list);for(const [id,key] of [['search','search'],['roomfilter','room'],['stylefilter','style'],['areafilter','area'],['budgetfilter','budget']]){const el=$('#'+id);if(el)el[id==='search'?'oninput':'onchange']=e=>{filter[key]=e.target.value;updateResults(list)}}document.querySelectorAll('[data-palette]').forEach(b=>b.onclick=()=>{filter.palette=b.dataset.palette;listing(kind)});if(window.innerWidth<650&&!Object.values(filter).some(Boolean))$('.morefilters').open=false;}

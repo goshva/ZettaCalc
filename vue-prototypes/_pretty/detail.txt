@@ -1,0 +1,40 @@
+
+function detail(x){const calc=isCalc(x),ap=x.type==='apt';$('#app').innerHTML=`<div class="crumb">>
+<a href="#/">Интерьеры</a> / <a href="#/${ap?'apartments':calc?'rooms':'ideas'}">${ap?'Квартиры со сметой':calc?'Интерьеры со сметой':'Идеи интерьеров'}</a> / ${esc(x.title)}</div>${x.demo?'<div class="notice">Демонстрационный пример: состав, связи и цены показывают работу прототипа и не являются предложением к покупке. Изображения — из каталога идей.</div>':''}<section class="detailtop split">${gallery(x)}<div>>
+<div class="eyebrow">${esc(x.room)} · ${esc(x.style)}</div>>
+<h1>${esc(x.title)}</h1>${palette(x)}${calc?`<p class="scope">Расчёт для ${ap?'квартиры':'помещения'} площадью ${x.area} м². Для вашего объекта состав и стоимость уточняются.</p>${x.costs.length>1?`<div class="tiers" role="group" aria-label="Ценовой вариант">${['Минимальный','Оптимальный','Комфортный'].map((t,i)=>`<button data-action="tier" data-value="${i}" class="${tier===i?'active':''}" aria-pressed="${tier===i}">${t}</button>`).join('')}</div>>
+<p class="small muted">${['Практичная базовая комплектация.','Баланс материалов, мебели и оснащения.','Расширенная комплектация и более высокий ценовой сегмент.'][tier]}</p>`:''}<div class="summary">${DATA.categories.map((c,i)=>`<div>>
+<span>${c}</span>>
+<strong>${money(x.costs[Math.min(tier,x.costs.length-1)][i])}</strong>>
+</div>`).join('')}<div class="total">>
+<span>Итого</span>>
+<span>${money(total(x))}</span>>
+</div>>
+</div>>
+<a class="textlink" href="#estimate" data-action="scroll" data-target="estimate">Что входит в смету</a>`:`<p class="lead" style="margin-top:23px">${x.description||'Сохраните этот образ. Подберём мебель и отделочные материалы под ваши пожелания к встрече в Центре.'}</p>>
+<p class="small muted">Стоимость определим после подбора конкретных товаров и уточнения задачи.</p>`}<div>>
+<button class="btn secondary" data-action="save" data-id="${x.id}">${favorites.includes(x.id)?'♥ В избранном':'♡ Сохранить в избранное'}</button>>
+<button class="btn" data-action="book">Записаться в Интерьерный центр</button>>
+</div>>
+<p class="scope">При записи выберите до пяти интерьеров из избранного. Подбор мебели и материалов — бесплатно. Можно прийти со своим проектом.</p>>
+</div>>
+</section>>
+<nav class="detailnav">${calc?'<a href="#estimate" data-action="scroll" data-target="estimate">Смета</a>':''}${ap?'<a href="#aprooms" data-action="scroll" data-target="aprooms">Помещения квартиры</a>':''}<a href="#selection" data-action="scroll" data-target="selection">${calc?'Мебель и материалы':'Подбор под вашу идею'}</a>>
+<a href="#related" data-action="scroll" data-target="related">${calc?'Похожие идеи':'Интерьеры со сметой'}</a>>
+</nav>${calc?estimate(x):''}${ap?`<section class="section" id="aprooms">>
+<div class="row">>
+<h2>Все помещения квартиры</h2>>
+<span class="small muted">Один проект · ${x.area} м²</span>>
+</div>>
+<p class="muted">Откройте помещение, чтобы посмотреть его состав и смету. Сумма смет помещений соответствует бюджету выбранного варианта квартиры.</p>>
+<div class="grid">${x.children.map(id=>card(item(id),false,tier)).join('')}</div>>
+</section>`:''}<section class="section" id="selection">>
+<h2>${calc?'Мебель и материалы в подборке':'Подборка под ваш интерьер'}</h2>>
+<p class="muted">${calc?'Визуализация передаёт образ интерьера. Конкретные товары определяются подборкой и сметой.':'К визиту подберём мебель, отделочные материалы и аксессуары. В Центре вы сможете посмотреть образцы и обсудить сочетания.'}</p>${calc?products(x):band()}${x.parent?`<p style="margin-top:25px">>
+<a class="textlink" href="#/item/${x.parent}">Посмотреть всю квартиру и общий бюджет</a>>
+</p>`:''}</section>>
+<section class="section" id="related">>
+<h2>${calc?'Другие идеи для вашего дома':'Похожие интерьеры с расчётом'}</h2>>
+<p class="muted">${calc?'Сохраняйте понравившиеся образы в избранное.':'Это самостоятельные решения. Подборка показывает возможное направление, а не точное воплощение этой концепции.'}</p>>
+<div class="grid related">${(calc?[item('idea2'),item('idea0')]:[item('room0'),item('room1')]).filter(y=>y.id!==x.id).map(y=>card(y)).join('')}</div>>
+</section>${band()}${x.source?`<p class="protohelp">Источник изображений${x.id==='room0'?' и опубликованной сметы':''}: <a href="${x.source}" target="_blank" rel="noopener">ZETTA HOME</a>. Данные в прототипе — снимок, актуальность уточняется.</p>`:''}`}

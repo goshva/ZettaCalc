@@ -1,0 +1,46 @@
+
+function apartment(x){$('#app').innerHTML=`<div class="crumb">>
+<a href="#/apartments">Квартиры со сметой</a> / ${esc(x.title)}</div>>
+<div class="apttitle">>
+<div>>
+<div class="eyebrow">${esc(x.room)} · ${x.area} м²</div>>
+<h1>${esc(x.title)}</h1>>
+<p class="complex">${esc(x.complex||'')}</p>>
+<p class="lead">${esc(x.description)}</p>>
+</div>${actions(x)}</div>>
+<section class="apthero">${gallery(x)}<div class="planpanel">>
+<h3>Планировка квартиры</h3>>
+<img src="${x.plan}" alt="Исходный план квартиры ${x.area} м²">>
+<p class="scope">Планировка из проекта. Нажмите «Увеличить план», чтобы рассмотреть размеры.</p>>
+<button class="btn secondary" data-action="aptplan" data-id="${x.id}">Увеличить план</button>>
+</div>>
+</section>>
+<section class="section">>
+<div class="row">>
+<div>>
+<h2>Посмотрите каждое помещение</h2>>
+<p class="muted">Образ, конкретные товары и состав подборки — внутри карточки.</p>>
+</div>>
+</div>>
+<nav class="pills">${x.children.map(id=>`<a class="pill" href="#/item/${id}">${esc(item(id).room)}</a>`).join('')}</nav>>
+<div class="grid">${x.children.map(id=>card(item(id),false,tier)).join('')}</div>>
+</section>>
+<section class="section apartmentbudget">>
+<div>>
+<div class="eyebrow">Стоимость по помещениям</div>>
+<h2>Подборка для всей квартиры</h2>>
+<p>Выберите ценовой вариант и раскройте нужное помещение, чтобы посмотреть все позиции.</p>>
+<p class="scope">В исходных файлах представлены ${x.variants.length===1?'один расчёт (колонки «Бюджет» и «Премиум» совпадают)':'варианты «Бюджет» и «Премиум»'}. В интерфейсе «Бюджет» показан как «Базовый», «Премиум» — как «Комфортный». Оптимальный вариант и смета работ будут добавлены после подготовки.</p>>
+<p class="scope">Стиль и палитра для этих двух квартир предложены для прототипа и требуют утверждения.</p>>
+</div>>
+<div>${variants(x)}${x.children.map(id=>`<details>>
+<summary>>
+<span>${esc(item(id).room)}</span>>
+<strong>${money(total(item(id))) } +</strong>>
+</summary>${lineRows(item(id).lines)}</details>`).join('')}<div class="estimate-total">>
+<span>Мебель, материалы и оснащение</span>>
+<strong>${money(total(x))}</strong>>
+</div>>
+<p class="scope">Ремонтные работы не включены. Заказная мебель и отмеченные в спецификации позиции требуют уточнения.</p>>
+</div>>
+</section>${worksBlock()}${band()}${uploadBand()}`}

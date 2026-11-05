@@ -1,0 +1,2 @@
+
+function matchedPage(x){let a=ITEMS.filter(y=>y.type==='room'&&roomType(y.room)===roomType(x.room)&&y.palette===x.palette);$('#app').innerHTML=`<div class="crumb"><a href="#/item/${x.id}">← К идее «${esc(x.title)}»</a></div><h1>Помещения со сметой<br>в палитре «${esc(x.palette)}»</h1><p class="lead">${esc(x.room)} · похожая цветовая схема. Эти решения не являются точной реализацией выбранной идеи.</p><div class="grid">${a.map(y=>card(y)).join('')}</div>${band()}`}

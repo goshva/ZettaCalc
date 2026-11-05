@@ -1,0 +1,36 @@
+
+function estimate(x){let costs=x.costs[Math.min(tier,x.costs.length-1)];;
+return `<section class="section estimate" id="estimate">>
+<div class="row">>
+<h2>Смета ${x.type==='apt'?'квартиры':'помещения'}</h2>>
+<span class="muted small">${x.area} м² · ${x.costs.length>1?['Минимальный','Оптимальный','Комфортный'][tier]:'Опубликованный расчёт'}</span>>
+</div>>
+<p class="muted">${x.id==='room0'?'Показаны опубликованные на сайте разделы расчёта. Построчные спецификации в исходной странице отсутствуют.':'Демонстрационная разбивка для проверки структуры и переключения вариантов.'}</p>${DATA.categories.map((c,i)=>`<details>>
+<summary>>
+<span>${c}</span>>
+<strong>${money(costs[i])}</strong>>
+</summary>>
+<table>>
+<thead>>
+<tr>>
+<th>Состав</th>>
+<th>Стоимость</th>>
+</tr>>
+</thead>>
+<tbody>${x.type==='apt'?x.children.map(id=>`<tr>>
+<td>>
+<a href="#/item/${id}">${esc(item(id).room)}</a>>
+</td>>
+<td>${money(item(id).costs[tier][i])}</td>>
+</tr>`).join(''):`<tr>>
+<td>${DATA.descriptions[i]}</td>>
+<td>${money(costs[i])}</td>>
+</tr>`}</tbody>>
+</table>>
+<p class="scope">${x.demo?'В рабочую версию будут добавлены артикулы, количества, единицы измерения и цены каждой позиции.':'Детальный состав и актуальность цен уточняются при подготовке проекта.'}</p>>
+</details>`).join('')}<div class="estimate-total">>
+<span>Всего</span>>
+<strong>${money(total(x))}</strong>>
+</div>>
+<p class="scope">Стоимость относится к указанной площади и составу. Подготовка ЦПР и индивидуального дизайн-проекта обсуждается отдельно.</p>>
+</section>`}

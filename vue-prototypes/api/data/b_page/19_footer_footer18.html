@@ -1,0 +1,53 @@
+<footer style="background:var(--ink);color:#C9C1B5;padding:88px 0 40px;border-top:1px solid #3A3631">
+<div class="wrap">
+<div class="grid12 stack" style="gap:40px 24px">
+<div style="grid-column:1/span 4;display:flex;flex-direction:column;gap:18px"><div class="logo" style="color:var(--linen)"><b>ZETTA</b><span style="color:var(--red-l)">home</span></div><p style="margin:0;font-size:14px">От идеи до готовой квартиры.<br>Дизайн, ремонт, мебель и материалы в контексте одной квартиры.</p></div>
+<div style="grid-column:6/span 2;display:flex;flex-direction:column;gap:12px;font-size:14px"><div style="color:var(--linen);font-weight:600;margin-bottom:6px">Интерьеры</div><a href="#/interiors">Все интерьеры</a><a href="#/ideas">Идеи интерьеров</a><a href="#/rooms">Интерьеры со сметой</a><a href="#/apartments">Квартиры со сметой</a><a href="#/upload">Свой дизайн-проект</a></div>
+<div style="grid-column:8/span 2;display:flex;flex-direction:column;gap:12px;font-size:14px"><div style="color:var(--linen);font-weight:600;margin-bottom:6px">Сервис</div><a href="#/catalog">Каталог товаров</a><a href="#/repair">Ремонт</a><a href="#/center">Интерьерный центр</a><a href="#/about">О ZETTA HOME</a></div>
+<div style="grid-column:10/span 3;display:flex;flex-direction:column;gap:12px;font-size:14px"><div style="color:var(--linen);font-weight:600;margin-bottom:6px">Встреча в Центре</div><span>Москва, Аминьевское шоссе, 6<br>ТЦ «Квартал», 2 этаж</span><a href="tel:+74951387338">+7 (495) 138-73-38</a><a href="#/appointment" style="color:var(--linen);border-bottom:1px solid var(--linen);align-self:flex-start;padding-bottom:2px">Записаться в Интерьерный центр</a><span style="font-size:12px;color:#A69D90">Подбор мебели и материалов — бесплатно</span></div>
+</div>
+<div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:72px;padding-top:24px;border-top:1px solid #3A3631;font-size:12px;color:#A69D90"><span>© ZETTA HOME · кликабельный прототип</span><span>Фото — интерьерные референсы, не реализованные проекты ZETTA HOME.</span><a href="#/about">О ZETTA HOME</a></div>
+</div>
+</footer>
+
+<!-- Модальные окна -->
+<div class="modal" id="m-meeting" role="dialog" aria-modal="true" aria-labelledby="mt-meeting"><div class="mbox">
+<button class="mclose" data-close aria-label="Закрыть">×</button>
+<div id="meetForm">
+<div class="eyebrow"><b>●</b><i></i><span id="meetTopic">Запись в Интерьерный центр</span></div>
+<h3 class="h3" id="mt-meeting" style="margin-top:20px;font-size:40px">Обсудим вашу квартиру.</h3>
+<p class="muted" style="margin:12px 0 0">Оставьте контакты — менеджер подтвердит время. Регистрация не нужна.</p>
+<form class="form-f" id="mform">
+<div class="field"><label for="mname">Как к вам обращаться</label><input id="mname" required placeholder="Имя" style="font-size:24px"></div>
+<div class="field"><label for="mphone">Телефон</label><input id="mphone" type="tel" required placeholder="+7" style="font-size:24px"></div>
+<div class="field"><label for="mcomment">Комментарий</label><input id="mcomment" placeholder="Необязательно" style="font-size:24px"></div>
+<button class="btn red" type="submit" style="align-self:flex-start">Отправить ↗</button>
+<span class="small">Демонстрационная форма: данные не отправляются и не сохраняются.</span>
+</form>
+</div>
+<div id="meetDone" hidden>
+<div class="serif" style="font-size:72px;color:var(--red);line-height:1">✓</div>
+<h3 class="h3" style="font-size:40px;margin-top:12px">Спасибо!</h3>
+<p class="muted">Сценарий записи завершён. В прототипе заявка не отправляется.</p>
+<button class="btn" data-close>Готово</button>
+</div>
+</div></div>
+
+<div class="modal" id="m-video" role="dialog" aria-modal="true" aria-label="Видео"><div class="mbox wide">
+<button class="mclose" data-close aria-label="Закрыть">×</button>
+<video id="vplayer" controls playsinline preload="none"></video>
+<p id="verr" hidden style="margin:0;padding:16px;color:#EDE8E0;font-size:14px;background:#1E1C19">Видео не загрузилось — нужен интернет. <a id="vlink" href="#" target="_blank" rel="noopener" style="color:#E9826F">Открыть ролик ↗</a></p>
+</div></div>
+
+<div class="modal" id="m-img" role="dialog" aria-modal="true" aria-label="Фото"><div class="mbox img">
+<button class="mclose" data-close aria-label="Закрыть">×</button>
+<img id="zimg" alt="">
+</div></div>
+
+<div class="modal" id="m-info" role="dialog" aria-modal="true" aria-labelledby="mt-info"><div class="mbox">
+<button class="mclose" data-close aria-label="Закрыть">×</button>
+<div id="infoBody"></div>
+</div></div>
+
+<div class="toast" id="toast" role="status"></div>
+

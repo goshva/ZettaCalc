@@ -1,0 +1,12 @@
+
+function compactEstimate(x){return `<div class="compactestimate">${variants(x)}<div class="estimate-total">>
+<span>${x.realArchive?'Подборка':'Итого'}</span>>
+<strong>${money(total(x))}</strong>>
+</div>${x.lines?`${groupedLines(x.lines)}<p class="scope">Расчёт из предоставленной таблицы. Заказные позиции уточняются. Смета ремонтных работ в этот итог не включена.</p>`:DATA.categories.map((c,i)=>`<details>>
+<summary>>
+<span>${c}</span>>
+<b>${money(x.costs[Math.min(tier,x.costs.length-1)][i])} +</b>>
+</summary>>
+<p class="small">${DATA.descriptions[i]}</p>>
+<p class="scope">${x.demo?'Демонстрационная сумма. Товарная спецификация для этого примера ещё не добавлена.':'В источнике опубликован итог категории. Построчная спецификация пока не предоставлена.'}</p>>
+</details>`).join('')}</div>`}

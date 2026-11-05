@@ -1,0 +1,48 @@
+
+function hub(){$('#app').innerHTML=`<div class="crumb">Главная / Интерьеры</div>>
+<section class="hubhero">>
+<div>>
+<div class="eyebrow">Интерьеры ZETTA HOME</div>>
+<h1>От понравившегося<br>интерьера —<br>к понятной смете.</h1>>
+<p class="lead">Выберите образ комнаты или всей квартиры. Посмотрите мебель, материалы и стоимость работ.</p>>
+<a class="btn" href="#/rooms">Смотреть интерьеры со сметой</a>>
+</div>>
+<img src="${item('idea0').image}" alt="Кухня Шалфей и терракота">>
+</section>>
+<div class="journey">>
+<a href="#/rooms">>
+<small>01 / КОНКРЕТНЫЕ РЕШЕНИЯ</small>>
+<h3>Интерьеры со сметой</h3>>
+<p>Отдельные помещения, подобранные товары и состав сметы.</p>>
+</a>>
+<a href="#/apartments">>
+<small>02 / КВАРТИРА ЦЕЛИКОМ</small>>
+<h3>Квартиры со сметой</h3>>
+<p>Планировка, все помещения и три варианта бюджета.</p>>
+</a>>
+<a href="#/ideas">>
+<small>03 / НАЙТИ СВОЙ ОБРАЗ</small>>
+<h3>Идеи интерьеров</h3>>
+<p>Помещения, стили и цветовые схемы для вашего дома.</p>>
+</a>>
+</div>${band()}<section class="section">>
+<div class="row">>
+<h2>Красивый интерьер.<br>Конкретный состав.</h2>>
+<a class="textlink" href="#/rooms">Все интерьеры со сметой</a>>
+</div>>
+<div class="grid">${[item('room0'),item('room1')].map(x=>card(x)).join('')}</div>>
+</section>>
+<section class="section">>
+<div class="row">>
+<h2>Сначала — то, что нравится</h2>>
+<a class="textlink" href="#/ideas">Все идеи интерьеров</a>>
+</div>>
+<div class="grid">${[item('idea2'),item('idea1')].map(x=>card(x)).join('')}</div>>
+</section>>
+<div class="band">>
+<div>>
+<h3>У вас уже есть дизайн-проект?</h3>>
+<p>Приходите с ним в Центр — обсудим подбор мебели, материалов и реализацию.</p>>
+</div>>
+<button class="btn secondary" data-action="book">Записаться в Интерьерный центр</button>>
+</div>`}

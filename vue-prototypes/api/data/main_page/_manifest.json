@@ -1,0 +1,83 @@
+[
+  {
+    "file": "00_header_shell-header.html",
+    "tag": "header",
+    "id": "",
+    "class": "shell-header",
+    "chars": 1224,
+    "imgs": 0,
+    "h": ""
+  },
+  {
+    "file": "01_nav_nav51.html",
+    "tag": "nav",
+    "id": "nav51",
+    "class": "nav51",
+    "chars": 636,
+    "imgs": 0,
+    "h": ""
+  },
+  {
+    "file": "02_header_header.html",
+    "tag": "header",
+    "id": "",
+    "class": "",
+    "chars": 1311,
+    "imgs": 0,
+    "h": ""
+  },
+  {
+    "file": "03_nav_navlinks.html",
+    "tag": "nav",
+    "id": "navlinks",
+    "class": "navlinks",
+    "chars": 741,
+    "imgs": 0,
+    "h": ""
+  },
+  {
+    "file": "04_section_hero.html",
+    "tag": "section",
+    "id": "",
+    "class": "hero",
+    "chars": 2816,
+    "imgs": 1,
+    "h": "Ваша квартира.   Все решения   вместе."
+  },
+  {
+    "file": "05_section_start.html",
+    "tag": "section",
+    "id": "start",
+    "class": "scenario section",
+    "chars": 1367,
+    "imgs": 0,
+    "h": "С чего начнём?"
+  },
+  {
+    "file": "06_section_how.html",
+    "tag": "section",
+    "id": "how",
+    "class": "how section",
+    "chars": 1941,
+    "imgs": 1,
+    "h": "Система, а не набор отдельных подрядчиков."
+  },
+  {
+    "file": "07_section_ideas.html",
+    "tag": "section",
+    "id": "ideas",
+    "class": "catalog section",
+    "chars": 8997,
+    "imgs": 6,
+    "h": "Сначала — интерьер, который вам нравится."
+  },
+  {
+    "file": "08_section_similarPanel64.html",
+    "tag": "section",
+    "id": "similarPanel64",
+    "class": "similar-panel64",
+    "chars": 632,
+    "imgs": 0,
+    "h": "Похожие товары"
+  }
+]

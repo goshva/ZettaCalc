@@ -1,0 +1,33 @@
+
+function listing(kind){pageLimit=6;;
+const ap=kind==='apartments',names={ideas:'Идеи интерьеров',rooms:'Интерьеры со сметой',apartments:'Квартиры со сметой'},type={ideas:'idea',rooms:'room',apartments:'apt'}[kind];currentList=ITEMS.filter(x=>x.type===type&&(!x.child||x.id==='flat5room1'||x.id==='flat6room1'));;
+const select=(key,label,values)=>`<label>${label}<select data-filter="${key}" aria-label="${label}">>
+<option value="">Все</option>${values.map(v=>`<option value="${esc(v)}" ${filter[key]===v?'selected':''}>${esc(v)}</option>`).join('')}</select>>
+</label>`;$('#app').innerHTML=`<div class="crumb">>
+<a href="#/">Интерьеры</a> / ${names[kind]}</div>>
+<h1>${names[kind]}</h1>>
+<p class="catalogintro">${kind==='ideas'?'Более 1500 идей в каталоге ZETTA HOME. Найдите свой образ и сохраните понравившееся.':ap?'Планировки, помещения и сметы для квартиры целиком.':'Конкретные решения для комнат: состав, товары и стоимость.'}</p>${tabs(kind)}<div class="compactfilters">${select('room',ap?'Количество комнат':'Тип помещения',[...new Set(currentList.map(x=>x.room))])}${select('style','Стиль',[...new Set(currentList.map(x=>x.style))])}<details class="palettedrop">>
+<summary>>
+<span>Цветовая палитра</span>>
+<b>${esc(filter.palette||'Все палитры')} ▾</b>>
+</summary>>
+<div class="palettepopup">>
+<button data-palette="">Все палитры</button>${[...new Set(currentList.map(x=>x.palette))].map(p=>`<button data-palette="${esc(p)}">${palette(currentList.find(x=>x.palette===p))}</button>`).join('')}</div>>
+</details>${ap?`<label>Площадь<select data-filter="area">>
+<option value="">Любая</option>>
+<option value="small" ${filter.area==='small'?'selected':''}>До 60 м²</option>>
+<option value="large" ${filter.area==='large'?'selected':''}>От 60 м²</option>>
+</select>>
+</label>>
+<label>Вариант бюджета<select data-filter="budget">>
+<option value="">Все варианты</option>>
+<option value="base" ${filter.budget==='base'?'selected':''}>Базовый</option>>
+<option value="optimal" ${filter.budget==='optimal'?'selected':''}>Оптимальный</option>>
+<option value="comfort" ${filter.budget==='comfort'?'selected':''}>Комфортный</option>>
+</select>>
+</label>`:''}<button class="textlink resetcompact" data-action="reset">Сбросить</button>>
+</div>>
+<div id="activefilters">>
+</div>>
+<div id="results">>
+</div>${band()}${uploadBand()}`;updateResults(currentList);document.querySelectorAll('[data-filter]').forEach(el=>el.onchange=()=>{filter[el.dataset.filter]=el.value;pageLimit=6;updateResults(currentList)});document.querySelectorAll('[data-palette]').forEach(b=>b.onclick=()=>{filter.palette=b.dataset.palette;listing(kind)});}

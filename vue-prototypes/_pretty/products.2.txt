@@ -1,0 +1,11 @@
+
+function products(x){if(!x.lines)return `<p class="muted">Товарная спецификация этого интерьера пока не добавлена в прототип. Здесь будут конкретные товары выбранного ценового варианта.</p>`;;
+let ls=x.lines.filter(l=>l.image&&l.url&&!(tier&&l.altUrl));;
+return `<div class="products realproducts">${ls.slice(0,8).map(l=>`<article class="product">>
+<img src="${l.image}" alt="${esc(l.name)}" loading="lazy">>
+<small>${esc(l.name)}</small>>
+<h3>${esc(l.description||l.name)}</h3>>
+<p>${esc(l.qty)} · ${money(l.values[tier]||l.values[0])}</p>>
+<a class="textlink" href="${esc(l.url)}" target="_blank" rel="noopener">Подробнее о товаре ↗</a>>
+</article>`).join('')}</div>>
+<p class="scope">Полный перечень — в раскрывающейся смете. Изображения и ссылки взяты из исходной подборки. Позиции с альтернативой без фотографии показаны в смете.</p>`}

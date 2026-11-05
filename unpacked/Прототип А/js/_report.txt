@@ -1,0 +1,77 @@
+### A51\s*=
+101622 "d(q=>q.short==='Шкаф')?.image||p.image});const G51=[...P51,...Object.values(demoGoods).flat()],f51=(id)=>G51.find(p=>p.id===id),S51=read('zh51-room-drafts',{}),A51=read('zh51-apartment',{});let room51=null,replacement51=null,pending51=null;\nfunction store51(){try{localStorage.set"
+
+### baseDetail51
+107734 '\':\'Исходный план помещения.\'}</p>`:\'<div class="plan-placeholder51"><span>Планировка помещения</span><p>Здесь будет план с размерами.</p></div>\'}</div>`}\nconst baseDetail51=baseDetail49,baseApartment51=baseApartment49,baseListing51=sourceListing50;\ncard=function(x,pick=false,pric'
+108782 '</div><a class="textlink" href="#/item/${x.id}">Подробнее →</a></div></article>`};\ndetail=function(x){if(x.type===\'apt\')return apartment(x);if(x.type!==\'room\'){baseDetail51(x);return}room51=x.id;draftRoom=x.id;const s=rd51(x),r=estimate51(x);baseDetail51(x);document.querySelector'
+108864 "\ndetail=function(x){if(x.type==='apt')return apartment(x);if(x.type!=='room'){baseDetail51(x);return}room51=x.id;draftRoom=x.id;const s=rd51(x),r=estimate51(x);baseDetail51(x);document.querySelectorAll('#app > .notice,#app > .workspending').forEach(n=>n.remove());const sum=$('.co"
+
+### baseApartment51
+107760 '.\'}</p>`:\'<div class="plan-placeholder51"><span>Планировка помещения</span><p>Здесь будет план с размерами.</p></div>\'}</div>`}\nconst baseDetail51=baseDetail49,baseApartment51=baseApartment49,baseListing51=sourceListing50;\ncard=function(x,pick=false,priceTier=0){let area=x.type=='
+113353 "quickBudget51(area,n,t){return n*[160000,240000,360000][t]+[160000,240000,350000][t]+area*([7500,11000,16000][t]+[13000,16000,20000][t])}\napartment=function(x){baseApartment51(x);const state=A51[x.id]||(A51[x.id]={level:0}),r=apTotal51(x);document.querySelectorAll('.workspending'"
+
+### room51\s*=
+101656 "mage});const G51=[...P51,...Object.values(demoGoods).flat()],f51=(id)=>G51.find(p=>p.id===id),S51=read('zh51-room-drafts',{}),A51=read('zh51-apartment',{});let room51=null,replacement51=null,pending51=null;\nfunction store51(){try{localStorage.setItem('zh51-room-drafts',JSON.strin"
+108805 'k" href="#/item/${x.id}">Подробнее →</a></div></article>`};\ndetail=function(x){if(x.type===\'apt\')return apartment(x);if(x.type!==\'room\'){baseDetail51(x);return}room51=x.id;draftRoom=x.id;const s=rd51(x),r=estimate51(x);baseDetail51(x);document.querySelectorAll(\'#app > .notice,#ap'
+
+### draftRoom
+72563 "are isolated demo drafts; source estimates stay intact.\nconst AD=JSON.parse(document.getElementById('adaptdata').textContent);let drafts=read('zh49-drafts',{}),draftRoom=null,replacing=null,pendingId=null,replaceQ='',replaceBudget='';\nconst demoGoods={\n sofa:AD.products.filter(p="
+77841 "троить первое помещение →</a>`;$('.apthero').after(panel)};\nrender=function(){const r=route();if(r.startsWith('/adapt/')&&item(r.split('/')[2])?.type==='room'){draftRoom=r.split('/')[2];adaptPage(item(draftRoom));$('#screens').value=r;document.title='Мой расчёт · ZETTA HOME · V50"
+77882 "o').after(panel)};\nrender=function(){const r=route();if(r.startsWith('/adapt/')&&item(r.split('/')[2])?.type==='room'){draftRoom=r.split('/')[2];adaptPage(item(draftRoom));$('#screens').value=r;document.title='Мой расчёт · ZETTA HOME · V50'}else{baseRender49();if(r==='/'){const b"
+83506 'it}</span><br><button class="textlink" data-adapt="replace" data-group="${p.group}">Заменить товар →</button>${p.id!==demoGoods[p.group][Math.min(getDraft(item(draftRoom)).level,demoGoods[p.group].length-1)].id?\'<p>✓ Выбрана замена</p>\':\'\'}</div><div>${p.pack?`<span>${p.count} м²'
+84070 "ney(p.sum)}</strong>${p.pack?'<p>С запасом 8%</p>':''}</div></article>`}\nfunction openReplacement(group){replacing=group;pendingId=currentVariant(getDraft(item(draftRoom))).choices[group];replaceQ='';replaceBudget='';let dialog=$('#replacement49');if(!dialog){dialog=document.crea"
+86021 'алога · цена от\':\'Демо · фото иллюстративное\'}</small></button>`).join(\'\'):\'<p class="empty">Нет подходящих товаров. Измените поиск или бюджет.</p>\';let x=item(draftRoom),s=getDraft(x),next=JSON.parse(JSON.stringify(s));currentVariant(next).choices[replacing]=pendingId;let before'
+86909 "и монтаж товара требуют уточнения.</p>`}\ndocument.addEventListener('click',e=>{let b=e.target.closest('[data-adapt]');if(!b)return;let a=b.dataset.adapt,x=item(draftRoom),s=x&&getDraft(x);if(a==='replace')openReplacement(b.dataset.group);if(a==='candidate'){pendingId=b.dataset.id"
+87861 "x);toast('Восстановлен начальный демовариант')}});\ndocument.addEventListener('submit',e=>{if(e.target.id==='area49'){e.preventDefault();const f=e.target,x=item(draftRoom),s=getDraft(x),a=+f.elements.area.value,h=+f.elements.height.value;if(!Number.isFinite(a)||a<2||a>80||!Number."
+
+### adaptData
+
+### ADAPT
+
+### rd51
+103747 "='table'?'tables':'storage',count:p.count,basecount:p.count,unit:p.unit,rate:p.price,pack:p.pack,areaBased:!!p.pack,source:false}));}return {rows}})}}\nfunction rd51(x){return S51[x.id]||(S51[x.id]=initRoom51(x))}\nfunction estimate51(x){const s=rd51(x),rows=s.variants[s.level].row"
+103831 ',pack:p.pack,areaBased:!!p.pack,source:false}));}return {rows}})}}\nfunction rd51(x){return S51[x.id]||(S51[x.id]=initRoom51(x))}\nfunction estimate51(x){const s=rd51(x),rows=s.variants[s.level].rows.map(r=>{let n=r.count;if(r.areaBased)n=r.pack?Math.ceil(s.area*1.08/r.pack)*r.pack'
+105381 ' data-r51="save">Сохранить мой вариант квартиры</button>\':\'\'}<p class="scope" id="save51">Ваш вариант сохраняется на этом устройстве.</p></div>`}\nfunction rowCard51(r){return `<article class="goods-card51"><a ${r.pid&&(P51.some(p=>p.id===r.pid)||AD.products.some(p=>p.id===r.pid))'
+105421 'вартиры</button>\':\'\'}<p class="scope" id="save51">Ваш вариант сохраняется на этом устройстве.</p></div>`}\nfunction rowCard51(r){return `<article class="goods-card51"><a ${r.pid&&(P51.some(p=>p.id===r.pid)||AD.products.some(p=>p.id===r.pid))?`href="#" data-cross="catalog" data-rou'
+106434 '<div class="row"><h2>Мебель, материалы и работы</h2></div><h3 class="goods-section-title51">Мебель и оснащение</h3><div class="goods-grid51">${r.goods.map(rowCard51).join(\'\')}</div><h3 class="goods-section-title51">Отделочные материалы</h3><div class="goods-grid51">${r.materials.'
+106563 'ods-grid51">${r.goods.map(rowCard51).join(\'\')}</div><h3 class="goods-section-title51">Отделочные материалы</h3><div class="goods-grid51">${r.materials.map(rowCard51).join(\'\')}</div><details class="works51"><summary><span>Черновые материалы</span><strong>${money(r.rough)} +</stron'
+106773 'mary><span>Черновые материалы</span><strong>${money(r.rough)} +</strong></summary><div class="work-line51"><span>Смеси, грунтовки и расходные материалы<small>${rd51(x).area} м² · демонстрационная норма</small></span><b>${money(r.rough)}</b></div></details><details class="works51"'
+108840 "→</a></div></article>`};\ndetail=function(x){if(x.type==='apt')return apartment(x);if(x.type!=='room'){baseDetail51(x);return}room51=x.id;draftRoom=x.id;const s=rd51(x),r=estimate51(x);baseDetail51(x);document.querySelectorAll('#app > .notice,#app > .workspending').forEach(n=>n.re"
+
+### estimate51
+103809 'it:p.unit,rate:p.price,pack:p.pack,areaBased:!!p.pack,source:false}));}return {rows}})}}\nfunction rd51(x){return S51[x.id]||(S51[x.id]=initRoom51(x))}\nfunction estimate51(x){const s=rd51(x),rows=s.variants[s.level].rows.map(r=>{let n=r.count;if(r.areaBased)n=r.pack?Math.ceil(s.ar'
+107935 '=baseApartment49,baseListing51=sourceListing50;\ncard=function(x,pick=false,priceTier=0){let area=x.type===\'idea\'?\'\':(x.area||sourceArea51(x)),v=x.type===\'room\'?estimate51(x).total:x.type===\'apt\'?apTotal51(x).total:null;return `<article class="card"><div class="photo"><a href="#/i'
+108850 "></article>`};\ndetail=function(x){if(x.type==='apt')return apartment(x);if(x.type!=='room'){baseDetail51(x);return}room51=x.id;draftRoom=x.id;const s=rd51(x),r=estimate51(x);baseDetail51(x);document.querySelectorAll('#app > .notice,#app > .workspending').forEach(n=>n.remove());co"
+111467 'oomPlan51(x))}store51()};\nfunction apRooms51(x){return A51[x.id]?.ids||x.children}\nfunction apTotal51(x){const ids=apRooms51(x),rows=ids.map(id=>({x:item(id),r:estimate51(item(id)),s:rd51(item(id))}));return {rows,total:rows.reduce((n,p)=>n+p.r.total,0),g:rows.reduce((n,p)=>n+p.r'
+117435 ">${money(p.price)} / ${p.unit||'шт.'}</strong></button>`).join('');if(pending51){const p=f51(pending51)||AD.products.find(p=>p.id===pending51),x=item(room51),r=estimate51(x),old=r.rows.find(r=>r.id===replacement51),delta=Math.round(old.count*p.price-old.sum);$('#replace-preview51"
+
+### apRooms51
+111082 ',x.id)}const rail=$(\'.relatedrail\');if(rail){const sec=rail.closest(\'section\');sec.innerHTML=`<h2>Другие помещения этой квартиры</h2><div class="relatedrail">${apRooms51(a).filter(id=>id!==x.id).map(id=>card(item(id))).join(\'\')}</div><a class="btn secondary" href="#/item/${a.id}"'
+111342 'ref="#/item/${a.id}">Вся квартира и общий бюджет →</a>`}}else if(x.planOnly){$(\'.planpanel\').insertAdjacentHTML(\'beforeend\',roomPlan51(x))}store51()};\nfunction apRooms51(x){return A51[x.id]?.ids||x.children}\nfunction apTotal51(x){const ids=apRooms51(x),rows=ids.map(id=>({x:item(i'
+111422 ".planpanel').insertAdjacentHTML('beforeend',roomPlan51(x))}store51()};\nfunction apRooms51(x){return A51[x.id]?.ids||x.children}\nfunction apTotal51(x){const ids=apRooms51(x),rows=ids.map(id=>({x:item(id),r:estimate51(item(id)),s:rd51(item(id))}));return {rows,total:rows.reduce((n,"
+111880 ',p)=>n+p.s.area,0)}}\nfunction apNav51(a,current){return `<nav class="apartmentnav"><a class="backapt" href="#/item/${a.id}">← Квартира и общий бюджет</a><div>${apRooms51(a).map(id=>`<a class="pill ${id===current?\'active\':\'\'}" href="#/item/${id}">${esc(item(id).room)}</a>`).join(\''
+115062 'мотрите каждое помещение</h2><p class="muted">Уточняйте площади и заменяйте товары — общий бюджет обновится.</p></div></div>${apNav51(x,\'\')}<div class="grid">${apRooms51(x).map(id=>card(item(id))).join(\'\')}</div>`}store51()};\nlisting=function(kind){baseListing51(kind)};\nrender=fu'
+119432 "ta-r51]');if(b){const x=item(room51),s=rd51(x),a=b.dataset.r51;if(a==='level'){s.level=+b.dataset.n;if(x.parent){A51[x.parent]??={};A51[x.parent].level=s.level;apRooms51(item(x.parent)).forEach(id=>rd51(item(id)).level=s.level)}detail(x)}if(a==='replace')openReplace51(+b.dataset."
+120615 "Modal()}}b=e.target.closest('[data-ap51]');if(b){const x=item(b.dataset.id),a=b.dataset.ap51;A51[x.id]??={level:0};if(a==='level'){A51[x.id].level=+b.dataset.n;apRooms51(x).forEach(id=>rd51(item(id)).level=+b.dataset.n);apartment(x)}if(a==='setup')showSetup51(x);if(a==='save'){st"
+
+### goodsSection51
+106208 'tton class="btn secondary" data-r51="replace" data-row="${r.id}">Заменить</button>${r.replaced?\'<p class="scope">✓ Выбрана замена</p>\':\'\'}</article>`}\nfunction goodsSection51(x,r){return `<section class="section" id="goods51"><div class="row"><h2>Мебель, материалы и работы</h2></'
+110683 ' class="textlink" href="#/item/${x.parent}">Посмотреть бюджет квартиры →</a>`:\'\'}</div>`;const section=$(\'#app > section.section\');if(section)section.outerHTML=goodsSection51(x,r);const gallery=$(\'.gallery\')||$(\'.planpanel\');if(gallery&&!x.planOnly)gallery.insertAdjacentHTML(\'bef'
+
+### store51
+101712 "t()],f51=(id)=>G51.find(p=>p.id===id),S51=read('zh51-room-drafts',{}),A51=read('zh51-apartment',{});let room51=null,replacement51=null,pending51=null;\nfunction store51(){try{localStorage.setItem('zh51-room-drafts',JSON.stringify(S51));localStorage.setItem('zh51-apartment',JSON.st"
+111321 'ass="btn secondary" href="#/item/${a.id}">Вся квартира и общий бюджет →</a>`}}else if(x.planOnly){$(\'.planpanel\').insertAdjacentHTML(\'beforeend\',roomPlan51(x))}store51()};\nfunction apRooms51(x){return A51[x.id]?.ids||x.children}\nfunction apTotal51(x){const ids=apRooms51(x),rows=i'
+115116 'е площади и заменяйте товары — общий бюджет обновится.</p></div></div>${apNav51(x,\'\')}<div class="grid">${apRooms51(x).map(id=>card(item(id))).join(\'\')}</div>`}store51()};\nlisting=function(kind){baseListing51(kind)};\nrender=function(){baseRender49();document.title=($(\'#app h1\')?.'
+120048 "ed:true});s.edited=true;$('#replace51').close();detail(x);$('#goods51').scrollIntoView({block:'start'});toast('Товар заменён. Бюджет обновлён.')}if(a==='save'){store51();$('#save51').textContent=x.parent?'Сохранён весь вариант квартиры: помещения, товары и расчёт.':'Расчёт сохран"
+120733 "a==='level'){A51[x.id].level=+b.dataset.n;apRooms51(x).forEach(id=>rd51(item(id)).level=+b.dataset.n);apartment(x)}if(a==='setup')showSetup51(x);if(a==='save'){store51();$('#apt-save51').textContent='Вариант квартиры сохранён: все помещения, площади и выбранные товары.'}}if(e.tar"
+120910 "-save51').textContent='Вариант квартиры сохранён: все помещения, площади и выбранные товары.'}}if(e.target.closest('[data-setupclose51]'))$('#setup51').close();store51()});\ndocument.addEventListener('input',e=>{if(e.target.id==='replace-search51')drawReplace51()});\ndocument.addEv"
+121317 "urn;const x=item(room51),s=rd51(x);s.variants[s.level].rows.find(r=>r.id===+e.target.dataset.qty51).count=n;s.edited=true;let y=scrollY;detail(x);scrollTo(0,y);store51()}});\ndocument.addEventListener('submit',e=>{const f=e.target;if(f.id==='room-form51'){e.preventDefault();if(!f."
+121613 "return;const x=item(room51),s=rd51(x);s.area=+f.elements.area.value;s.height=+f.elements.height.value;s.edited=true;detail(x);toast('Площадь учтена в расчёте');store51()}if(f.id==='apt-form51'){e.preventDefault();if(!f.checkValidity())return;const x=item(f.dataset.id),st=A51[x.id"
+
+### demoArea
+74647 "oom),bed=/спальн|детск/i.test(x.room),cab=/кабин/i.test(x.room);return [wet?'bath':bed?'bed':cab?'table':'sofa','storage','light',wet?'tile':'floor']}\nfunction demoArea(x){if(x.area)return +x.area;let l=(x.lines||[]).find(l=>/потолок/i.test(l.name)),n=l&&parseFloat(l.qty.replace("
+74839 "area;let l=(x.lines||[]).find(l=>/потолок/i.test(l.name)),n=l&&parseFloat(l.qty.replace(',','.'));return n&&n>=4&&n<=80?n:18}\nfunction newDraft(x){return {area:demoArea(x),height:2.7,level:0,variants:[0,1,2].map(t=>({choices:Object.fromEntries(roomGroups(x).map(k=>[k,demoGoods[k]"
+89475 "drafts));localStorage.setItem('zh50-active',JSON.stringify(active50));localStorage.setItem('zh50-apartment-levels',JSON.stringify(apartmentLevels50))}catch{}};\ndemoArea=function(x){if(x.area)return +x.area;const lines=x.lines||[];for(const name of [/^Потолок$/i,/^Напольное покрыт"
+90239 "en.forEach(id=>getDraft(item(id)).level=apartmentLevels50[a.id]);}keepDraft()}\nfunction roomEdited50(x){const d=getDraft(x),v=currentVariant(d);return d.area!==demoArea(x)||d.height!==2.7||v.changed||Object.entries(v.qty).some(([k,n])=>n!==(k==='light'?2:1))}\nfunction areaForm50("
+102604 "lighting':/краска|стен|плинтус|двер|потол|молдинг|карниз/.test(n)?'walls':/штор|ковер|картин|зеркал/.test(n)?'decor':'storage'}\nfunction sourceArea51(x){return demoArea(x)}\nfunction initRoom51(x){const base=sourceArea51(x);return {area:base,height:2.7,level:0,edited:false,variant"
+

@@ -1,0 +1,2 @@
+
+function variants(x){return x.costs?.length>1?`<div class="tiers">${(x.variants||['Минимальный','Оптимальный','Комфортный']).map((s,i)=>`<button data-action="tier" data-value="${i}" class="${tier===i?'active':''}">${s}</button>`).join('')}</div>`:''}

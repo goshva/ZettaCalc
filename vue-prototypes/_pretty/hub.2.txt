@@ -1,0 +1,24 @@
+
+function hub(){const section=(title,url,ids,desc)=>`<section class="section">>
+<div class="row">>
+<div>>
+<h2>${title}</h2>>
+<p class="muted">${desc}</p>>
+</div>>
+<a class="btn secondary" href="#/${url}">Все ${title.toLowerCase()}</a>>
+</div>>
+<div class="grid">${ids.map(id=>card(item(id))).join('')}</div>>
+</section>`;$('#app').innerHTML=`<div class="crumb">Главная / Интерьеры</div>>
+<section class="hubhero">>
+<div>>
+<div class="eyebrow">Интерьеры ZETTA HOME</div>>
+<h1>Найдите интерьер,<br>в котором хочется жить.</h1>>
+<p class="lead">От идеи для одной комнаты до решения для всей квартиры — с мебелью, материалами и понятной стоимостью.</p>>
+<a class="btn" href="#/ideas">Найти свой интерьер</a>>
+</div>>
+<img src="${item('idea0').image}" alt="Кухня в шалфейных и терракотовых оттенках">>
+</section>>
+<div class="journey">${[['ideas','Идеи интерьеров','Выберите стиль и цветовую палитру.'],['rooms','Интерьеры со сметой','Посмотрите состав и стоимость решения для комнаты.'],['apartments','Квартиры со сметой','Изучите планировку и подборки для всех помещений.']].map(([r,t,s])=>`<a href="#/${r}">>
+<h3>${t} →</h3>>
+<p>${s}</p>>
+</a>`).join('')}</div>${section('Идеи интерьеров','ideas',['idea2','idea1'],'Сначала — то, что нравится: образы, стили и цветовые схемы.')}${section('Интерьеры со сметой','rooms',['room0','flat5room1'],'Конкретные товары и понятный состав стоимости.')}${section('Квартиры со сметой','apartments',['flat5','flat6'],'Планировка, помещения и подборки, связанные в один проект.')}${band()}${uploadBand()}`}

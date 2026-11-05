@@ -1,0 +1,2 @@
+
+apartment=function(x){baseApartment49(x);const panel=document.createElement('div');panel.className='adapt-new';panel.innerHTML=`<div><h3>Настройте квартиру по комнатам</h3><p>Откройте нужное помещение и нажмите «Рассчитать для моей комнаты». Площадь всей квартиры сама по себе недостаточна для пересчёта.</p><p class="adapt-small">Персональные деморасчёты комнат сохраняются отдельно и не меняют исходную смету квартиры.</p></div><a class="btn secondary" href="#/adapt/${x.children[0]}">Настроить первое помещение →</a>`;$('.apthero').after(panel)}

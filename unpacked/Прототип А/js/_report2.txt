@@ -1,0 +1,26 @@
+### baseDetail49\s*=
+76680 "rate)}));let workTotal=works.reduce((n,w)=>n+w.sum,0);return {rows,walls,finishes,rough,works,fixed,materials:floor.sum+finishes+rough,workTotal,total:fixed+floor.sum+finishes+rough+workTotal}}\nconst baseDetail49=detail,baseApartment49=apartment,baseRender49=render;\ndetail=function(x){baseDetail49(x);if(x.type==='room'){const panel=document.createElement('di"
+
+### baseApartment49\s*=
+76700 "al=works.reduce((n,w)=>n+w.sum,0);return {rows,walls,finishes,rough,works,fixed,materials:floor.sum+finishes+rough,workTotal,total:fixed+floor.sum+finishes+rough+workTotal}}\nconst baseDetail49=detail,baseApartment49=apartment,baseRender49=render;\ndetail=function(x){baseDetail49(x);if(x.type==='room'){const panel=document.createElement('div');panel.className="
+
+### sourceListing50\s*=
+89043 'oreend\',\'<option value="/adapt/room1">10 — Мой расчёт комнаты · новое</option>\');\n\n// V50: one room page, one editable estimate, an apartment assembled from its rooms.\nconst originalAdapt50=adaptPage,sourceListing50=listing;\nlet active50=read(\'zh50-active\',{}),apartmentLevels50=read(\'zh50-apartment-levels\',{}),quick50=read(\'zh50-quick\',{area:50,rooms:2,level'
+
+### baseRender49\s*=
+76726 ".sum,0);return {rows,walls,finishes,rough,works,fixed,materials:floor.sum+finishes+rough,workTotal,total:fixed+floor.sum+finishes+rough+workTotal}}\nconst baseDetail49=detail,baseApartment49=apartment,baseRender49=render;\ndetail=function(x){baseDetail49(x);if(x.type==='room'){const panel=document.createElement('div');panel.className='adapt-cta';panel.innerHTM"
+
+### baseListing49\s*=
+
+### baseDetail49\b
+76680 "rate)}));let workTotal=works.reduce((n,w)=>n+w.sum,0);return {rows,walls,finishes,rough,works,fixed,materials:floor.sum+finishes+rough,workTotal,total:fixed+floor.sum+finishes+rough+workTotal}}\nconst baseDetail49=detail,baseApartment49=apartment,baseRender49=render;\ndetail=function(x){baseDetail49(x);if(x.type==='room'){const panel=document.createElement('di"
+76766 "h,works,fixed,materials:floor.sum+finishes+rough,workTotal,total:fixed+floor.sum+finishes+rough+workTotal}}\nconst baseDetail49=detail,baseApartment49=apartment,baseRender49=render;\ndetail=function(x){baseDetail49(x);if(x.type==='room'){const panel=document.createElement('div');panel.className='adapt-cta';panel.innerHTML=`<strong>Посчитать для своей комнаты</"
+91048 "роется отдельная демонстрационная подборка. Исходный расчёт можно вернуть.</p></form>`}\ndetail=function(x){if(x.type==='apt')return apartment(x);if(x.type==='room'&&active50[x.id])return adaptPage(x);baseDetail49(x);if(x.type!=='room')return;draftRoom=x.id;const panel=document.createElement('details');panel.className='inline-start50';panel.id='customize50';p"
+91557 "Page=function(x){draftRoom=x.id;activate50(x);originalAdapt50(x);const summary=$('.adapt-summary').cloneNode(true),config=$('.adapt-config').cloneNode(true),goods=$('section.section').cloneNode(true);baseDetail49(x);summary.classList.add('inline-summary50');summary.querySelector('h2').textContent='Предварительный расчёт для вашей комнаты';const link=summary."
+107747 ' комнаты смотрите на плане.\':\'Исходный план помещения.\'}</p>`:\'<div class="plan-placeholder51"><span>Планировка помещения</span><p>Здесь будет план с размерами.</p></div>\'}</div>`}\nconst baseDetail51=baseDetail49,baseApartment51=baseApartment49,baseListing51=sourceListing50;\ncard=function(x,pick=false,priceTier=0){let area=x.type===\'idea\'?\'\':(x.area||sourceA'
+
+### sourceListing50\b
+89043 'oreend\',\'<option value="/adapt/room1">10 — Мой расчёт комнаты · новое</option>\');\n\n// V50: one room page, one editable estimate, an apartment assembled from its rooms.\nconst originalAdapt50=adaptPage,sourceListing50=listing;\nlet active50=read(\'zh50-active\',{}),apartmentLevels50=read(\'zh50-apartment-levels\',{}),quick50=read(\'zh50-quick\',{area:50,rooms:2,level'
+99015 'b></div></div><p class="scope">Общий ориентир не изменяет сметы квартир в каталоге. Для подробного расчёта откройте квартиру и настройте её комнаты.</p></div></div></section>`}\nlisting=function(kind){sourceListing50(kind);if(kind===\'apartments\')$(\'#results\').insertAdjacentHTML(\'afterend\',quickHtml50())};\nrender=function(){const r=route();if(r.startsWith(\'/ad'
+107806 '>`:\'<div class="plan-placeholder51"><span>Планировка помещения</span><p>Здесь будет план с размерами.</p></div>\'}</div>`}\nconst baseDetail51=baseDetail49,baseApartment51=baseApartment49,baseListing51=sourceListing50;\ncard=function(x,pick=false,priceTier=0){let area=x.type===\'idea\'?\'\':(x.area||sourceArea51(x)),v=x.type===\'room\'?estimate51(x).total:x.type===\'a'
+

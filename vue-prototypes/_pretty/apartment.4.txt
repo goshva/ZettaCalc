@@ -1,0 +1,26 @@
+
+apartment=function(x){baseApartment51(x);;
+const state=A51[x.id]||(A51[x.id]={level:0}),r=apTotal51(x);document.querySelectorAll('.workspending').forEach(n=>n.remove());;
+const budget=$('.apartmentbudget');budget.innerHTML=`<div>>
+<div class="eyebrow">Общий бюджет</div>>
+<h2>Стоимость всей квартиры</h2>>
+<p>Мебель, отделочные и черновые материалы, ремонтные работы — в одном расчёте.</p>${apGlobal51(x)}<p class="scope">Площадь помещений в текущем расчёте: ${r.area.toFixed(2)} м². Площадь исходного проекта: ${x.area} м². Площади уточняются по планировке.</p>>
+</div>>
+<div>>
+<div class="adapt-levels">${['Базовый','Оптимальный','Комфортный'].map((n,i)=>`<button data-ap51="level" data-id="${x.id}" data-n="${i}" aria-pressed="${state.level===i}">${n}</button>`).join('')}</div>>
+<div class="adapt-total" id="ap-total51">${money(r.total)}</div>>
+<div class="adapt-breakdown">${[['Мебель и оснащение',r.g],['Отделочные материалы',r.mat],['Черновые материалы',r.rough],['Ремонтные работы',r.w]].map(([n,v])=>`<div>>
+<span>${n}</span>>
+<b>${money(v)}</b>>
+</div>`).join('')}</div>>
+<p class="scope">Сумма текущих расчётов всех помещений. Изменение комнаты автоматически обновляет этот итог.</p>>
+<button class="btn" data-ap51="save" data-id="${x.id}">Сохранить мой вариант квартиры</button>>
+<p class="scope" id="apt-save51">Ваш вариант сохраняется на этом устройстве.</p>>
+<p class="scope">Доставка, сборка и проектные услуги уточняются отдельно.</p>>
+</div>`;$('.apthero').after(budget);;
+const rooms=budget.nextElementSibling;if(rooms?.querySelector('.grid')){rooms.innerHTML=`<div class="row">>
+<div>>
+<h2>Посмотрите каждое помещение</h2>>
+<p class="muted">Уточняйте площади и заменяйте товары — общий бюджет обновится.</p>>
+</div>>
+</div>${apNav51(x,'')}<div class="grid">${apRooms51(x).map(id=>card(item(id))).join('')}</div>`}store51()}

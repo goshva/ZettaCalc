@@ -1,0 +1,39 @@
+<section class="sec reveal" id="budget">
+<div class="wrap">
+<div class="head2 stack">
+<div style="grid-column:1/span 8"><div class="eyebrow" style="margin-bottom:28px"><b>09</b><i></i>Бюджет до первого разговора</div><h2 class="h2">Поймите порядок цифр.<br><span class="it">И что за ними стоит.</span></h2></div>
+<p class="lead" style="grid-column:9/span 4">Укажите площадь и количество комнат. Сравните три ценовых сегмента и состав расходов.</p>
+</div>
+<div class="calc">
+<form id="budgetForm" novalidate>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+<div class="field"><label for="area">Площадь, м²</label><input id="area" type="number" min="15" max="400" value="54" inputmode="numeric"></div>
+<div class="field"><label for="rooms">Комнат</label><select id="rooms"><option value="0">Студия</option><option value="1">1 комната</option><option value="2" selected>2 комнаты</option><option value="3">3 комнаты</option><option value="4">4 и более</option></select></div>
+</div>
+<div class="field"><label for="cond">Состояние квартиры</label><select id="cond"><option value="new">Новостройка без отделки</option><option value="old">Вторичное жильё</option></select></div>
+<div class="field"><label for="scope">Что нужно рассчитать</label><select id="scope"><option value="all">Работы, мебель и отделочные материалы</option><option value="repair">Ремонтные работы</option><option value="supply">Мебель и отделочные материалы</option></select></div>
+<div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:8px">
+<button class="btn" type="submit">Пересчитать ориентир <span aria-hidden="true">↗</span></button>
+<span class="small">Без регистрации и номера телефона.</span>
+</div>
+</form>
+<div class="res">
+<div class="segs" role="group" aria-label="Ценовой сегмент" id="segs"></div>
+<div>
+<span class="tag">Демонстрационный расчёт</span>
+<div class="total" id="total" aria-live="polite"></div>
+<div class="small" style="margin-top:12px;font-size:14px" id="bmeta"></div>
+</div>
+<div class="bars" id="bars"><i style="background:var(--ink)"></i><i style="background:var(--red)"></i><i style="background:var(--sand)"></i></div>
+<div id="brows"></div>
+<p class="small" style="margin:0">За основу взята типовая планировка для выбранной площади и количества комнат. Расчёт включает выбранные категории по минимальным ценам в выбранном сегменте. Состав и стоимость уточняются под вашу квартиру. В прототипе показаны условные суммы; это не смета и не предложение цены.</p>
+<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+<button class="btn red" data-open="flats">Смотреть квартиры со сметами ↗</button>
+<button class="link" data-open="meeting" data-topic="Уточнить бюджет в Центре">Уточнить бюджет в Центре ↗</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Ремонт -->
