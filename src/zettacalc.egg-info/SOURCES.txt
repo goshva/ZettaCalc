@@ -5,12 +5,16 @@ src/api/__init__.py
 src/domain/__init__.py
 src/domain/catalog/__init__.py
 src/domain/cpr/__init__.py
+src/domain/estimate/__init__.py
 src/domain/geometry/__init__.py
 src/harness/__init__.py
+src/harness/llm.py
 src/harness/runtime.py
 src/harness/evals/__init__.py
 src/harness/guardrails/__init__.py
+src/harness/tools/__init__.py
 src/rules/__init__.py
+src/rules/engine.py
 src/zettacalc.egg-info/PKG-INFO
 src/zettacalc.egg-info/SOURCES.txt
 src/zettacalc.egg-info/dependency_links.txt
