@@ -1,0 +1,18 @@
+package pg
+
+import (
+	"crypto/sha256"
+	"encoding/hex"
+)
+
+func sha256Hex(s string) string {
+	sum := sha256.Sum256([]byte(s))
+	return hex.EncodeToString(sum[:])
+}
+
+func nullStr(s string) any {
+	if s == "" {
+		return nil
+	}
+	return s
+}

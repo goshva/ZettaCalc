@@ -55,6 +55,7 @@ onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
           </div>
         </div>
         <RouterLink to="/catalog" @click="menuOpen = false">Каталог товаров</RouterLink>
+        <RouterLink to="/flow" @click="menuOpen = false">Расчёт и ЦПР</RouterLink>
         <RouterLink to="/#center" @click="menuOpen = false">Интерьерный центр</RouterLink>
         <RouterLink to="/#repair" @click="menuOpen = false">Ремонт</RouterLink>
         <RouterLink to="/#company" @click="menuOpen = false">О ZETTA HOME</RouterLink>

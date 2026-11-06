@@ -17,6 +17,7 @@ function logout() { auth.logout(); router.push('/') }
         <RouterLink to="/">Главная</RouterLink>
         <RouterLink to="/gallery">Галерея</RouterLink>
         <RouterLink to="/calculator">Калькулятор</RouterLink>
+        <RouterLink to="/flow">Путь клиента</RouterLink>
         <RouterLink to="/cpr">ЦПР</RouterLink>
       </nav>
       <div class="tools">

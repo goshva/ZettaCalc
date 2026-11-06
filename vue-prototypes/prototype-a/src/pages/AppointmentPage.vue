@@ -9,9 +9,9 @@
  * Write-операция выполняется по правилам проекта: сначала dry-run,
  * затем создание записи с Idempotency-Key и подтверждением человека.
  */
-import { computed, onBeforeUnmount, onBeforeMount, onMounted, ref } from 'vue'
-import { storeToRefs } from 'pinia'
+import { ref, computed, onMounted, nextTick } from 'vue'
 import { api, API_BASE } from '@/api/client'
+import { bookingStatusLabel } from '@/utils/labels'
 import { useAppointmentsStore } from '@/stores/appointments'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useAppStyles } from '@/composables/useAppStyles'
@@ -361,7 +361,7 @@ function again() {
         <div v-else class="success" role="status">
           <div class="eyebrow">Пример подтверждения</div>
           <h3>Запись создана</h3>
-          <p>Запись <b>{{ created.id }}</b> сохранена со статусом «{{ created.status }}»{{ replayed ? ' (повторная отправка того же запроса)' : '' }}.
+          <p>Заявка <b>{{ created.id }}</b> сохранена со статусом «{{ bookingStatusLabel(created.status) }}»{{ replayed ? ' (повторная отправка того же запроса)' : '' }}.
             В рабочей версии менеджер подтвердит время встречи и получит выбранные интерьеры, файлы и пожелания.</p>
           <ul>
             <li>Задачи: {{ created.tasks.join(', ') || 'не выбраны' }}</li>

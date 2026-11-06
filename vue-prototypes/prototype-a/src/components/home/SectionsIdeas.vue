@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia'
 import { api } from '@/api/client'
 import { useFavoritesStore } from '@/stores/favorites'
 import { closeOnBackdrop } from '@/composables/useDialog'
+import { refStyleLabel } from '@/utils/labels'
 
 interface Idea {
   id: string

@@ -4,6 +4,7 @@ import { storeToRefs } from 'pinia'
 import { useCprStore } from '@/stores'
 import { formatPrice } from '@/api/client'
 import { imgUrl } from '@/composables/useImg'
+import { cprStatusLabel, docTypeLabel } from '@/utils/labels'
 
 const cpr = useCprStore()
 const { loading, error } = storeToRefs(cpr)
@@ -27,7 +28,7 @@ onMounted(() => cpr.fetchBids())
       <p v-if="error" class="error">{{ error }}</p>
 
       <div v-if="cpr.current" class="cpr-card">
-        <div class="header"><h3>{{ cpr.current.id }} · v{{ cpr.current.version }}</h3><span class="tag">{{ cpr.current.status }}</span></div>
+        <div class="header"><h3>{{ cpr.current.id }} · v{{ cpr.current.version }}</h3><span class="tag">{{ cprStatusLabel(cpr.current.status) }}</span></div>
         <div class="est">
           <div class="total">{{ formatPrice(cpr.current.estimate.total_rub) }}</div>
           <div class="range">{{ formatPrice(cpr.current.estimate.range_min) }} — {{ formatPrice(cpr.current.estimate.range_max) }}</div>
@@ -35,7 +36,7 @@ onMounted(() => cpr.fetchBids())
         <div class="docs">
           <h4>Документы</h4>
           <div v-for="d in cpr.current.documents" :key="d.id" class="doc">
-            <span>{{ d.title }}</span><span class="tag">{{ d.type }}</span>
+            <span>{{ d.title }}</span><span class="tag">{{ docTypeLabel(d.type) }}</span>
           </div>
         </div>
         <div class="bids">

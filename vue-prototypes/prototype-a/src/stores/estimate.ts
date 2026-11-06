@@ -13,11 +13,13 @@ export const useEstimateStore = defineStore('estimate', {
     range: (s) => s.current ? `${s.current.range_min} — ${s.current.range_max}` : '',
   },
   actions: {
-    async calculate() {
+    async calculate(referenceId = '') {
       this.loading = true
       this.error = ''
       try {
-        const { data } = await api.post<EstimateResponse>('/api/estimate/calculate', {})
+        const { data } = await api.post<EstimateResponse>('/api/estimate/calculate', {
+          reference_id: referenceId,
+        })
         this.current = data
       } catch (e: unknown) {
         this.error = (e as { message?: string }).message ?? 'Ошибка расчёта'

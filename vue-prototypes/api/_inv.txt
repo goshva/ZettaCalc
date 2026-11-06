@@ -1,0 +1,118 @@
+=== proto_a_hotspotData60.json
+[
+ {
+  "id": "str",
+  "name": "str",
+  "category": "str",
+  "price": "float",
+  "unit": "str",
+  "image": "str",
+  "point": [
+   "float"
+  ]
+ }
+]
+=== proto_a_extraAnalogues64.json
+[
+ {
+  "id": "str",
+  "name": "str",
+  "short": "str",
+  "price": "int",
+  "group": "str",
+  "unit": "str",
+  "image": "str",
+  "url": "str",
+  "external": "bool"
+ }
+]
+=== apps52/interiors/dataset.json
+{
+ "items": [
+  "..."
+ ],
+ "categories": [
+  "str"
+ ],
+ "descriptions": [
+  "str"
+ ]
+}
+=== apps52/catalog/data.json
+{
+ "products": [
+  "..."
+ ],
+ "offers": [
+  "..."
+ ],
+ "photos": {
+  "bed": "str",
+  "floor": "str",
+  "light": "str",
+  "table": "str",
+  "bath": "str",
+  "decor": "str",
+  "room": "str",
+  "kitchen": "str",
+  "furniture": "str",
+  "engineering": "str"
+ },
+ "extra": [
+  "..."
+ ],
+ "scenes": {
+  "furniture": "str",
+  "materials": "str",
+  "plumbing": "str",
+  "lighting": "str",
+  "decor": "str",
+  "engineering": "str"
+ },
+ "rooms": [
+  "..."
+ ]
+}
+=== apps52/center/interiors.json
+[
+ {
+  "id": "str",
+  "title": "str",
+  "image": "str"
+ }
+]
+=== apps52/center/photos.json
+[
+ {
+  "name": "str",
+  "src": "str"
+ }
+]
+=== apps52 dir
+about.css 51829
+about.html 13330
+catalog DIR
+catalog.css 37287
+catalog.html 35840
+center DIR
+center.css 43647
+center.html 25817
+interiors DIR
+interiors.css 72980
+interiors.html 124265
+main.css 180451
+repair.css 53914
+repair.html 36752
+=== a_page
+['main.html', 'pretty', 'section_budget.html', 'section_center.html', 'section_company.html', 'section_dialog_meeting.html', 'section_dialog_saved.html', 'section_dialog_video.html', 'section_faq.html', 'section_final.html', 'section_footer.html', 'section_project.html', 'section_repair.html', 'section_supply.html', 'shell.html']
+=== b_page
+['00_shell.html', '01_header_header0.html', '02_section_top.html', '03_section_start.html', '04_section_how.html', '05_section_why.html', '06_section_ideas.html', '07_section_feat.html', '08_section_connected.html', '09_section_section8.html', '10_section_supply.html', '11_section_center.html', '12_section_real.html', '13_section_budget.html', '14_section_repair.html', '15_section_project.html', '16_section_company.html', '17_section_faq.html', '18_section_final.html', '19_footer_footer18.html', '_manifest.json']
+=== css
+['a_all.css', 'a_shell.css', 'a_style_0.css', 'a_style_1.css', 'a_style_2.css', 'b_all.css', 'b_style_0.css']
+=== main_page
+['00_header_shell-header.html', '00_shellbar.html', '01_nav_nav51.html', '01_shell-header.html', '02_header_header.html', '02_prototype-note51.html', '03_nav_navlinks.html', '04_section_hero.html', '05_section_start.html', '06_section_how.html', '07_section_ideas.html', '08_section_similarPanel64.html', '_manifest.json', 'connected.html', 'how.html', 'ideas.html', 'interiors-drop52.html', 'nav51.html', 'navlinks.html', 'router_0.js', 'router_clean.js', 'similarList64.html', 'similarPanel64.html', 'start.html', 'surface52.html']
+total files in static/images: 669
+distinct referenced: 134
+referenced but missing: []
+present but NOT referenced: ['a_about_img_0001.jpg', 'a_catalog_img_0001.jpg', 'a_catalog_img_0002.jpg', 'a_catalog_img_0003.jpg', 'a_catalog_img_0004.jpg', 'a_catalog_img_0005.jpg', 'a_catalog_img_0006.jpg', 'a_catalog_img_0007.jpg', 'a_catalog_img_0008.jpg', 'a_catalog_img_0009.jpg', 'a_catalog_img_0010.jpg', 'a_catalog_img_0011.jpg', 'a_catalog_img_0012.jpg', 'a_catalog_img_0013.jpg', 'a_catalog_img_0014.jpg', 'a_catalog_img_0015.jpg', 'a_catalog_img_0016.jpg', 'a_catalog_img_0017.jpg', 'a_catalog_img_0018.jpg', 'a_catalog_img_0019.jpg', 'a_catalog_img_0020.jpg', 'a_catalog_img_0021.jpg', 'a_catalog_img_0022.jpg', 'a_catalog_img_0023.jpg', 'a_catalog_img_0024.jpg', 'a_catalog_img_0025.jpg', 'a_catalog_img_0026.jpg', 'a_catalog_img_0027.jpg', 'a_catalog_img_0028.jpg', 'a_catalog_img_0029.jpg', 'a_catalog_img_0030.jpg', 'a_catalog_img_0031.jpg', 'a_catalog_img_0032.jpg', 'a_catalog_img_0033.jpg', 'a_catalog_img_0034.jpg', 'a_catalog_img_0035.jpg', 'a_catalog_img_0036.jpg', 'a_catalog_img_0037.jpg', 'a_catalog_img_0038.jpg', 'a_catalog_img_0039.jpg', 'a_catalog_img_0040.jpg', 'a_catalog_img_0041.jpg', 'a_catalog_img_0042.jpg', 'a_catalog_img_0043.jpg', 'a_catalog_img_0044.jpg', 'a_catalog_img_0045.jpg', 'a_catalog_img_0046.jpg', 'a_catalog_img_0047.jpg', 'a_catalog_img_0048.jpg', 'a_catalog_img_0049.jpg', 'a_catalog_img_0050.jpg', 'a_catalog_img_0051.jpg', 'a_catalog_img_0052.jpg', 'a_catalog_img_0053.jpg', 'a_catalog_img_0054.jpg', 'a_catalog_img_0055.jpg', 'a_catalog_img_0056.jpg', 'a_catalog_img_0057.jpg', 'a_catalog_img_0058.jpg', 'a_catalog_img_0059.jpg']
+prefixes: {'a_about': 3, 'a_catalog': 102, 'a_center': 44, 'a_interiors': 262, 'a_main': 70, 'a_repair': 6, 'app.jpg': 1, 'auction.jpg': 1, 'b': 143, 'c-bedroom.jpg': 1, 'c-dark.jpg': 1, 'c-decor.jpg': 1, 'c-dining.jpg': 1, 'c-floors.jpg': 1, 'c-lounge.jpg': 1, 'c-sockets.jpg': 1, 'c-sofa.jpg': 1, 'c-stone.jpg': 1, 'c-wardrobe.jpg': 1, 'cat-bath.jpg': 1, 'cat-decor.jpg': 1, 'cat-furniture.jpg': 1, 'cat-materials.jpg': 1, 'center-kitchen.jpg': 1, 'center-pano.jpg': 1, 'center-stone.jpg': 1, 'center-store.jpg': 1, 'center-wardrobe.jpg': 1, 'ceo.jpg': 1, 'connected.jpg': 1, 'cpr.jpg': 1, 'ds-e06b4936da.jpg': 1, 'expert.jpg': 1, 'hero.jpg': 1, 'idea-bath.jpg': 1, 'idea-bedroom.jpg': 1, 'idea-kitchen.jpg': 1, 'idea-living.jpg': 1, 'idea-study.jpg': 1, 'idea-teen.jpg': 1, 'pendant.jpg': 1, 'plan.jpg': 1, 'repair.jpg': 1, 'rug.jpg': 1, 'sofa.jpg': 1, 'video.jpg': 1}

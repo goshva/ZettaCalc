@@ -37,13 +37,9 @@ onBeforeUnmount(() => document.removeEventListener('click', onDocClick))
           </div>
         </div>
         <RouterLink to="/interiors/apartments" @click="menuOpen = false">Квартиры со сметами</RouterLink>
+        <RouterLink to="/flow" @click="menuOpen = false">Расчёт и ЦПР</RouterLink>
         <RouterLink to="/#repair" @click="menuOpen = false">Ремонт</RouterLink>
-        <RouterLink to="/#supply" @click="menuOpen = false">Комплектация</RouterLink>
         <RouterLink to="/#center" @click="menuOpen = false">Центр</RouterLink>
-        <RouterLink to="/#how" @click="menuOpen = false">Как это работает</RouterLink>
-        <button class="btn redbtn navlinks-cta" @click="emit('meeting', 'Получить консультацию'); menuOpen = false">
-          Получить консультацию ↗
-        </button>
       </nav>
 
       <div class="navtools">

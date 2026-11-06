@@ -176,6 +176,16 @@ ESTIMATES = {
     },
 }
 
+# Корзина mock API: в памяти процесса, стартовое состояние — демо-позиция.
+_cart_state: dict = {
+    "items": [{"sku": "ZET-KIT-MET-001", "brand": "ZETTA", "title": "Кухня METALICO",
+               "price": 385000, "qty": 1, "image": "idea-kitchen"}],
+}
+
+
+def _cart_total() -> int:
+    return sum(int(it.get("price", 0)) * int(it.get("qty", 1)) for it in _cart_state["items"])
+
 BIDS = [
     {"id": "b1", "name": "РемонтПро", "rating": 4.8, "price": 320000, "days": 40, "scope": "Кухня + санузел", "image": "repair"},
     {"id": "b2", "name": "СтройМастер", "rating": 4.5, "price": 280000, "days": 45, "scope": "Кухня + санузел", "image": "auction"},
@@ -642,8 +652,37 @@ async def estimate(est_id: str):
     return _est_dto(ESTIMATES[est_id])
 
 @app.post("/api/estimate/calculate")
-async def calc_estimate():
-    return _est_dto(ESTIMATES["est_001"])
+async def calc_estimate(payload: dict | None = None):
+    """Расчёт по выбранному референсу.
+
+    payload.reference_id — id референса из REFERENCES; без него возвращается
+    демонстрационная смета est_001 (как раньше). Итог, диапазон и срок
+    детерминированно считаются от price_from/price_to референса, поэтому смена
+    референса меняет результат расчёта.
+    """
+    ref_id = (payload or {}).get("reference_id") or (payload or {}).get("ref")
+    if not ref_id:
+        return _est_dto(ESTIMATES["est_001"])
+    ref = next((r for r in REFERENCES if r["id"] == ref_id), None)
+    if not ref:
+        raise HTTPException(404, f"Reference {ref_id} not found")
+    lo, hi = int(ref["price_from"]), int(ref["price_to"])
+    mid = round((lo + hi) / 2 / 500) * 500  # «результат» — середина диапазона, округлённая до 500
+    days = 30 + max(0, (mid - 180000) // 20000)  # чем дороже комплектация — тем дольше
+    lines = [
+        {"id": "l1", "title": ref["title"], "qty": 1, "unit": "компл.",
+         "price": mid, "sku": f"REF-{ref_id.upper()}", "brand": "ZETTA"},
+        {"id": "l2", "title": "Отделочные материалы", "qty": 12.5, "unit": "м²",
+         "price": 3200, "sku": None, "brand": None},
+        {"id": "l3", "title": "Работы", "qty": 65, "unit": "м²",
+         "price": 850, "sku": None, "brand": None},
+    ]
+    total = sum(int(l["price"] * l["qty"]) for l in lines)
+    return {"id": f"est_{ref_id}", "status": "preliminary", "total_rub": total,
+            "range_min": lo, "range_max": hi, "days": days,
+            "lines": lines,
+            "assumptions": ["Состав уточняется после замера",
+                            "Цены — из каталога на дату расчёта"]}
 
 @app.get("/api/cpr/{cpr_id}")
 async def cpr(cpr_id: str):
@@ -665,12 +704,26 @@ async def gen_cpr(payload: dict, user: dict = Depends(verify_token)):
 
 @app.get("/api/cart")
 async def get_cart(user: dict = Depends(verify_token)):
-    return {"items": [{"sku": "ZET-KIT-MET-001", "brand": "ZETTA", "title": "Кухня METALICO",
-                       "price": 385000, "qty": 1, "image": "idea-kitchen"}], "total_rub": 385000}
+    return {"items": _cart_state["items"], "total_rub": _cart_total()}
 
 @app.post("/api/cart/items")
 async def add_cart(item: dict, user: dict = Depends(verify_token)):
-    return {"items": [item], "total_rub": int(item.get("price", 0)) * int(item.get("qty", 1))}
+    sku = item.get("sku", "")
+    for it in _cart_state["items"]:
+        if it.get("sku") == sku:
+            it["qty"] = int(it.get("qty", 0)) + int(item.get("qty", 1))
+            break
+    else:
+        _cart_state["items"].append(item)
+    return {"items": _cart_state["items"], "total_rub": _cart_total()}
+
+@app.delete("/api/cart/items/{sku}")
+async def remove_cart_item(sku: str, user: dict = Depends(verify_token)):
+    before = len(_cart_state["items"])
+    _cart_state["items"] = [it for it in _cart_state["items"] if it.get("sku") != sku]
+    if len(_cart_state["items"]) == before:
+        raise HTTPException(404, f"Item {sku} not found in cart")
+    return {"items": _cart_state["items"], "total_rub": _cart_total()}
 
 @app.get("/api/bids")
 async def bids():

@@ -27,5 +27,10 @@ export const useCartStore = defineStore('cart', {
       this.items = data.items
       this.total_rub = data.total_rub
     },
+    async remove(sku: string) {
+      const { data } = await api.delete<CartResponse>(`/api/cart/items/${encodeURIComponent(sku)}`)
+      this.items = data.items
+      this.total_rub = data.total_rub
+    },
   },
 })

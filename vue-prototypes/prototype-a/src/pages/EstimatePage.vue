@@ -1,16 +1,22 @@
 <script setup lang="ts">
-import { onMounted, computed } from 'vue'
+import { onMounted, computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useReferencesStore } from '@/stores/references'
 import { useEstimateStore } from '@/stores/estimate'
 import ReferenceCard from '@/components/ReferenceCard.vue'
 import { formatPrice } from '@/api/client'
 
+const route = useRoute()
 const refs = useReferencesStore()
 const est = useEstimateStore()
 const { filtered, loading } = storeToRefs(refs)
 
-const total = computed(() => est.current?.total_rub ?? 0)
+/** Выбранный референс — из query ?ref=; пустой → демо-смета est_001 */
+const selectedRef = computed(() => String(route.query.ref ?? ''))
+const selectedRefItem = computed(
+  () => (selectedRef.value ? refs.items.find((r) => r.id === selectedRef.value) ?? null : null),
+)
 const range = computed(() => est.current ? `${formatPrice(est.current.range_min)} — ${formatPrice(est.current.range_max)}` : '')
 const days = computed(() => est.current?.days ?? 0)
 const lines = computed(() => est.current?.lines ?? [])
@@ -18,8 +24,11 @@ const assumptions = computed(() => est.current?.assumptions ?? [])
 
 onMounted(() => {
   refs.fetch()
-  est.calculate()
+  est.calculate(selectedRef.value)
 })
+
+// Смена референса (клик «Рассчитать» на другой карточке) пересчитывает смету.
+watch(selectedRef, (id) => est.calculate(id))
 </script>
 
 <template>
@@ -33,13 +42,17 @@ onMounted(() => {
         <div class="refs">
           <h3>Выберите референс</h3>
           <div class="grid cols-2">
-            <ReferenceCard v-for="r in filtered" :key="r.id" :ref-item="r" />
+            <ReferenceCard v-for="r in filtered" :key="r.id" :ref-item="r"
+                           :selected="r.id === selectedRef" />
           </div>
         </div>
 
         <!-- Расчёт справа -->
         <div class="est-card">
           <h3>Результат расчёта</h3>
+          <p v-if="selectedRefItem" class="muted ref-caption">
+            По референсу: {{ selectedRefItem.title }}
+          </p>
           <div v-if="est.loading" class="muted">Рассчитываю…</div>
           <template v-else-if="est.error">
             <p class="muted">{{ est.error }}</p>
@@ -81,6 +94,7 @@ onMounted(() => {
 .line b { font-weight: 600; }
 .assumptions { margin-top: 20px; padding: 14px; background: #fef3f0; border-radius: 8px; font-size: 13px; }
 .assumptions ul { margin: 8px 0 0 20px; }
+.ref-caption { font-size: 13px; margin: -6px 0 14px; }
 .grid.cols-2 { grid-template-columns: 1fr 1fr; }
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }

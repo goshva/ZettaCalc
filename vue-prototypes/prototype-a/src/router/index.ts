@@ -23,6 +23,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/appointment', name: 'appointment', component: () => import('@/pages/AppointmentPage.vue') },
   { path: '/catalog', name: 'catalog', component: () => import('@/pages/CatalogPage.vue') },
   { path: '/estimate', name: 'estimate', component: () => import('@/pages/EstimatePage.vue') },
+  { path: '/flow', name: 'flow', component: () => import('@/pages/FlowPage.vue') },
   { path: '/cpr', name: 'cpr', component: () => import('@/pages/CprPage.vue'), meta: { requiresAuth: true } },
   { path: '/cart', name: 'cart', component: () => import('@/pages/CartPage.vue'), meta: { requiresAuth: true } },
   { path: '/login', name: 'login', component: () => import('@/pages/LoginPage.vue') },

@@ -15,6 +15,7 @@
 - [docs/prototypes-comparison.md](docs/prototypes-comparison.md) — прототипы А и В
 - [docs/economics.md](docs/economics.md) — гипотезы дохода
 - [docs/architecture/](docs/architecture/) — данные, сервисы, harness, ER, S2T, матрица ИИ
+- [docs/architecture/go-ddd-migration.md](docs/architecture/go-ddd-migration.md) — переписывание бэкенда на Go: статус и факт
 - [docs/adr/](docs/adr/) — архитектурные решения
 
 ## Структура
@@ -23,6 +24,8 @@
 - `src/domain/` — детерминированное ядро (catalog, geometry, estimate, cpr).
 - `src/rules/` — rule engine и техкарты (версии, владельцы, тесты).
 - `src/harness/` — LLM-слой: runtime, llm (мок), tools, guardrails, evals.
+- `backend/` — Go-сервис на том же HTTP-контракте, что и mock API
+  (см. [backend/README.md](backend/README.md)): данные и картинки в PostgreSQL.
 - `tests/` — unit, contract, evals, fixtures.
 - `.ai/` — контекст, промпты, описание evals. `AGENTS.md` — правила для агентов (читать первым).
 
@@ -37,3 +40,7 @@
 
 Исходные файлы (Прототип А.html, Прототип В.html, Стратегия и задание для CPTO.docx)
 хранятся в корне и не изменяются скриптом инициализации.
+
+Vue-прототипы (`vue-prototypes/prototype-a`, `prototype-b`) ходят в API через
+прокси Vite; адрес задаётся в `.env.local` переменной `VITE_API_PROXY`
+(по умолчанию — Go-сервис на `127.0.0.1:8080`).

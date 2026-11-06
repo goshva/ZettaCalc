@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Проверка вёрстки flow на широких экранах</title>
+<style>
+  body { font: 13px/1.5 monospace; margin: 16px; background: #faf9f6; color: #1e1c19; }
+  h1 { font-size: 18px; }
+  #out { white-space: pre-wrap; }
+  #stage { position: relative; overflow: hidden; margin-top: 12px; border: 1px dashed #cfc6b8; }
+  iframe { border: 0; display: block; transform-origin: top left; }
+</style>
+</head>
+<body>
+<h1>Проверка вёрстки flow на широких экранах</h1>
+<p>Параметры: <code>?base=/flow?step=&amp;widths=1440,1920,2560&amp;steps=0,1,2,3,4&amp;scale=0.35&amp;keep=1</code></p>
+<div id="out">Запуск…</div>
+<div id="stage"></div>
+<script>
+const params = new URLSearchParams(location.search)
+const widths = (params.get('widths') || '1440,1920,2560').split(',').map(Number)
+const steps = (params.get('steps') || '0,1,2,3,4').split(',').map(Number)
+const scale = Number(params.get('scale') || 0)
+const base = params.get('base') || '/#/flow?step='
+const keep = params.get('keep') === '1'
+
+const out = document.getElementById('out')
+const stage = document.getElementById('stage')
+const lines = []
+const problems = []
+
+function log(s) { lines.push(s); out.textContent = lines.join('\n') }
+
+function collect(w) {
+  const vw = w.innerWidth
+  const wrap = w.document.querySelector('.flow-page .flow-wrap')
+  const cards = [...w.document.querySelectorAll('.flow-page .flow-card')]
+  const overflowing = []
+  const outside = []
+  for (const el of w.document.querySelectorAll('body *')) {
+    const r = el.getBoundingClientRect()
+    if (r.width === 0 && r.height === 0) continue
+    if (r.right > vw + 1 || r.left < -1) {
+      const item = {
+        cls: String(el.className || '').slice(0, 50),
+        tag: el.tagName,
+        left: Math.round(r.left),
+        right: Math.round(r.right),
+      }
+      outside.push(item)
+      if (el.closest('.flow-page')) overflowing.push(item)
+    }
+  }
+  return {
+    vw,
+    docScrollWidth: w.document.documentElement.scrollWidth,
+    bodyScrollWidth: w.document.body.scrollWidth,
+    wrapWidth: wrap ? Math.round(wrap.getBoundingClientRect().width) : null,
+    cardWidth: cards.length ? Math.round(cards[0].getBoundingClientRect().width) : null,
+    cardCount: cards.length,
+    overflowCount: overflowing.length,
+    overflowing: overflowing.slice(0, 5),
+    outside: outside.map((o) => `${o.tag}.${o.cls} ${o.left}..${o.right}`).slice(0, 4),
+    active: w.document.querySelector('.flow-page .flow-step.active')?.textContent?.trim(),
+    h2: w.document.querySelector('.flow-page .flow-card h2')?.textContent?.trim(),
+  }
+}
+
+function openFrame(width, step) {
+  return new Promise((resolve) => {
+    const frame = document.createElement('iframe')
+    frame.width = width
+    frame.height = 1000
+    frame.style.width = width + 'px'
+    frame.style.height = '1000px'
+    frame.style.transform = scale ? `scale(${scale})` : 'none'
+    frame.src = base + step
+    if (!keep) stage.innerHTML = ''
+    stage.style.width = scale ? Math.round(width * scale) + 'px' : width + 'px'
+    stage.style.height = scale ? Math.round(1000 * scale) + 'px' : '1000px'
+    stage.appendChild(frame)
+    frame.onload = () => resolve(frame)
+  })
+}
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
+
+async function run() {
+  for (const width of widths) {
+    for (const step of steps) {
+      const frame = await openFrame(width, step)
+      const w = frame.contentWindow
+      for (let i = 0; i < 40; i++) {
+        if (w.document.querySelector('.flow-page')) break
+        await sleep(100)
+      }
+      await sleep(400)
+      const data = collect(w)
+
+      let auction = null
+      if (step === 4) {
+        const btns = [...w.document.querySelectorAll('.flow-page button')]
+        const clicked = btns.find((b) => b.textContent.includes('Заказать ЦПР и начать аукцион'))
+        if (clicked) {
+          clicked.click()
+          await sleep(400)
+          const bids = [...w.document.querySelectorAll('.flow-page .bid-card')]
+          const after = collect(w)
+          auction = {
+            bidCount: bids.length,
+            bidWidths: bids.map((b) => Math.round(b.getBoundingClientRect().width)),
+            overflowCount: after.overflowCount,
+            overflowing: after.overflowing,
+          }
+        }
+      }
+
+      const label = `ширина ${width}, шаг ${step}`
+      const notes = []
+      if (data.docScrollWidth > data.vw + 1) {
+        notes.push(`горизонтальный скролл: ${data.docScrollWidth} > ${data.vw}; вне окна: ${JSON.stringify(data.outside)}`)
+      }
+      if (data.overflowCount) notes.push(`за краем ${data.overflowCount}: ${JSON.stringify(data.overflowing)}`)
+      if (data.cardWidth && data.cardWidth > 1360) notes.push(`карточка шире 1360: ${data.cardWidth}`)
+      if (data.cardCount === 0) notes.push('карточек нет')
+      if (auction) {
+        if (auction.bidCount !== 3) notes.push(`ставок ${auction.bidCount}`)
+        if (auction.overflowCount) notes.push(`аукцион за краем ${auction.overflowCount}: ${JSON.stringify(auction.overflowing)}`)
+      }
+
+      const info = `wrap=${data.wrapWidth} card=${data.cardWidth} шаг="${data.active}" h2="${data.h2}"` +
+        (auction ? ` ставок=${auction.bidCount} ширины=${JSON.stringify(auction.bidWidths)}` : '')
+      if (notes.length) {
+        problems.push(`${label}: ${notes.join(' | ')}`)
+        log(`ПРОБЛЕМА ${label}: ${info}\n         ${notes.join(' | ')}`)
+      } else {
+        log(`ок ${label}: ${info}`)
+      }
+      if (!keep) frame.remove()
+    }
+  }
+  log(`\nИтого проблем: ${problems.length}`)
+  for (const p of problems) log(' - ' + p)
+}
+
+run().catch((e) => log('Ошибка запуска: ' + e.message))
+</script>
+</body>
+</html>

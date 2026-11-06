@@ -13,7 +13,8 @@ const STATIC_KEYS = new Set([
   'center-stone', 'center-wardrobe', 'ds-e06b4936da',
 ])
 
-const API_BASE = import.meta.env.VITE_API_URL ?? 'http://127.0.0.1:8000'
+// По умолчанию относительный путь: картинки идут через прокси Vite (/api).
+const API_BASE = import.meta.env.VITE_API_URL ?? ''
 
 export function imgUrl(key: string): string {
   if (!key) return ''

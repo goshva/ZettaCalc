@@ -3,6 +3,8 @@ import { onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useReferencesStore } from '@/stores/references'
 import { imgUrl } from '@/composables/useImg'
+import { refStyleLabel } from '@/utils/labels'
+import { formatPrice } from '@/api/client'
 
 const refs = useReferencesStore()
 const { items, loading } = storeToRefs(refs)
@@ -19,7 +21,7 @@ onMounted(() => refs.fetch())
           <div class="card-img"><img :src="imgUrl(r.image)" :alt="r.title" /></div>
           <div class="card-body">
             <h3>{{ r.title }}</h3>
-            <div class="tags"><span v-for="s in r.styles" :key="s" class="tag">{{ s }}</span></div>
+            <div class="tags"><span v-for="s in r.styles" :key="s" class="tag">{{ refStyleLabel(s) }}</span></div>
             <div class="price">от {{ formatPrice(r.price_from) }}</div>
           </div>
         </div>
@@ -27,10 +29,6 @@ onMounted(() => refs.fetch())
     </div>
   </section>
 </template>
-<script lang="ts">
-import { formatPrice } from '@/api/client'
-export default { data() { return { formatPrice } } }
-</script>
 <style scoped>
 .card-img { aspect-ratio: 4/3; overflow: hidden; }
 .card-img img { width: 100%; height: 100%; object-fit: cover; }

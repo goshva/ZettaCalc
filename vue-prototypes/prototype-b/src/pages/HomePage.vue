@@ -3,6 +3,8 @@ import { onMounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useReferencesStore } from '@/stores/references'
 import { imgUrl } from '@/composables/useImg'
+import { refStyleLabel } from '@/utils/labels'
+import SectionRepair from '@/components/home/SectionRepair.vue'
 
 const refs = useReferencesStore()
 const { items, loading } = storeToRefs(refs)
@@ -33,7 +35,7 @@ onMounted(() => refs.fetch())
           <div class="gallery-body">
             <h3>{{ r.title }}</h3>
             <div class="tags">
-              <span v-for="s in r.styles" :key="s" class="tag">{{ s }}</span>
+              <span v-for="s in r.styles" :key="s" class="tag">{{ refStyleLabel(s) }}</span>
             </div>
             <div class="price">от {{ formatPrice(r.price_from) }} до {{ formatPrice(r.price_to) }}</div>
             <RouterLink :to="`/calculator?ref=${r.id}`" class="btn ghost sm">Рассчитать</RouterLink>
@@ -42,6 +44,9 @@ onMounted(() => refs.fetch())
       </div>
     </div>
   </section>
+
+  <!-- 10 · Ремонт и исполнители: аукцион подрядчиков -->
+  <SectionRepair />
 </template>
 <script lang="ts">
 import { formatPrice } from '@/api/client'

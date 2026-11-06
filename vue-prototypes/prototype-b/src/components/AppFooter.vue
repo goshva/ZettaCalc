@@ -1,3 +1,9 @@
+<script setup lang="ts">
+// Ссылки на API идут через прокси Vite (/api), поэтому работают на любом
+// порту dev-сервера и не привязаны к адресу mock API.
+const apiDocs = '/docs'
+const apiHealth = '/api/health'
+</script>
 <template>
   <footer class="ftr">
     <div class="wrap inner">
@@ -13,8 +19,8 @@
       </div>
       <div>
         <h4>API</h4>
-        <a href="http://127.0.0.1:8000/docs" target="_blank">Swagger UI</a>
-        <a href="http://127.0.0.1:8000/api/health" target="_blank">Health Check</a>
+        <a :href="apiDocs" target="_blank" rel="noopener">Swagger UI</a>
+        <a :href="apiHealth" target="_blank" rel="noopener">Health Check</a>
       </div>
     </div>
     <div class="wrap bottom">

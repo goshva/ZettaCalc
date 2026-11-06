@@ -2,7 +2,10 @@
 import axios, { type AxiosError } from 'axios'
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ?? 'http://127.0.0.1:8000',
+  // По умолчанию относительный путь: запросы идут через прокси Vite (/api),
+  // поэтому фронт и API живут на одном origin. VITE_API_URL нужен только
+  // если API вызывается напрямую, без прокси.
+  baseURL: import.meta.env.VITE_API_URL ?? '',
   timeout: 15000,
 })
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useCartStore } from '@/stores/cart'
 import { formatPrice } from '@/api/client'
@@ -7,6 +7,19 @@ import { imgUrl } from '@/composables/useImg'
 
 const cart = useCartStore()
 const { items, total_rub } = storeToRefs(cart)
+
+/** sku позиции, которую сейчас удаляем, — блокируем кнопку до ответа API */
+const removing = ref('')
+
+async function remove(sku: string) {
+  if (removing.value) return
+  removing.value = sku
+  try {
+    await cart.remove(sku)
+  } finally {
+    removing.value = ''
+  }
+}
 
 onMounted(() => cart.fetch())
 </script>
@@ -34,6 +47,15 @@ onMounted(() => cart.fetch())
             <div class="item-price">
               <b>{{ formatPrice(item.price * item.qty) }}</b>
             </div>
+            <button
+              type="button"
+              class="remove-btn"
+              :disabled="removing === item.sku"
+              aria-label="Удалить из корзины"
+              @click="remove(item.sku)"
+            >
+              {{ removing === item.sku ? '…' : '×' }}
+            </button>
           </div>
         </div>
 
@@ -60,6 +82,9 @@ onMounted(() => cart.fetch())
 .item-info strong { display: block; margin-bottom: 4px; }
 .item-qty { font-size: 14px; color: var(--muted); }
 .item-price { font-size: 18px; font-weight: 600; }
+.remove-btn { flex-shrink: 0; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; transition: background .18s, color .18s, border-color .18s; }
+.remove-btn:hover:not(:disabled) { background: #fef3f0; border-color: #e4b3a8; color: #cf3d2b; }
+.remove-btn:disabled { opacity: .5; cursor: default; }
 .total-bar { display: flex; justify-content: space-between; padding: 20px 0; font-size: 20px; font-weight: 600; }
 .actions { margin-top: 20px; }
 </style>
