@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import type { ReferenceItem } from '@/types'
 import { formatPrice } from '@/api/client'
-import { imgUrl } from '@/composables/useImg'
+import { imgUrl } from '@/composables/useImg'          // ← проверить путь и имя экспорта
 import { refCategoryLabel, refStyleLabel } from '@/utils/labels'
 
-defineProps<{ refItem: ReferenceItem; selected?: boolean }>()
+const props = defineProps<{ refItem: ReferenceItem; selected?: boolean }>()
+const emit = defineEmits<{ (e: 'calculate', id: string): void }>()
+
+function onCalculate() {
+  emit('calculate', props.refItem.id)
+}
 </script>
 
 <template>
@@ -21,10 +26,7 @@ defineProps<{ refItem: ReferenceItem; selected?: boolean }>()
       <div class="ref-price">
         от {{ formatPrice(refItem.price_from) }} до {{ formatPrice(refItem.price_to) }}
       </div>
-      <RouterLink
-        :to="`/estimate?ref=${refItem.id}`"
-        class="btn red sm"
-      >Рассчитать</RouterLink>
+      <button class="btn red sm" @click="onCalculate">Рассчитать</button>
     </div>
   </div>
 </template>

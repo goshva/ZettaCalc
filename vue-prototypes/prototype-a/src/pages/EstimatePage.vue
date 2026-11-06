@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { onMounted, computed, watch } from 'vue'
-import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useReferencesStore } from '@/stores/references'
 import { useEstimateStore } from '@/stores/estimate'
 import ReferenceCard from '@/components/ReferenceCard.vue'
 import { formatPrice } from '@/api/client'
-
+import { useRoute, useRouter } from 'vue-router'
+const router = useRouter() 
 const route = useRoute()
 const refs = useReferencesStore()
 const est = useEstimateStore()
@@ -22,6 +22,13 @@ const days = computed(() => est.current?.days ?? 0)
 const lines = computed(() => est.current?.lines ?? [])
 const assumptions = computed(() => est.current?.assumptions ?? [])
 
+function onCardCalculate(id: string) {
+  if (String(route.query.ref ?? '') !== id) {
+    router.push({ query: { ...route.query, ref: id } })
+  } else {
+    est.calculate(id) // принудительный пересчёт того же референса
+  }
+}
 onMounted(() => {
   refs.fetch()
   est.calculate(selectedRef.value)
@@ -42,8 +49,13 @@ watch(selectedRef, (id) => est.calculate(id))
         <div class="refs">
           <h3>Выберите референс</h3>
           <div class="grid cols-2">
-            <ReferenceCard v-for="r in filtered" :key="r.id" :ref-item="r"
-                           :selected="r.id === selectedRef" />
+<ReferenceCard
+  v-for="r in filtered"
+  :key="r.id"
+  :ref-item="r"
+  :selected="r.id === selectedRef"
+  @calculate="onCardCalculate"
+/>
           </div>
         </div>
 
